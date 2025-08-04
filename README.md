@@ -10,7 +10,7 @@ The system forecasts **ridership volume per station group in 4-hour windows**, u
 - **PostgreSQL** to store preprocessed features
 - **XGBoost** as the core model
 - **Hyperopt** for hyperparameter tuning
-- **MLflow** for experiment tracking and model versioning
+- **MLflow** for experiment tracking 
 - **Apache Airflow** to orchestrate the pipeline
 - **Docker** for reproducible deployment
 -**Gafana** for monitoring prediction quality
@@ -29,7 +29,7 @@ After each prediction run, the DAG also generates **monitoring data** to help ev
 │   ├── download_ingest.py             # Download data for training
 │   ├── preprocess.py                  # Preprocessing and feature engineering (training and inference)         
 │   ├── tune_model.py                  # Hyperparameter tuning with Hyperopt
-│   ├── train_register.py              # Model training and MLflow registration 
+│   ├── train_register.py              # Model training and MLflow experiment tracking
 │   ├── inference.py                   # Prediction
 │   └── monitor.py                     # Save data for monitoring
 ├── notebooks/                         # Jupyter notebooks for exploration
@@ -48,7 +48,7 @@ After each prediction run, the DAG also generates **monitoring data** to help ev
 - Forecasts **ridership volume per turnstile group** for 4-hour intervals
 - Uses historical patterns including previous day/hour/week statistics
 - Automatically selects best hyperparameters with **Hyperopt**
-- Trains and registers best model to **MLflow**
+- Trains and save best model with **MLflow**
 - Supports **daily prediction simulation** using Airflow scheduler
 - Saves prediction metrics and monitoring artifacts for further analysis
 

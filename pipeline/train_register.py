@@ -24,8 +24,8 @@ def load_features(user, password, host, port, db_name, table_name):
     return df
 
 
-def get_best_params():
-    params_path = "/opt/airflow/shared/best_params.json"
+def get_best_params(params_path):
+    
     with open(params_path, "r") as f:
         best_params_raw = json.load(f)
 
@@ -42,7 +42,7 @@ def get_best_params():
     }
 
 
-def train(df, model_output_dir, tracking_uri=None):
+def train(df, model_output_dir, tracking_uri=None, params_path='shared/best_params.json'):
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
 
@@ -63,7 +63,7 @@ def train(df, model_output_dir, tracking_uri=None):
     TARGET = "ridership_4h"
         
     train = df.copy()
-    best_params = get_best_params()
+    best_params = get_best_params(params_path)
 
     for col in FEATURES:
         if col != "group_key":
@@ -111,4 +111,5 @@ if __name__ == "__main__":
         table_name=args.features_table,
     )
     model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
-    train(df, model_output_dir, tracking_uri=MLFLOW_URI)
+    params_path = "/opt/airflow/shared/best_params.json"
+    train(df, model_output_dir, tracking_uri=MLFLOW_URI, params_path= params_path)

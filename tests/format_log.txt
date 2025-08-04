@@ -1,0 +1,13 @@
+Skipping .ipynb files as Jupyter dependencies are not installed.
+You can fix this by running ``pip install "black[jupyter]"``
+would reformat /app/pipeline/download_ingest.py
+would reformat /app/pipeline/inference.py
+would reformat /app/pipeline/monitor.py
+would reformat /app/pipeline/train_register.py
+would reformat /app/pipeline/tune_model.py
+would reformat /app/tests/unit_tests/test_train_register.py
+would reformat /app/pipeline/preprocess.py
+would reformat /app/tests/unit_tests/test_tune_model.py
+
+Oh no! 💥 💔 💥
+8 files would be reformatted, 6 files would be left unchanged.
