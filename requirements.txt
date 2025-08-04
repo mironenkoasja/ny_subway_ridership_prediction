@@ -4,5 +4,13 @@ sqlalchemy
 psycopg2-binary
 mlflow
 scikit-learn
-xgboost==1.7.6
+xgboost>=2.0.3
 hyperopt
+pandas
+requests
+pytest
+requests-mock
+pytest-mock
+pendulum
+flake8
+black

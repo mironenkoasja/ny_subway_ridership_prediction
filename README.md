@@ -88,4 +88,25 @@ After predictions, the DAG generates:
 
 These artifacts are logged and can be used to evaluate model degradation over time.
 
+ ## 🧪 Unit tests & Code Quality
+
+This project includes unit tests covering the key pipeline components, including data ingestion, preprocessing, model training, tuning, inference, and monitoring.
+Tests are automatically executed when all containers are started.
+
+In addition to testing, the project automatically runs:
+
+Code formatting checks using black
+
+Linting checks using flake8
+
+These ensure the code is consistent, readable, and adheres to Python best practices.
+Test results and logs are saved to: 
+
+   ```bash
+   tests/tests_logs.txt
+   tests/format_log.txt
+   tests/lint_log.txt
+   ```
+
+
 

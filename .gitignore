@@ -1,6 +1,6 @@
 
 grafana_storage/
-
+venv/
 !grafana/dashboards/
 !grafana/dashboards/*
 !grafana/datasources/

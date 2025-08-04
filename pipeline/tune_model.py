@@ -4,23 +4,23 @@ import pandas as pd
 import numpy as np
 import mlflow
 from sqlalchemy import create_engine
-from datetime import datetime, timedelta
-
+from datetime import datetime
 import json
-
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error
 import xgboost as xgb
-
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 from hyperopt.pyll import scope
 
+
 def load_features(user, password, host, port, db_name, table_name):
-    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(
+        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql(query, con=engine)
     df["datetime"] = pd.to_datetime(df["datetime"])
     df["group_key"] = df["group_key"].astype("category")
     return df
+
 
 def tune(df, experiment_name, run_prefix, n_trials):
     CUTOFF_DATE = df["datetime"].max() - pd.Timedelta(days=1)
@@ -31,7 +31,14 @@ def tune(df, experiment_name, run_prefix, n_trials):
     print("Validation shape:", val.shape)
     print("Max datetime in dataset:", df["datetime"].max())
 
-    FEATURES = ["entries_4h_last_week", "entries_4h_last_day", "rolling_mean_prev_day", "hour", "day_of_week", "group_key"]
+    FEATURES = [
+        "entries_4h_last_week",
+        "entries_4h_last_day",
+        "rolling_mean_prev_day",
+        "hour",
+        "day_of_week",
+        "group_key",
+    ]
     TARGET = "ridership_4h"
 
     X_train = train[FEATURES]
@@ -39,7 +46,13 @@ def tune(df, experiment_name, run_prefix, n_trials):
     X_val = val[FEATURES]
     y_val = val[TARGET]
 
-    for col in ["entries_4h_last_week", "entries_4h_last_day", "rolling_mean_prev_day", "hour", "day_of_week"]:
+    for col in [
+        "entries_4h_last_week",
+        "entries_4h_last_day",
+        "rolling_mean_prev_day",
+        "hour",
+        "day_of_week",
+    ]:
         X_train[col] = pd.to_numeric(X_train[col], errors="coerce")
         X_val[col] = pd.to_numeric(X_val[col], errors="coerce")
     X_train["group_key"] = X_train["group_key"].astype("category")
@@ -47,7 +60,6 @@ def tune(df, experiment_name, run_prefix, n_trials):
 
     dtrain = xgb.DMatrix(X_train, label=y_train, enable_categorical=True)
     dval = xgb.DMatrix(X_val, label=y_val, enable_categorical=True)
-
 
     mlflow.set_tracking_uri("http://mlflow:5000")
     mlflow.set_experiment(experiment_name)
@@ -58,11 +70,13 @@ def tune(df, experiment_name, run_prefix, n_trials):
         "reg_alpha": hp.loguniform("reg_alpha", -3, 1),
         "reg_lambda": hp.loguniform("reg_lambda", -3, 1),
         "min_child_weight": scope.int(hp.quniform("min_child_weight", 1, 10, 1)),
-        "n_estimators": scope.int(hp.quniform("n_estimators", 50, 300, 10))
+        "n_estimators": scope.int(hp.quniform("n_estimators", 50, 300, 10)),
     }
 
     def objective(params):
-        with mlflow.start_run(run_name=f"{run_prefix}-{datetime.now().strftime('%Y%m%d-%H%M%S')}"):
+        with mlflow.start_run(
+            run_name=f"{run_prefix}-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+        ):
             mlflow.set_tag("model", "xgboost")
             mlflow.log_params(params)
 
@@ -83,19 +97,23 @@ def tune(df, experiment_name, run_prefix, n_trials):
         algo=tpe.suggest,
         max_evals=n_trials,
         trials=Trials(),
-        rstate=np.random.default_rng(42)
+        rstate=np.random.default_rng(42),
     )
 
     print("Best hyperparameters:", best_result)
 
-    with mlflow.start_run(run_name=f"log-best-params-{datetime.now().strftime('%Y%m%d-%H%M%S')}", nested=True) as log_run:
-        
+    with mlflow.start_run(
+        run_name=f"log-best-params-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+        nested=True,
+    ):
+
         tmp_dir = "/opt/airflow/shared"
         os.makedirs(tmp_dir, exist_ok=True)
         params_path = os.path.join(tmp_dir, "best_params.json")
         with open(params_path, "w") as f:
             json.dump(best_result, f)
-        #mlflow.log_artifact(params_path, artifact_path="best_params")
+        # mlflow.log_artifact(params_path, artifact_path="best_params")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -117,7 +135,7 @@ if __name__ == "__main__":
         host=args.host,
         port=args.port,
         db_name=args.db_name,
-        table_name=args.features_table
+        table_name=args.features_table,
     )
 
     tune(df, args.experiment_name, args.run_prefix, args.n_trials)

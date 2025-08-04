@@ -1,0 +1,14 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Установим зависимости только для тестов и базового проекта
+COPY requirements.txt .
+RUN pip install --no-cache-dir --timeout 100 -r requirements.txt
+
+# Копируем всё, включая pipeline/ и tests/
+COPY . .
+ENV PYTHONPATH=/app
+
+# Тесты будут запускаться через docker-compose
+CMD ["sh", "-c", "(pytest tests/ --tb=short --disable-warnings > tests/test_output.log 2>&1) && (black --check . --line-length 89 > tests/format_log.txt 2>&1) && (flake8 . > tests/lint_log.txt 2>&1)"]

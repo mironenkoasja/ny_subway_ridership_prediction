@@ -1,0 +1,8 @@
+pyarrow
+pandas
+sqlalchemy
+psycopg2-binary
+mlflow
+scikit-learn
+xgboost>=2.0.3
+hyperopt

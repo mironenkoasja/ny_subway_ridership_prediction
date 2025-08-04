@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.18, pytest-8.4.1, pluggy-1.6.0
+rootdir: /app
+plugins: requests-mock-1.12.1, mock-3.14.1, anyio-4.10.0
+collected 17 items
+
+tests/unit_tests/test_download_ingest.py ....                            [ 23%]
+tests/unit_tests/test_inference.py ...                                   [ 41%]
+tests/unit_tests/test_monitor.py ...                                     [ 58%]
+tests/unit_tests/test_preprocess.py ...                                  [ 76%]
+tests/unit_tests/test_train_register.py ..                               [ 88%]
+tests/unit_tests/test_tune_model.py ..                                   [100%]
+
+======================= 17 passed, 14 warnings in 38.33s =======================

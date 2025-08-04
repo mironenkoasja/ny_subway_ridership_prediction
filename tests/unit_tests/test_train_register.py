@@ -1,0 +1,76 @@
+import pandas as pd
+import os
+from unittest import mock
+from pipeline import train_register
+
+
+@mock.patch("pipeline.train_register.create_engine")
+def test_load_features(mock_engine):
+    df_mock = pd.DataFrame(
+        {
+            "datetime": ["2025-08-01", "2025-08-02"],
+            "group_key": ["A001_R001", "A002_R002"],
+        }
+    )
+    mock_engine.return_value.connect.return_value = None
+    mock_engine.return_value.__enter__.return_value = None
+    pd.read_sql = mock.Mock(return_value=df_mock)
+
+    df = train_register.load_features(
+        "user", "pass", "localhost", "5432", "testdb", "features"
+    )
+    assert isinstance(df, pd.DataFrame)
+    assert pd.api.types.is_datetime64_any_dtype(df["datetime"])
+    assert pd.api.types.is_categorical_dtype(df["group_key"])
+
+
+@mock.patch("pipeline.train_register.mlflow.set_experiment")
+@mock.patch("pipeline.train_register.mlflow.log_params")
+@mock.patch("pipeline.train_register.mlflow.set_tag")
+@mock.patch("pipeline.train_register.get_best_params")
+def test_train(
+    mock_get_best_params,
+    mock_set_tag,
+    mock_log_params,
+    mock_set_experiment,
+    tmp_path,
+    monkeypatch,
+):
+    model_output_path = tmp_path / "model.pkl"
+
+    mock_get_best_params.return_value = {
+        "max_depth": 3,
+        "min_child_weight": 1,
+        "reg_alpha": 0.1,
+        "reg_lambda": 0.1,
+        "learning_rate": 0.1,
+        "n_estimators": 10,
+        "objective": "reg:squarederror",
+        "seed": 42,
+        "verbosity": 0,
+    }
+
+    monkeypatch.setattr(
+        train_register.mlflow,
+        "start_run",
+        lambda *args, **kwargs: __import__("contextlib").nullcontext(),
+    )
+
+    df = pd.DataFrame(
+        {
+            "datetime": pd.date_range("2025-08-01", periods=5, freq="4H"),
+            "entries_4h_last_week": [1.0, 2.0, 3.0, 4.0, 5.0],
+            "entries_4h_last_day": [1.0] * 5,
+            "rolling_mean_prev_day": [1.0] * 5,
+            "hour": [0] * 5,
+            "day_of_week": [1] * 5,
+            "group_key": ["A001_R001"] * 5,
+            "ridership_4h": [100] * 5,
+        }
+    )
+    df["group_key"] = df["group_key"].astype("category")
+
+    train_register.train(df, model_output_dir=str(model_output_path))
+
+    assert os.path.exists(model_output_path)
+    os.remove(model_output_path)
