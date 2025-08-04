@@ -5,8 +5,6 @@ import mlflow
 import xgboost as xgb
 import pickle
 
-model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
-
 
 def load_features(user, password, host, port, db_name, inference_table):
     engine = create_engine(
@@ -19,10 +17,11 @@ def load_features(user, password, host, port, db_name, inference_table):
 
 
 def load_model(
-    model_uri="models:/xgboost-best-model/Production", 
-    model_output_dir=model_output_dir
+    tracking_uri=None, 
+    model_output_dir=None
 ):
-    mlflow.set_tracking_uri("http://mlflow:5000")
+    if tracking_uri:
+        mlflow.set_tracking_uri(tracking_uri)
 
     with open(model_output_dir, "rb") as f:
         model = pickle.load(f)
@@ -72,7 +71,7 @@ if __name__ == "__main__":
     parser.add_argument("--predictions_table", required=True)
     parser.add_argument(
         "--model_uri",
-        default="models:/xgboost-best-model/Production",
+        default="http://mlflow:5000",
         help="MLflow model URI",
     )
 
@@ -86,7 +85,8 @@ if __name__ == "__main__":
         args.db_name,
         args.inference_table,
     )
-    print(df_features.head(2))
+
+    model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
     model = load_model(args.model_uri, model_output_dir)
     predict_and_save(
         df_features,
