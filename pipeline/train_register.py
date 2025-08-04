@@ -14,23 +14,6 @@ EXPERIMENT_HYPEROPT = "xgboost-hyperopt"
 EXPERIMENT_TRAIN = "xgboost-best-model"
 
 
-client = MlflowClient()
-exp = client.get_experiment_by_name(EXPERIMENT_HYPEROPT)
-runs = client.search_runs(
-    exp.experiment_id, order_by=["metrics.rmse ASC"], max_results=1
-)
-best_run_id = runs[0].info.run_id
-FEATURES = [
-    "entries_4h_last_week",
-    "entries_4h_last_day",
-    "rolling_mean_prev_day",
-    "hour",
-    "day_of_week",
-    "group_key",
-]
-TARGET = "ridership_4h"
-
-
 def load_features(user, password, host, port, db_name, table_name):
     engine = create_engine(
         f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
@@ -62,6 +45,22 @@ def get_best_params():
 def train(df, model_output_dir, tracking_uri=None):
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
+
+    # client = MlflowClient()
+    # exp = client.get_experiment_by_name(EXPERIMENT_HYPEROPT)
+    # runs = client.search_runs(
+    #     exp.experiment_id, order_by=["metrics.rmse ASC"], max_results=1
+    # )
+    # best_run_id = runs[0].info.run_id
+    FEATURES = [
+        "entries_4h_last_week",
+        "entries_4h_last_day",
+        "rolling_mean_prev_day",
+        "hour",
+        "day_of_week",
+        "group_key",
+    ]
+    TARGET = "ridership_4h"
         
     train = df.copy()
     best_params = get_best_params()
