@@ -27,7 +27,14 @@ jobs:
     - name: Run unit tests
       run: |
         export PYTHONPATH=$(pwd)
-        pytest tests/ --tb=short --disable-warnings
+        pytest tests/ --tb=short --disable-warnings > tests/test_output.log 2>&1
+
+    - name: Upload test log artifact
+      if: always()  # даже если тесты упали
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-logs
+        path: tests/test_output.log
 
     - name: Run flake8 linter
       run: |
