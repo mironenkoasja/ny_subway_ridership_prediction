@@ -29,8 +29,6 @@ def test_load_features(mock_engine):
     assert pd.api.types.is_categorical_dtype(df["group_key"])
 
 
-@mock.patch("pipeline.train_register.MlflowClient.get_experiment_by_name")
-@mock.patch("pipeline.train_register.mlflow.search_runs")
 @mock.patch("pipeline.train_register.mlflow.set_experiment")
 @mock.patch("pipeline.train_register.mlflow.log_params")
 @mock.patch("pipeline.train_register.mlflow.set_tag")
@@ -40,8 +38,6 @@ def test_train(
     mock_set_tag,
     mock_log_params,
     mock_set_experiment,
-    mock_search_runs,
-    mock_get_experiment_by_name,
     tmp_path,
     monkeypatch,
 ):
@@ -58,11 +54,6 @@ def test_train(
         "seed": 42,
         "verbosity": 0,
     }
-
-    mock_get_experiment_by_name.return_value = mock.Mock(experiment_id="123")
-    fake_run = mock.Mock()
-    fake_run.info.run_id = "fake-run-id"
-    mock_search_runs.return_value = [fake_run]
 
     monkeypatch.setattr(
         train_register.mlflow,
