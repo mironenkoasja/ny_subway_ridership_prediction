@@ -43,8 +43,8 @@ def load_predictions(
 ):
     engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"""
-        SELECT datetime, group_key, predicted_ridership 
-        FROM {predictions_table} 
+        SELECT datetime, group_key, predicted_ridership
+        FROM {predictions_table}
         WHERE DATE(datetime) = '{target_date}'
     """
     df = pd.read_sql(query, con=engine)

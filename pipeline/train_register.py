@@ -6,7 +6,6 @@ import numpy as np
 import pickle
 import xgboost as xgb
 from sqlalchemy import create_engine
-from mlflow.tracking import MlflowClient
 
 TABLE_NAME = "turnstile_features"
 MLFLOW_URI = "http://mlflow:5000"
