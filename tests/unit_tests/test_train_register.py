@@ -1,10 +1,11 @@
 import pandas as pd
 import os
+import contextlib
 from unittest import mock
 from pipeline import train_register
 
 
-@mock.patch("pipeline.train_register.create_engine")
+@mock.patch("sqlalchemy.create_engine")  # исправлено
 def test_load_features(mock_engine):
     df_mock = pd.DataFrame(
         {
@@ -12,32 +13,40 @@ def test_load_features(mock_engine):
             "group_key": ["A001_R001", "A002_R002"],
         }
     )
-    mock_engine.return_value.connect.return_value = None
-    mock_engine.return_value.__enter__.return_value = None
-    pd.read_sql = mock.Mock(return_value=df_mock)
+    mock_conn = mock.MagicMock()
+    mock_engine.return_value.connect.return_value = mock_conn
+    mock_engine.return_value.__enter__.return_value = mock_conn
+    mock_engine.return_value.__exit__.return_value = False
 
-    df = train_register.load_features(
-        "user", "pass", "localhost", "5432", "testdb", "features"
-    )
+    with mock.patch("pandas.read_sql", return_value=df_mock):
+        df = train_register.load_features(
+            "user", "pass", "localhost", "5432", "testdb", "features"
+        )
+
     assert isinstance(df, pd.DataFrame)
     assert pd.api.types.is_datetime64_any_dtype(df["datetime"])
     assert pd.api.types.is_categorical_dtype(df["group_key"])
 
 
+@mock.patch("pipeline.train_register.mlflow.search_runs")
 @mock.patch("pipeline.train_register.mlflow.set_experiment")
 @mock.patch("pipeline.train_register.mlflow.log_params")
 @mock.patch("pipeline.train_register.mlflow.set_tag")
 @mock.patch("pipeline.train_register.get_best_params")
+@mock.patch("pipeline.train_register.MlflowClient.get_experiment_by_name")
 def test_train(
+    mock_get_experiment_by_name,
     mock_get_best_params,
     mock_set_tag,
     mock_log_params,
     mock_set_experiment,
+    mock_search_runs,
     tmp_path,
     monkeypatch,
 ):
     model_output_path = tmp_path / "model.pkl"
 
+    # Мокаем лучшие параметры
     mock_get_best_params.return_value = {
         "max_depth": 3,
         "min_child_weight": 1,
@@ -50,10 +59,15 @@ def test_train(
         "verbosity": 0,
     }
 
+    # Мокаем experiment_id
+    mock_get_experiment_by_name.return_value = mock.Mock(experiment_id="123")
+    mock_search_runs.return_value = []
+
+    # Мокаем mlflow.start_run
     monkeypatch.setattr(
         train_register.mlflow,
         "start_run",
-        lambda *args, **kwargs: __import__("contextlib").nullcontext(),
+        lambda *args, **kwargs: contextlib.nullcontext()
     )
 
     df = pd.DataFrame(
