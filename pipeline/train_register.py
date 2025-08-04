@@ -1,87 +1,115 @@
+import json
+import mlflow
+import argparse
 import pandas as pd
-import os
-from unittest import mock
-from pipeline import train_register
+import numpy as np
+import pickle
+import xgboost as xgb
+from sqlalchemy import create_engine
+from mlflow.tracking import MlflowClient
+
+TABLE_NAME = "turnstile_features"
+MLFLOW_URI = "http://mlflow:5000"
+EXPERIMENT_HYPEROPT = "xgboost-hyperopt"
+EXPERIMENT_TRAIN = "xgboost-best-model"
 
 
-@mock.patch("pipeline.train_register.create_engine")
-def test_load_features(mock_engine):
-    df_mock = pd.DataFrame(
-        {
-            "datetime": ["2025-08-01", "2025-08-02"],
-            "group_key": ["A001_R001", "A002_R002"],
-        }
-    )
-    mock_engine.return_value.connect.return_value = None
-    mock_engine.return_value.__enter__.return_value = None
-    pd.read_sql = mock.Mock(return_value=df_mock)
-
-    df = train_register.load_features(
-        "user", "pass", "localhost", "5432", "testdb", "features"
-    )
-    assert isinstance(df, pd.DataFrame)
-    assert pd.api.types.is_datetime64_any_dtype(df["datetime"])
-    assert pd.api.types.is_categorical_dtype(df["group_key"])
+client = MlflowClient()
+exp = client.get_experiment_by_name(EXPERIMENT_HYPEROPT)
+runs = client.search_runs(
+    exp.experiment_id, order_by=["metrics.rmse ASC"], max_results=1
+)
+best_run_id = runs[0].info.run_id
+FEATURES = [
+    "entries_4h_last_week",
+    "entries_4h_last_day",
+    "rolling_mean_prev_day",
+    "hour",
+    "day_of_week",
+    "group_key",
+]
+TARGET = "ridership_4h"
 
 
-@mock.patch("pipeline.train_register.mlflow.set_experiment")
-@mock.patch("pipeline.train_register.mlflow.log_params")
-@mock.patch("pipeline.train_register.mlflow.set_tag")
-@mock.patch("pipeline.train_register.get_best_params")
-@mock.patch("pipeline.train_register.mlflow.search_runs")
-@mock.patch("pipeline.train_register.MlflowClient.get_experiment_by_name")
-def test_train(
-    mock_get_experiment_by_name,
-    mock_search_runs,
-    mock_get_best_params,
-    mock_set_tag,
-    mock_log_params,
-    mock_set_experiment,
-    tmp_path,
-    monkeypatch,
-):
-    model_output_path = tmp_path / "model.pkl"
+def load_features(user, password, host, port, db_name, table_name):
+    engine = create_engine(
+        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    query = f"SELECT * FROM {table_name}"
+    df = pd.read_sql(query, con=engine)
+    df["datetime"] = pd.to_datetime(df["datetime"])
+    df["group_key"] = df["group_key"].astype("category")
+    return df
 
-    # Вернём поддельный experiment
-    mock_get_experiment_by_name.return_value = mock.Mock(experiment_id="123")
 
-    # Вернём поддельный результат поиска run'ов
-    mock_search_runs.return_value = pd.DataFrame([{"run_id": "test-run-id"}])
+def get_best_params():
+    params_path = "/opt/airflow/shared/best_params.json"
+    with open(params_path, "r") as f:
+        best_params_raw = json.load(f)
 
-    mock_get_best_params.return_value = {
-        "max_depth": 3,
-        "min_child_weight": 1,
-        "reg_alpha": 0.1,
-        "reg_lambda": 0.1,
-        "learning_rate": 0.1,
-        "n_estimators": 10,
+    return {
+        "max_depth": int(best_params_raw["max_depth"]),
+        "min_child_weight": int(best_params_raw["min_child_weight"]),
+        "reg_alpha": float(best_params_raw["reg_alpha"]),
+        "reg_lambda": float(best_params_raw["reg_lambda"]),
+        "learning_rate": float(best_params_raw["learning_rate"]),
+        "n_estimators": int(best_params_raw["n_estimators"]),
         "objective": "reg:squarederror",
         "seed": 42,
         "verbosity": 0,
     }
 
-    # Подменим start_run на пустой контекст
-    monkeypatch.setattr(
-        train_register.mlflow,
-        "start_run",
-        lambda *args, **kwargs: __import__("contextlib").nullcontext(),
+
+def train(df, model_output_dir, tracking_uri=None):
+    if tracking_uri:
+        mlflow.set_tracking_uri(tracking_uri)
+        
+    train = df.copy()
+    best_params = get_best_params()
+
+    for col in FEATURES:
+        if col != "group_key":
+            train[col] = pd.to_numeric(train[col], errors="coerce").replace(
+                -1.0, np.nan
+            )
+        else:
+            train[col] = train[col].astype("category")
+
+    X_train = train[FEATURES].copy()
+    y_train = train[TARGET].copy()
+
+    dtrain = xgb.DMatrix(X_train, label=y_train, enable_categorical=True)
+    # --- Обучение и логгирование модели ---
+    mlflow.set_experiment(EXPERIMENT_TRAIN)
+    with mlflow.start_run():
+        mlflow.set_tag("stage", "train")
+        mlflow.log_params(best_params)
+
+        model = xgb.train(best_params, dtrain)
+
+    with open(model_output_dir, "wb") as f:
+        pickle.dump(model, f)
+        # mlflow.xgboost.save_model(model, path=model_output_dir)
+        # mlflow.log_artifacts(model_output_dir, artifact_path="model")
+
+
+# --- Точка входа ---
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--user", required=True)
+    parser.add_argument("--password", required=True)
+    parser.add_argument("--host", required=True)
+    parser.add_argument("--port", required=True)
+    parser.add_argument("--db_name", required=True)
+    parser.add_argument("--features_table", default=TABLE_NAME)
+    args = parser.parse_args()
+
+    df = load_features(
+        user=args.user,
+        password=args.password,
+        host=args.host,
+        port=args.port,
+        db_name=args.db_name,
+        table_name=args.features_table,
     )
-
-    df = pd.DataFrame(
-        {
-            "datetime": pd.date_range("2025-08-01", periods=5, freq="4H"),
-            "entries_4h_last_week": [1.0, 2.0, 3.0, 4.0, 5.0],
-            "entries_4h_last_day": [1.0] * 5,
-            "rolling_mean_prev_day": [1.0] * 5,
-            "hour": [0] * 5,
-            "day_of_week": [1] * 5,
-            "group_key": ["A001_R001"] * 5,
-            "ridership_4h": [100] * 5,
-        }
-    )
-    df["group_key"] = df["group_key"].astype("category")
-
-    train_register.train(df, model_output_dir=str(model_output_path))
-
-    assert os.path.exists(model_output_path)
-    os.remove(model_output_path)
+    model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
+    train(df, model_output_dir, tracking_uri=MLFLOW_URI)
