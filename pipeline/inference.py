@@ -7,8 +7,7 @@ import pickle
 
 
 def load_features(user, password, host, port, db_name, inference_table):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"SELECT * FROM {inference_table}"
     df = pd.read_sql(query, con=engine)
     df["datetime"] = pd.to_datetime(df["datetime"])
@@ -16,10 +15,7 @@ def load_features(user, password, host, port, db_name, inference_table):
     return df
 
 
-def load_model(
-    tracking_uri=None, 
-    model_output_dir=None
-):
+def load_model(tracking_uri=None, model_output_dir=None):
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
 
@@ -32,11 +28,8 @@ def load_model(
 
     return model
 
-def predict_and_save(df, 
-                     model, 
-                     user, password, 
-                     host, port, 
-                     db_name, output_table):
+
+def predict_and_save(df, model, user, password, host, port, db_name, output_table):
     FEATURES = [
         "entries_4h_last_week",
         "entries_4h_last_day",
@@ -47,13 +40,11 @@ def predict_and_save(df,
     ]
 
     df_pred = df.copy()
-    df_pred["entries_4h_last_week"] = df_pred["entries_4h_last_week"].astype(
-        float)
+    df_pred["entries_4h_last_week"] = df_pred["entries_4h_last_week"].astype(float)
     dmat = xgb.DMatrix(df_pred[FEATURES], enable_categorical=True)
     df_pred["predicted_ridership"] = model.predict(dmat)
 
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     df_pred[["datetime", "group_key", "predicted_ridership"]].to_sql(
         output_table, con=engine, if_exists="append", index=False
     )

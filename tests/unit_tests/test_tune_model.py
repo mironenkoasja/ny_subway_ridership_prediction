@@ -16,8 +16,7 @@ def test_load_features(mock_engine):
     mock_engine.return_value.connect.return_value = None
     mock_engine.return_value.__enter__.return_value = None
     with mock.patch("pandas.read_sql", return_value=df_mock):
-        df = load_features("user", "pass", "localhost",
-                           "5432", "testdb", "features")
+        df = load_features("user", "pass", "localhost", "5432", "testdb", "features")
 
     assert isinstance(df, pd.DataFrame)
     assert "datetime" in df.columns
@@ -45,12 +44,9 @@ def test_tune_mocked(
         }
     )
 
-    monkeypatch.setattr(
-        "pipeline.tune_model.mlflow.set_tracking_uri", lambda uri: None)
-    monkeypatch.setattr(
-        "pipeline.tune_model.mlflow.log_params", lambda params: None)
-    monkeypatch.setattr(
-        "pipeline.tune_model.mlflow.log_metric", lambda key, val: None)
+    monkeypatch.setattr("pipeline.tune_model.mlflow.set_tracking_uri", lambda uri: None)
+    monkeypatch.setattr("pipeline.tune_model.mlflow.log_params", lambda params: None)
+    monkeypatch.setattr("pipeline.tune_model.mlflow.log_metric", lambda key, val: None)
     monkeypatch.setattr(
         "pipeline.tune_model.mlflow.start_run",
         lambda **kwargs: contextlib.nullcontext(),

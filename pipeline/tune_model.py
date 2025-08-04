@@ -13,8 +13,7 @@ from hyperopt.pyll import scope
 
 
 def load_features(user, password, host, port, db_name, table_name):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql(query, con=engine)
     df["datetime"] = pd.to_datetime(df["datetime"])
@@ -60,7 +59,7 @@ def tune(df, experiment_name, run_prefix, n_trials, tracking_uri=None):
 
     dtrain = xgb.DMatrix(X_train, label=y_train, enable_categorical=True)
     dval = xgb.DMatrix(X_val, label=y_val, enable_categorical=True)
-    
+
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
     mlflow.set_experiment(experiment_name)
@@ -139,4 +138,10 @@ if __name__ == "__main__":
         table_name=args.features_table,
     )
 
-    tune(df, args.experiment_name, args.run_prefix, args.n_trials, tracking_uri="http://mlflow:5000")
+    tune(
+        df,
+        args.experiment_name,
+        args.run_prefix,
+        args.n_trials,
+        tracking_uri="http://mlflow:5000",
+    )

@@ -40,10 +40,8 @@ def download_and_ingest(
     df_raw["entries"] = pd.to_numeric(df_raw["entries"], errors="coerce")
     df_raw["date"] = pd.to_datetime(df_raw["date"])
 
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
-    df_raw.to_sql(name=table_name, con=engine,
-                  if_exists="replace", index=False)
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    df_raw.to_sql(name=table_name, con=engine, if_exists="replace", index=False)
     print(f"[OK] Ingested {len(df_raw)} rows into table '{table_name}'")
 
 

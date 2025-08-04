@@ -10,8 +10,7 @@ def fetch_actual_data(date: str) -> pd.DataFrame:
     url = f"https://data.ny.gov/resource/k7j9-jnct.json?date={date}"
     response = requests.get(url)
     if response.status_code != 200:
-        raise Exception(
-            f"Failed to fetch data for {date}: {response.status_code}")
+        raise Exception(f"Failed to fetch data for {date}: {response.status_code}")
     df = pd.DataFrame(response.json())
 
     df["date"] = pd.to_datetime(df["date"])
@@ -21,8 +20,7 @@ def fetch_actual_data(date: str) -> pd.DataFrame:
     df["entries"] = pd.to_numeric(df["entries"], errors="coerce")
     df["exits"] = pd.to_numeric(df["exits"], errors="coerce")
 
-    df = df.dropna(subset=["datetime", "entries",
-                   "exits", "c_a", "unit", "scp"])
+    df = df.dropna(subset=["datetime", "entries", "exits", "c_a", "unit", "scp"])
     df = df.sort_values(["c_a", "unit", "scp", "datetime"])
 
     df["entries_diff"] = df.groupby(["c_a", "unit", "scp"])["entries"].diff()
@@ -39,11 +37,11 @@ def fetch_actual_data(date: str) -> pd.DataFrame:
     )
     return agg
 
+
 def load_predictions(
     user, password, host, port, db_name, predictions_table, target_date
 ):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"""
         SELECT datetime, group_key, predicted_ridership 
         FROM {predictions_table} 
@@ -53,18 +51,15 @@ def load_predictions(
     df["datetime"] = pd.to_datetime(df["datetime"])
     return df
 
+
 def save_monitoring_data(
     df, df_global, user, password, host, port, db_name, monitoring_table
 ):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
-    df.to_sql(name=monitoring_table, con=engine,
-              if_exists="append", index=False)
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    df.to_sql(name=monitoring_table, con=engine, if_exists="append", index=False)
 
     df_global.to_sql(
-        name=monitoring_table + "_global",
-          con=engine, 
-          if_exists="append", index=False
+        name=monitoring_table + "_global", con=engine, if_exists="append", index=False
     )
 
     print(f"[OK] Saved {len(df)} rows to '{monitoring_table}'")
@@ -89,13 +84,10 @@ def run_monitoring(
     df_actual = fetch_actual_data(str(reference_date))
     print(reference_date)
 
-    df = pd.merge(df_pred, df_actual, on=[
-                  "datetime", "group_key"], how="inner")
+    df = pd.merge(df_pred, df_actual, on=["datetime", "group_key"], how="inner")
 
-    df["abs_error"] = (df["actual_ridership"] -
-                       df["predicted_ridership"]).abs()
-    df["squared_error"] = (df["actual_ridership"] -
-                           df["predicted_ridership"]) ** 2
+    df["abs_error"] = (df["actual_ridership"] - df["predicted_ridership"]).abs()
+    df["squared_error"] = (df["actual_ridership"] - df["predicted_ridership"]) ** 2
 
     df_metrics = (
         df.groupby("group_key")
@@ -109,9 +101,7 @@ def run_monitoring(
         .reset_index()
     )
     df_metrics["load_class"] = pd.qcut(
-        df_metrics["ridership_mean"],
-        q=4,
-        labels=["low", "mid-low", "mid-high", "high"]
+        df_metrics["ridership_mean"], q=4, labels=["low", "mid-low", "mid-high", "high"]
     )
 
     df_global_metrics = pd.DataFrame(

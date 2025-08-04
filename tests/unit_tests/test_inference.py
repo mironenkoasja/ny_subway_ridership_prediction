@@ -61,7 +61,7 @@ def test_load_model(tmp_path):
         pickle.dump(model, f)
 
     loaded_model = load_model(model_output_dir=str(model_path))
-    
+
     assert isinstance(loaded_model, xgb.XGBRegressor)
 
     model_path.unlink()

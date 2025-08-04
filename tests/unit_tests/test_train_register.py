@@ -67,19 +67,21 @@ def test_train(
     monkeypatch.setattr(
         train_register.mlflow,
         "start_run",
-        lambda *args, **kwargs: contextlib.nullcontext()
+        lambda *args, **kwargs: contextlib.nullcontext(),
     )
 
-    df = pd.DataFrame({
-        "datetime": pd.date_range("2025-08-01", periods=5, freq="4H"),
-        "entries_4h_last_week": [1.0, 2.0, 3.0, 4.0, 5.0],
-        "entries_4h_last_day": [1.0] * 5,
-        "rolling_mean_prev_day": [1.0] * 5,
-        "hour": [0] * 5,
-        "day_of_week": [1] * 5,
-        "group_key": ["A001_R001"] * 5,
-        "ridership_4h": [100] * 5,
-    })
+    df = pd.DataFrame(
+        {
+            "datetime": pd.date_range("2025-08-01", periods=5, freq="4H"),
+            "entries_4h_last_week": [1.0, 2.0, 3.0, 4.0, 5.0],
+            "entries_4h_last_day": [1.0] * 5,
+            "rolling_mean_prev_day": [1.0] * 5,
+            "hour": [0] * 5,
+            "day_of_week": [1] * 5,
+            "group_key": ["A001_R001"] * 5,
+            "ridership_4h": [100] * 5,
+        }
+    )
     df["group_key"] = df["group_key"].astype("category")
 
     train_register.train(df, model_output_dir=str(model_output_path))

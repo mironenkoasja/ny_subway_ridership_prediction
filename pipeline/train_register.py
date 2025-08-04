@@ -15,8 +15,7 @@ EXPERIMENT_TRAIN = "xgboost-best-model"
 
 
 def load_features(user, password, host, port, db_name, table_name):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql(query, con=engine)
     df["datetime"] = pd.to_datetime(df["datetime"])
@@ -25,7 +24,7 @@ def load_features(user, password, host, port, db_name, table_name):
 
 
 def get_best_params(params_path):
-    
+
     with open(params_path, "r") as f:
         best_params_raw = json.load(f)
 
@@ -42,7 +41,9 @@ def get_best_params(params_path):
     }
 
 
-def train(df, model_output_dir, tracking_uri=None, params_path='shared/best_params.json'):
+def train(
+    df, model_output_dir, tracking_uri=None, params_path="shared/best_params.json"
+):
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
 
@@ -61,15 +62,13 @@ def train(df, model_output_dir, tracking_uri=None, params_path='shared/best_para
         "group_key",
     ]
     TARGET = "ridership_4h"
-        
+
     train = df.copy()
     best_params = get_best_params(params_path)
 
     for col in FEATURES:
         if col != "group_key":
-            train[col] = pd.to_numeric(train[col], errors="coerce").replace(
-                -1.0, np.nan
-            )
+            train[col] = pd.to_numeric(train[col], errors="coerce").replace(-1.0, np.nan)
         else:
             train[col] = train[col].astype("category")
 
@@ -112,4 +111,4 @@ if __name__ == "__main__":
     )
     model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
     params_path = "/opt/airflow/shared/best_params.json"
-    train(df, model_output_dir, tracking_uri=MLFLOW_URI, params_path= params_path)
+    train(df, model_output_dir, tracking_uri=MLFLOW_URI, params_path=params_path)

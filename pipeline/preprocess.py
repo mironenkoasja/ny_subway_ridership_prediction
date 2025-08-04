@@ -5,8 +5,7 @@ from datetime import timedelta
 
 
 def load_raw_data(user, password, host, port, db_name, raw_table):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     query = f"SELECT * FROM {raw_table}"
     df = pd.read_sql(query, con=engine)
     print(f"Loaded {df.shape}")
@@ -21,15 +20,11 @@ def preprocess(df_raw):
         df_raw["date"].astype(str) + " " + df_raw["time"], errors="coerce"
     )
 
-    df_raw = df_raw.dropna(
-        subset=["entries", "exits", "datetime", "c_a", "unit", "scp"]
-    )
+    df_raw = df_raw.dropna(subset=["entries", "exits", "datetime", "c_a", "unit", "scp"])
     df_raw = df_raw.sort_values(["c_a", "unit", "scp", "datetime"])
 
-    df_raw["entries_diff"] = df_raw.groupby(
-        ["c_a", "unit", "scp"])["entries"].diff()
-    df_raw["exits_diff"] = df_raw.groupby(
-        ["c_a", "unit", "scp"])["exits"].diff()
+    df_raw["entries_diff"] = df_raw.groupby(["c_a", "unit", "scp"])["entries"].diff()
+    df_raw["exits_diff"] = df_raw.groupby(["c_a", "unit", "scp"])["exits"].diff()
     df_raw["ridership"] = df_raw["entries_diff"] + df_raw["exits_diff"]
     df_raw = df_raw[(df_raw["ridership"] >= 0) & (df_raw["ridership"] < 5000)]
 
@@ -47,10 +42,8 @@ def preprocess(df_raw):
 
 def add_features(df, mode="train"):
     df = df.copy()
-    df["entries_4h_last_week"] = df.groupby(
-        "group_key")["ridership_4h"].shift(6 * 7)
-    df["entries_4h_last_day"] = df.groupby(
-        "group_key")["ridership_4h"].shift(6)
+    df["entries_4h_last_week"] = df.groupby("group_key")["ridership_4h"].shift(6 * 7)
+    df["entries_4h_last_day"] = df.groupby("group_key")["ridership_4h"].shift(6)
     df["rolling_mean_prev_day"] = df.groupby("group_key")["ridership_4h"].transform(
         lambda x: x.shift(6).rolling(6).mean()
     )
@@ -77,11 +70,8 @@ def add_features(df, mode="train"):
         df = pd.concat([df, df_future], ignore_index=True)
         df = df.sort_values(["group_key", "datetime"])
 
-        df["entries_4h_last_week"] = df.groupby("group_key")["ridership_4h"].shift(
-            6 * 7
-        )
-        df["entries_4h_last_day"] = df.groupby(
-            "group_key")["ridership_4h"].shift(6)
+        df["entries_4h_last_week"] = df.groupby("group_key")["ridership_4h"].shift(6 * 7)
+        df["entries_4h_last_day"] = df.groupby("group_key")["ridership_4h"].shift(6)
         df["rolling_mean_prev_day"] = df.groupby("group_key")["ridership_4h"].transform(
             lambda x: x.shift(6).rolling(6).mean()
         )
@@ -94,8 +84,7 @@ def add_features(df, mode="train"):
 
 
 def save_features(df, user, password, host, port, db_name, table_name):
-    engine = create_engine(
-        f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
+    engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     df.to_sql(name=table_name, con=engine, if_exists="replace", index=False)
     print(f"[OK] Saved {len(df)} rows to '{table_name}'")
 
@@ -109,8 +98,7 @@ if __name__ == "__main__":
     parser.add_argument("--db_name", required=True)
     parser.add_argument("--raw_table", required=True)
     parser.add_argument("--features_table", required=True)
-    parser.add_argument(
-        "--mode", choices=["train", "inference"], required=True)
+    parser.add_argument("--mode", choices=["train", "inference"], required=True)
     parser.add_argument(
         "--inference_table", required=False, help="Table to save inference features"
     )
