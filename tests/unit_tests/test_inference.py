@@ -60,11 +60,9 @@ def test_load_model(tmp_path):
     with open(model_path, "wb") as f:
         pickle.dump(model, f)
 
-    with mock.patch("pipeline.inference.mlflow.set_tracking_uri"), mock.patch(
-        "pipeline.inference.model_output_dir", str(model_path)
-    ):
-        loaded_model = load_model()
-        assert isinstance(loaded_model, xgb.XGBRegressor)
+    loaded_model = load_model(model_output_dir=str(model_path))
+    
+    assert isinstance(loaded_model, xgb.XGBRegressor)
 
     model_path.unlink()
     assert not model_path.exists()
