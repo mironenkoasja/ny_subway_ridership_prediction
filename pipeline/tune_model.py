@@ -22,7 +22,7 @@ def load_features(user, password, host, port, db_name, table_name):
     return df
 
 
-def tune(df, experiment_name, run_prefix, n_trials):
+def tune(df, experiment_name, run_prefix, n_trials, tracking_uri=None):
     CUTOFF_DATE = df["datetime"].max() - pd.Timedelta(days=1)
     train = df[df["datetime"] < CUTOFF_DATE]
     val = df[df["datetime"] >= CUTOFF_DATE]
@@ -60,9 +60,10 @@ def tune(df, experiment_name, run_prefix, n_trials):
 
     dtrain = xgb.DMatrix(X_train, label=y_train, enable_categorical=True)
     dval = xgb.DMatrix(X_val, label=y_val, enable_categorical=True)
-
-    mlflow.set_tracking_uri("http://mlflow:5000")
-    mlflow.set_experiment(experiment_name)
+    
+    if tracking_uri:
+        mlflow.set_tracking_uri(tracking_uri)
+        mlflow.set_experiment(experiment_name)
 
     search_space = {
         "max_depth": scope.int(hp.quniform("max_depth", 3, 10, 1)),
@@ -138,4 +139,4 @@ if __name__ == "__main__":
         table_name=args.features_table,
     )
 
-    tune(df, args.experiment_name, args.run_prefix, args.n_trials)
+    tune(df, args.experiment_name, args.run_prefix, args.n_trials, tracking_uri="http://mlflow:5000")
