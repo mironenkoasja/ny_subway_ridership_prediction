@@ -13,7 +13,6 @@ MLFLOW_URI = "http://mlflow:5000"
 EXPERIMENT_HYPEROPT = "xgboost-hyperopt"
 EXPERIMENT_TRAIN = "xgboost-best-model"
 
-mlflow.set_tracking_uri(MLFLOW_URI)
 
 client = MlflowClient()
 exp = client.get_experiment_by_name(EXPERIMENT_HYPEROPT)
@@ -60,7 +59,9 @@ def get_best_params():
     }
 
 
-def train(df, model_output_dir):
+def train(df, model_output_dir, tracking_uri=None):
+    if tracking_uri:
+        mlflow.set_tracking_uri(tracking_uri)
     train = df.copy()
     best_params = get_best_params()
 
@@ -110,4 +111,4 @@ if __name__ == "__main__":
         table_name=args.features_table,
     )
     model_output_dir = "/opt/airflow/shared/xgboost_model/model.pkl"
-    train(df, model_output_dir)
+    train(df, model_output_dir, tracking_uri=MLFLOW_URI)

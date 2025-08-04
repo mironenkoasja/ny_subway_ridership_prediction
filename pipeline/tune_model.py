@@ -63,7 +63,7 @@ def tune(df, experiment_name, run_prefix, n_trials, tracking_uri=None):
     
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
-        mlflow.set_experiment(experiment_name)
+    mlflow.set_experiment(experiment_name)
 
     search_space = {
         "max_depth": scope.int(hp.quniform("max_depth", 3, 10, 1)),
