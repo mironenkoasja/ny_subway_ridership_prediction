@@ -1,0 +1,846 @@
+[2025-07-16T14:46:29.151+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T14:46:29.181+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:46:29.200+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:46:29.201+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T14:46:29.232+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): tune_model> on 2025-07-15 00:00:00+00:00
+[2025-07-16T14:46:29.248+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3114) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T14:46:29.252+0000] {standard_task_runner.py:72} INFO - Started process 3122 to run task
+[2025-07-16T14:46:29.261+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'tune_model', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpj39uty2z']
+[2025-07-16T14:46:29.266+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask tune_model
+[2025-07-16T14:46:29.290+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:46:29.387+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [running]> on host d84888688479
+[2025-07-16T14:46:29.391+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:46:29.553+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='tune_model' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T14:46:29.555+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T14:46:29.585+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T14:46:29.586+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/tune_model.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --features_table turnstile_features         ']
+[2025-07-16T14:46:29.611+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T14:46:38.153+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:43: SettingWithCopyWarning:
+[2025-07-16T14:46:38.154+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T14:46:38.155+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T14:46:38.155+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:38.156+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T14:46:38.156+0000] {subprocess.py:106} INFO -   X_train[col] = pd.to_numeric(X_train[col], errors="coerce")
+[2025-07-16T14:46:38.157+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:44: SettingWithCopyWarning:
+[2025-07-16T14:46:38.158+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T14:46:38.158+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T14:46:38.159+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:38.160+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T14:46:38.160+0000] {subprocess.py:106} INFO -   X_val[col] = pd.to_numeric(X_val[col], errors="coerce")
+[2025-07-16T14:46:38.166+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:45: SettingWithCopyWarning:
+[2025-07-16T14:46:38.167+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T14:46:38.168+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T14:46:38.169+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:38.170+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T14:46:38.171+0000] {subprocess.py:106} INFO -   X_train["group_key"] = X_train["group_key"].astype("category")
+[2025-07-16T14:46:38.171+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:46: SettingWithCopyWarning:
+[2025-07-16T14:46:38.172+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T14:46:38.173+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T14:46:38.173+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:38.174+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T14:46:38.175+0000] {subprocess.py:106} INFO -   X_val["group_key"] = X_val["group_key"].astype("category")
+[2025-07-16T14:46:38.910+0000] {subprocess.py:106} INFO - Train shape: (119, 8)
+[2025-07-16T14:46:38.912+0000] {subprocess.py:106} INFO - Validation shape: (146, 8)
+[2025-07-16T14:46:38.913+0000] {subprocess.py:106} INFO - Max datetime in dataset: 2022-07-02 22:00:00
+[2025-07-16T14:46:39.043+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]2025/07/16 14:46:39 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-07-16T14:46:39.044+0000] {subprocess.py:106} INFO - The git executable must be specified in one of the following ways:
+[2025-07-16T14:46:39.046+0000] {subprocess.py:106} INFO -     - be included in your $PATH
+[2025-07-16T14:46:39.047+0000] {subprocess.py:106} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-07-16T14:46:39.048+0000] {subprocess.py:106} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-07-16T14:46:39.050+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:39.051+0000] {subprocess.py:106} INFO - All git commands will error until this is rectified.
+[2025-07-16T14:46:39.052+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:39.053+0000] {subprocess.py:106} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-07-16T14:46:39.054+0000] {subprocess.py:106} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-07-16T14:46:39.055+0000] {subprocess.py:106} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-07-16T14:46:39.056+0000] {subprocess.py:106} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-07-16T14:46:39.057+0000] {subprocess.py:106} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-07-16T14:46:39.058+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:39.059+0000] {subprocess.py:106} INFO - Example:
+[2025-07-16T14:46:39.060+0000] {subprocess.py:106} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-07-16T14:46:39.062+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:39.064+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:39.788+0000] {subprocess.py:106} INFO -                                                       [14:46:39] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:39.789+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:39.798+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:44.085+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      🏃 View run tune-20250716-144638 at: http://mlflow:5000/#/experiments/1/runs/c883d9f00d004648898f14aa707dcad0
+[2025-07-16T14:46:44.086+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:44.086+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:05<?, ?trial/s, best loss=?]                                                      🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:44.087+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:44.438+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:05<?, ?trial/s, best loss=?]  3%|▎         | 1/30 [00:05<02:32,  5.24s/trial, best loss: 1025.099069549972]                                                                               [14:46:44] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:44.445+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:44.448+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:45.712+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:05<02:32,  5.24s/trial, best loss: 1025.099069549972]                                                                               🏃 View run tune-20250716-144644 at: http://mlflow:5000/#/experiments/1/runs/65bd93b523044b8bb5118b575ba7e70f
+[2025-07-16T14:46:45.712+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:45.713+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:06<02:32,  5.24s/trial, best loss: 1025.099069549972]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:45.714+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:45.932+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:06<02:32,  5.24s/trial, best loss: 1025.099069549972]  7%|▋         | 2/30 [00:06<01:26,  3.10s/trial, best loss: 913.3896625231262]                                                                               [14:46:45] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:45.933+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:45.933+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:47.144+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:07<01:26,  3.10s/trial, best loss: 913.3896625231262]                                                                               🏃 View run tune-20250716-144645 at: http://mlflow:5000/#/experiments/1/runs/0de8e90b45714179b1f0638d6dc7afe2
+[2025-07-16T14:46:47.144+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:47.145+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:08<01:26,  3.10s/trial, best loss: 913.3896625231262]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:47.146+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:47.564+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:08<01:26,  3.10s/trial, best loss: 913.3896625231262] 10%|█         | 3/30 [00:08<01:03,  2.35s/trial, best loss: 765.1645598209915]                                                                               [14:46:47] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:47.565+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:47.566+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:47.958+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:08<01:03,  2.35s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-144647 at: http://mlflow:5000/#/experiments/1/runs/4e98682563994d16929d6fc5ff8735a9
+[2025-07-16T14:46:47.959+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:47.960+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:09<01:03,  2.35s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:47.961+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:48.331+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:09<01:03,  2.35s/trial, best loss: 765.1645598209915] 13%|█▎        | 4/30 [00:09<00:45,  1.75s/trial, best loss: 765.1645598209915]                                                                               [14:46:48] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:48.335+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:48.336+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:50.673+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:09<00:45,  1.75s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-144648 at: http://mlflow:5000/#/experiments/1/runs/4db059f7e28c431e976a330c02b7ea20
+[2025-07-16T14:46:50.674+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:50.675+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:11<00:45,  1.75s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:50.675+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:50.925+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:11<00:45,  1.75s/trial, best loss: 765.1645598209915] 17%|█▋        | 5/30 [00:11<00:52,  2.09s/trial, best loss: 718.547114889508]                                                                               [14:46:50] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:50.930+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:50.931+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:54.320+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:12<00:52,  2.09s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-144650 at: http://mlflow:5000/#/experiments/1/runs/3adc35b2af284811a7c6db1dbec2cb11
+[2025-07-16T14:46:54.321+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:54.322+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:15<00:52,  2.09s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:54.322+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:54.585+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:15<00:52,  2.09s/trial, best loss: 718.547114889508] 20%|██        | 6/30 [00:15<01:02,  2.62s/trial, best loss: 718.547114889508]                                                                              [14:46:54] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:54.586+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:54.587+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:55.285+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:15<01:02,  2.62s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-144654 at: http://mlflow:5000/#/experiments/1/runs/34040af65dbd4bf1903d356905ad2363
+[2025-07-16T14:46:55.286+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:55.287+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:16<01:02,  2.62s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:55.287+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:55.580+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:16<01:02,  2.62s/trial, best loss: 718.547114889508] 23%|██▎       | 7/30 [00:16<00:48,  2.09s/trial, best loss: 718.547114889508]                                                                              [14:46:55] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:55.587+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:55.588+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:56.941+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:16<00:48,  2.09s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-144655 at: http://mlflow:5000/#/experiments/1/runs/1d26bbb363e34ce9b515e9c880dc81cf
+[2025-07-16T14:46:56.942+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:56.942+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:18<00:48,  2.09s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:46:56.943+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:46:57.329+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:18<00:48,  2.09s/trial, best loss: 718.547114889508] 27%|██▋       | 8/30 [00:18<00:42,  1.94s/trial, best loss: 718.547114889508]                                                                              [14:46:57] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:46:57.330+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:46:57.331+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:00.835+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:18<00:42,  1.94s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-144656 at: http://mlflow:5000/#/experiments/1/runs/80e4ca38cc314ba7bd7514252b513a0a
+[2025-07-16T14:47:00.836+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:00.837+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:21<00:42,  1.94s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:00.838+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:01.069+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:21<00:42,  1.94s/trial, best loss: 718.547114889508] 30%|███       | 9/30 [00:21<00:53,  2.55s/trial, best loss: 718.547114889508]                                                                              [14:47:01] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:01.075+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:01.077+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:05.898+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:22<00:53,  2.55s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-144700 at: http://mlflow:5000/#/experiments/1/runs/f59376ef5b124e04a9e9607cc8664726
+[2025-07-16T14:47:05.899+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:05.901+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:53,  2.55s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:05.902+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:06.206+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:53,  2.55s/trial, best loss: 718.547114889508] 33%|███▎      | 10/30 [00:27<01:06,  3.33s/trial, best loss: 718.547114889508]                                                                               [14:47:06] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:06.208+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:06.209+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:09.010+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:27<01:06,  3.33s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144705 at: http://mlflow:5000/#/experiments/1/runs/01ce0b2475e746509f4ebd6e866dee26
+[2025-07-16T14:47:09.011+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:09.012+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:30<01:06,  3.33s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:09.012+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:09.245+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:30<01:06,  3.33s/trial, best loss: 718.547114889508] 37%|███▋      | 11/30 [00:30<01:01,  3.26s/trial, best loss: 718.547114889508]                                                                               [14:47:09] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:09.252+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:09.255+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:11.787+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:30<01:01,  3.26s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144709 at: http://mlflow:5000/#/experiments/1/runs/3e4dcc84cb5948419bcaef0e0e7c3ba3
+[2025-07-16T14:47:11.788+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:11.789+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:32<01:01,  3.26s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:11.790+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:12.018+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:32<01:01,  3.26s/trial, best loss: 718.547114889508] 40%|████      | 12/30 [00:32<00:56,  3.12s/trial, best loss: 718.547114889508]                                                                               [14:47:12] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:12.019+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:12.020+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:16.580+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:33<00:56,  3.12s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144711 at: http://mlflow:5000/#/experiments/1/runs/fa5c7c13fcf7418890b6654db8e1448b
+[2025-07-16T14:47:16.581+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:16.581+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:37<00:56,  3.12s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:16.582+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:16.906+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:37<00:56,  3.12s/trial, best loss: 718.547114889508] 43%|████▎     | 13/30 [00:37<01:01,  3.63s/trial, best loss: 718.547114889508]                                                                               [14:47:16] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:16.908+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:16.909+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:18.960+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:38<01:01,  3.63s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144716 at: http://mlflow:5000/#/experiments/1/runs/1930f683a3a94da887babae6ca13ffa4
+[2025-07-16T14:47:18.961+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:18.962+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:40<01:01,  3.63s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:18.962+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:19.228+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:40<01:01,  3.63s/trial, best loss: 718.547114889508] 47%|████▋     | 14/30 [00:40<00:51,  3.25s/trial, best loss: 718.547114889508]                                                                               [14:47:19] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:19.229+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:19.229+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:20.904+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:40<00:51,  3.25s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144719 at: http://mlflow:5000/#/experiments/1/runs/dfbabbf97c104b03a909dfb95195a797
+[2025-07-16T14:47:20.905+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:20.906+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:41<00:51,  3.25s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:20.906+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:21.124+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:41<00:51,  3.25s/trial, best loss: 718.547114889508] 50%|█████     | 15/30 [00:42<00:42,  2.85s/trial, best loss: 718.547114889508]                                                                               [14:47:21] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:21.124+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:21.125+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:23.367+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:42<00:42,  2.85s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144720 at: http://mlflow:5000/#/experiments/1/runs/946f8d63fa6f4b648a6190b2b3b2c041
+[2025-07-16T14:47:23.368+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:23.369+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:44<00:42,  2.85s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:23.370+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:23.625+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:44<00:42,  2.85s/trial, best loss: 718.547114889508] 53%|█████▎    | 16/30 [00:44<00:38,  2.74s/trial, best loss: 718.547114889508]                                                                               [14:47:23] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:23.629+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:23.630+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:25.404+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:44<00:38,  2.74s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144723 at: http://mlflow:5000/#/experiments/1/runs/2f1be291c968492db2c1fde4f2831435
+[2025-07-16T14:47:25.405+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:25.406+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:46<00:38,  2.74s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:25.407+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:25.618+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:46<00:38,  2.74s/trial, best loss: 718.547114889508] 57%|█████▋    | 17/30 [00:46<00:32,  2.52s/trial, best loss: 718.547114889508]                                                                               [14:47:25] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:25.619+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:25.620+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.021+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:46<00:32,  2.52s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144725 at: http://mlflow:5000/#/experiments/1/runs/4809339dd2b94d81a772751eb7932863
+[2025-07-16T14:47:26.022+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.023+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:47<00:32,  2.52s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:26.023+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.309+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:47<00:32,  2.52s/trial, best loss: 718.547114889508] 60%|██████    | 18/30 [00:47<00:23,  1.95s/trial, best loss: 718.547114889508]                                                                               [14:47:26] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:26.310+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:26.311+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.621+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:47<00:23,  1.95s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-144726 at: http://mlflow:5000/#/experiments/1/runs/b08c57e443574c189c58daab17e90fc1
+[2025-07-16T14:47:26.622+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.622+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:47<00:23,  1.95s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:26.623+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:26.834+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:47<00:23,  1.95s/trial, best loss: 718.547114889508] 63%|██████▎   | 19/30 [00:47<00:17,  1.55s/trial, best loss: 715.4694444850281]                                                                                [14:47:26] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:26.836+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:26.837+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:27.160+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:47<00:17,  1.55s/trial, best loss: 715.4694444850281]                                                                                🏃 View run tune-20250716-144726 at: http://mlflow:5000/#/experiments/1/runs/8ddc34139522423b8c085c103bf516a6
+[2025-07-16T14:47:27.161+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:27.162+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:48<00:17,  1.55s/trial, best loss: 715.4694444850281]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:27.163+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:27.430+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:48<00:17,  1.55s/trial, best loss: 715.4694444850281] 67%|██████▋   | 20/30 [00:48<00:12,  1.24s/trial, best loss: 703.1963580316317]                                                                                [14:47:27] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:27.431+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:27.432+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:31.155+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:48<00:12,  1.24s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-144727 at: http://mlflow:5000/#/experiments/1/runs/76507609ee934eb5a723d56ca51be528
+[2025-07-16T14:47:31.157+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:31.159+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:52<00:12,  1.24s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:31.163+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:31.559+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:52<00:12,  1.24s/trial, best loss: 703.1963580316317] 70%|███████   | 21/30 [00:52<00:18,  2.08s/trial, best loss: 703.1963580316317]                                                                                [14:47:31] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:31.560+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:31.561+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:34.115+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:52<00:18,  2.08s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-144731 at: http://mlflow:5000/#/experiments/1/runs/10977c1f91804983ba1789eac37923d2
+[2025-07-16T14:47:34.116+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:34.117+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:55<00:18,  2.08s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:34.118+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:34.348+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:55<00:18,  2.08s/trial, best loss: 703.1963580316317] 73%|███████▎  | 22/30 [00:55<00:18,  2.33s/trial, best loss: 694.8931121848902]                                                                                [14:47:34] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:34.349+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:34.350+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:35.519+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:55<00:18,  2.33s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144734 at: http://mlflow:5000/#/experiments/1/runs/5835dd7b54ca4d21a8e4951bfb363648
+[2025-07-16T14:47:35.520+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:35.521+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:56<00:18,  2.33s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:35.522+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:36.020+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:56<00:18,  2.33s/trial, best loss: 694.8931121848902] 77%|███████▋  | 23/30 [00:56<00:14,  2.07s/trial, best loss: 694.8931121848902]                                                                                [14:47:36] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:36.021+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:36.030+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:36.747+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:57<00:14,  2.07s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144735 at: http://mlflow:5000/#/experiments/1/runs/4c0dfbfd287d40bdaeeef1880b937390
+[2025-07-16T14:47:36.748+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:36.749+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:57<00:14,  2.07s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:36.749+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:37.016+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:57<00:14,  2.07s/trial, best loss: 694.8931121848902] 80%|████████  | 24/30 [00:57<00:10,  1.80s/trial, best loss: 694.8931121848902]                                                                                [14:47:37] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:37.017+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:37.017+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:37.373+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:58<00:10,  1.80s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144736 at: http://mlflow:5000/#/experiments/1/runs/1c560590dc2a4d39a406f17c5faa732e
+[2025-07-16T14:47:37.374+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:37.375+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:58<00:10,  1.80s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:37.375+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:37.595+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:58<00:10,  1.80s/trial, best loss: 694.8931121848902] 83%|████████▎ | 25/30 [00:58<00:07,  1.45s/trial, best loss: 694.8931121848902]                                                                                [14:47:37] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:37.596+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:37.597+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:38.197+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:58<00:07,  1.45s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144737 at: http://mlflow:5000/#/experiments/1/runs/53512a92178a428e91a3b841da15e68e
+[2025-07-16T14:47:38.198+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:38.199+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:59<00:07,  1.45s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:38.199+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:38.477+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:59<00:07,  1.45s/trial, best loss: 694.8931121848902] 87%|████████▋ | 26/30 [00:59<00:05,  1.26s/trial, best loss: 694.8931121848902]                                                                                [14:47:38] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:38.478+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:38.479+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:40.548+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:59<00:05,  1.26s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144738 at: http://mlflow:5000/#/experiments/1/runs/22cedde504ce4adcb77c55b696009387
+[2025-07-16T14:47:40.549+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:40.550+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [01:01<00:05,  1.26s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:40.552+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:40.832+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [01:01<00:05,  1.26s/trial, best loss: 694.8931121848902] 90%|█████████ | 27/30 [01:01<00:04,  1.59s/trial, best loss: 694.8931121848902]                                                                                [14:47:40] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:40.834+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:40.835+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:42.756+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:01<00:04,  1.59s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144740 at: http://mlflow:5000/#/experiments/1/runs/64603410d5d64a619e354250c60a6226
+[2025-07-16T14:47:42.757+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:42.758+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:03<00:04,  1.59s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:42.758+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:42.995+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:03<00:04,  1.59s/trial, best loss: 694.8931121848902] 93%|█████████▎| 28/30 [01:03<00:03,  1.77s/trial, best loss: 694.8931121848902]                                                                                [14:47:42] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:43.005+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:43.005+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:44.510+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:04<00:03,  1.77s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-144742 at: http://mlflow:5000/#/experiments/1/runs/fc7b6f90873a4f2cbcb8f43bcd6ba743
+[2025-07-16T14:47:44.511+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:44.512+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:05<00:03,  1.77s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:44.513+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:44.741+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:05<00:03,  1.77s/trial, best loss: 694.8931121848902] 97%|█████████▋| 29/30 [01:05<00:01,  1.77s/trial, best loss: 687.7432222799732]                                                                                [14:47:44] WARNING: ../src/learner.cc:767:
+[2025-07-16T14:47:44.749+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T14:47:44.750+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:46.140+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:05<00:01,  1.77s/trial, best loss: 687.7432222799732]                                                                                🏃 View run tune-20250716-144744 at: http://mlflow:5000/#/experiments/1/runs/4356f368449e447791d3c11148d11b4a
+[2025-07-16T14:47:46.141+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:46.141+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:07<00:01,  1.77s/trial, best loss: 687.7432222799732]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:46.143+0000] {subprocess.py:106} INFO - 
+[2025-07-16T14:47:46.436+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:07<00:01,  1.77s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [01:07<00:00,  1.73s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [01:07<00:00,  2.24s/trial, best loss: 687.7432222799732]
+[2025-07-16T14:47:46.437+0000] {subprocess.py:106} INFO - Best hyperparameters: {'learning_rate': 0.20465124690783987, 'max_depth': 4.0, 'min_child_weight': 2.0, 'n_estimators': 280.0, 'reg_alpha': 0.19922593076961778, 'reg_lambda': 0.509913933018477}
+[2025-07-16T14:47:46.438+0000] {subprocess.py:106} INFO - 🏃 View run log-best-params-20250716-144746 at: http://mlflow:5000/#/experiments/1/runs/46d0f5e74a604e6c98d76a91fe61b6e1
+[2025-07-16T14:47:46.439+0000] {subprocess.py:106} INFO - 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T14:47:46.934+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T14:47:46.970+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T14:47:46.971+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=tune_model, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T144629, end_date=20250716T144746
+[2025-07-16T14:47:47.060+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T14:47:47.097+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T14:47:47.100+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T18:46:05.722+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T18:46:05.755+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:46:05.771+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:46:05.772+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T18:46:05.792+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): tune_model> on 2025-07-15 00:00:00+00:00
+[2025-07-16T18:46:05.804+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=326) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T18:46:05.806+0000] {standard_task_runner.py:72} INFO - Started process 332 to run task
+[2025-07-16T18:46:05.805+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'tune_model', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpn5hzobej']
+[2025-07-16T18:46:05.808+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask tune_model
+[2025-07-16T18:46:05.837+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:46:05.907+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [running]> on host 36b6cbfeb7c6
+[2025-07-16T18:46:05.909+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:46:06.046+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='tune_model' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T18:46:06.052+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T18:46:06.080+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T18:46:06.082+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/tune_model.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --features_table turnstile_features         ']
+[2025-07-16T18:46:06.100+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T18:46:13.488+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:43: SettingWithCopyWarning:
+[2025-07-16T18:46:13.489+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T18:46:13.490+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T18:46:13.491+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:13.492+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T18:46:13.492+0000] {subprocess.py:106} INFO -   X_train[col] = pd.to_numeric(X_train[col], errors="coerce")
+[2025-07-16T18:46:13.493+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:44: SettingWithCopyWarning:
+[2025-07-16T18:46:13.493+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T18:46:13.494+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T18:46:13.494+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:13.495+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T18:46:13.495+0000] {subprocess.py:106} INFO -   X_val[col] = pd.to_numeric(X_val[col], errors="coerce")
+[2025-07-16T18:46:13.496+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:45: SettingWithCopyWarning:
+[2025-07-16T18:46:13.496+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T18:46:13.497+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T18:46:13.497+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:13.498+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T18:46:13.499+0000] {subprocess.py:106} INFO -   X_train["group_key"] = X_train["group_key"].astype("category")
+[2025-07-16T18:46:13.500+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:46: SettingWithCopyWarning:
+[2025-07-16T18:46:13.501+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T18:46:13.501+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T18:46:13.502+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:13.505+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T18:46:13.506+0000] {subprocess.py:106} INFO -   X_val["group_key"] = X_val["group_key"].astype("category")
+[2025-07-16T18:46:15.571+0000] {subprocess.py:106} INFO - Train shape: (119, 8)
+[2025-07-16T18:46:15.572+0000] {subprocess.py:106} INFO - Validation shape: (146, 8)
+[2025-07-16T18:46:15.573+0000] {subprocess.py:106} INFO - Max datetime in dataset: 2022-07-02 22:00:00
+[2025-07-16T18:46:15.675+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]2025/07/16 18:46:15 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-07-16T18:46:15.676+0000] {subprocess.py:106} INFO - The git executable must be specified in one of the following ways:
+[2025-07-16T18:46:15.677+0000] {subprocess.py:106} INFO -     - be included in your $PATH
+[2025-07-16T18:46:15.677+0000] {subprocess.py:106} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-07-16T18:46:15.678+0000] {subprocess.py:106} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-07-16T18:46:15.679+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:15.679+0000] {subprocess.py:106} INFO - All git commands will error until this is rectified.
+[2025-07-16T18:46:15.680+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:15.681+0000] {subprocess.py:106} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-07-16T18:46:15.682+0000] {subprocess.py:106} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-07-16T18:46:15.683+0000] {subprocess.py:106} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-07-16T18:46:15.683+0000] {subprocess.py:106} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-07-16T18:46:15.685+0000] {subprocess.py:106} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-07-16T18:46:15.685+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:15.686+0000] {subprocess.py:106} INFO - Example:
+[2025-07-16T18:46:15.687+0000] {subprocess.py:106} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-07-16T18:46:15.687+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:15.688+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:15.919+0000] {subprocess.py:106} INFO -                                                       [18:46:15] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:15.920+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:15.928+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:22.423+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      🏃 View run tune-20250716-184615 at: http://mlflow:5000/#/experiments/1/runs/c8a3c8bc5edc430eb014a27835751dc3
+[2025-07-16T18:46:22.425+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:22.426+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:06<?, ?trial/s, best loss=?]                                                      🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:22.427+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:24.432+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:06<?, ?trial/s, best loss=?]  3%|▎         | 1/30 [00:08<04:11,  8.66s/trial, best loss: 1025.099069549972]                                                                               [18:46:24] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:24.435+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:24.436+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:25.751+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:08<04:11,  8.66s/trial, best loss: 1025.099069549972]                                                                               🏃 View run tune-20250716-184624 at: http://mlflow:5000/#/experiments/1/runs/ef63dc1f4e244b528a3a6ce9b2c7e4db
+[2025-07-16T18:46:25.752+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:25.752+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:10<04:11,  8.66s/trial, best loss: 1025.099069549972]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:25.753+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:25.987+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:10<04:11,  8.66s/trial, best loss: 1025.099069549972]  7%|▋         | 2/30 [00:10<02:05,  4.48s/trial, best loss: 913.3896625231262]                                                                               [18:46:25] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:25.988+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:25.989+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:26.749+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:10<02:05,  4.48s/trial, best loss: 913.3896625231262]                                                                               🏃 View run tune-20250716-184625 at: http://mlflow:5000/#/experiments/1/runs/1c09abd0c64c4142b1a2a7799f6671d9
+[2025-07-16T18:46:26.750+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:26.751+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:11<02:05,  4.48s/trial, best loss: 913.3896625231262]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:26.752+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:27.069+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:11<02:05,  4.48s/trial, best loss: 913.3896625231262] 10%|█         | 3/30 [00:11<01:18,  2.91s/trial, best loss: 765.1645598209915]                                                                               [18:46:27] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:27.072+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:27.073+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:28.627+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:11<01:18,  2.91s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-184626 at: http://mlflow:5000/#/experiments/1/runs/324202cc2d9e4f1dab87ecd93b5493cf
+[2025-07-16T18:46:28.628+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:28.629+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:13<01:18,  2.91s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:28.630+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:28.870+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:13<01:18,  2.91s/trial, best loss: 765.1645598209915] 13%|█▎        | 4/30 [00:13<01:04,  2.49s/trial, best loss: 765.1645598209915]                                                                               [18:46:28] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:28.874+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:28.878+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:30.711+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:13<01:04,  2.49s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-184628 at: http://mlflow:5000/#/experiments/1/runs/3e5792e091c04d82905f6f4cf7a9021c
+[2025-07-16T18:46:30.712+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:30.713+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:15<01:04,  2.49s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:30.713+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:30.986+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:15<01:04,  2.49s/trial, best loss: 765.1645598209915] 17%|█▋        | 5/30 [00:15<00:58,  2.35s/trial, best loss: 718.547114889508]                                                                               [18:46:30] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:30.988+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:30.989+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:32.689+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:15<00:58,  2.35s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-184630 at: http://mlflow:5000/#/experiments/1/runs/2e1233c1f5524e0e9f4eab9323911055
+[2025-07-16T18:46:32.689+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:32.690+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:17<00:58,  2.35s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:32.690+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:32.909+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:17<00:58,  2.35s/trial, best loss: 718.547114889508] 20%|██        | 6/30 [00:17<00:53,  2.22s/trial, best loss: 718.547114889508]                                                                              [18:46:32] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:32.909+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:32.910+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:34.605+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:17<00:53,  2.22s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-184632 at: http://mlflow:5000/#/experiments/1/runs/257b5c33311c4ab39f520ea6129af74c
+[2025-07-16T18:46:34.606+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:34.607+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:19<00:53,  2.22s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:34.608+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:34.843+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:19<00:53,  2.22s/trial, best loss: 718.547114889508] 23%|██▎       | 7/30 [00:19<00:48,  2.12s/trial, best loss: 718.547114889508]                                                                              [18:46:34] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:34.843+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:34.844+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:36.429+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:19<00:48,  2.12s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-184634 at: http://mlflow:5000/#/experiments/1/runs/86348f0f8fbb4d74912df19d304ea43b
+[2025-07-16T18:46:36.430+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:36.431+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:20<00:48,  2.12s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:36.432+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:36.722+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:20<00:48,  2.12s/trial, best loss: 718.547114889508] 27%|██▋       | 8/30 [00:20<00:44,  2.03s/trial, best loss: 718.547114889508]                                                                              [18:46:36] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:36.723+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:36.724+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:40.753+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:21<00:44,  2.03s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-184636 at: http://mlflow:5000/#/experiments/1/runs/41d0d384a935412db5cfbe90b4d7127a
+[2025-07-16T18:46:40.754+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:40.754+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:25<00:44,  2.03s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:40.755+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:40.993+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:25<00:44,  2.03s/trial, best loss: 718.547114889508] 30%|███       | 9/30 [00:25<00:57,  2.74s/trial, best loss: 718.547114889508]                                                                              [18:46:40] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:40.994+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:40.994+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:42.065+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:25<00:57,  2.74s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-184640 at: http://mlflow:5000/#/experiments/1/runs/5f82816d98e94f92affeaaee90d867d8
+[2025-07-16T18:46:42.066+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:42.067+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:57,  2.74s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:42.067+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:42.347+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:57,  2.74s/trial, best loss: 718.547114889508] 33%|███▎      | 10/30 [00:26<00:46,  2.30s/trial, best loss: 718.547114889508]                                                                               [18:46:42] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:42.349+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:42.352+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:43.904+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:26<00:46,  2.30s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184642 at: http://mlflow:5000/#/experiments/1/runs/4a0615fab82c47b59187207647047f8e
+[2025-07-16T18:46:43.905+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:43.906+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:28<00:46,  2.30s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:43.906+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:44.208+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:28<00:46,  2.30s/trial, best loss: 718.547114889508] 37%|███▋      | 11/30 [00:28<00:41,  2.17s/trial, best loss: 718.547114889508]                                                                               [18:46:44] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:44.211+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:44.212+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:46.018+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:28<00:41,  2.17s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184643 at: http://mlflow:5000/#/experiments/1/runs/c9d86b2f26eb423396ba5a11f1056ba3
+[2025-07-16T18:46:46.019+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:46.020+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:30<00:41,  2.17s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:46.021+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:46.320+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:30<00:41,  2.17s/trial, best loss: 718.547114889508] 40%|████      | 12/30 [00:30<00:38,  2.15s/trial, best loss: 718.547114889508]                                                                               [18:46:46] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:46.321+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:46.322+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:46.876+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:30<00:38,  2.15s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184646 at: http://mlflow:5000/#/experiments/1/runs/1cd2529967cc42d5812e693728e78840
+[2025-07-16T18:46:46.877+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:46.877+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:31<00:38,  2.15s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:46.878+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:47.114+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:31<00:38,  2.15s/trial, best loss: 718.547114889508] 43%|████▎     | 13/30 [00:31<00:29,  1.75s/trial, best loss: 718.547114889508]                                                                               [18:46:47] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:47.117+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:47.121+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:47.918+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:31<00:29,  1.75s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184646 at: http://mlflow:5000/#/experiments/1/runs/96c21870f068447caae5eb2131e8ab20
+[2025-07-16T18:46:47.919+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:47.921+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:32<00:29,  1.75s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:47.922+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:48.145+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:32<00:29,  1.75s/trial, best loss: 718.547114889508] 47%|████▋     | 14/30 [00:32<00:24,  1.54s/trial, best loss: 718.547114889508]                                                                               [18:46:48] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:48.154+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:48.155+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:48.642+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:32<00:24,  1.54s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184647 at: http://mlflow:5000/#/experiments/1/runs/52ca38d55e264cb985653923ed79b64a
+[2025-07-16T18:46:48.643+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:48.643+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:33<00:24,  1.54s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:48.644+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:48.853+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:33<00:24,  1.54s/trial, best loss: 718.547114889508] 50%|█████     | 15/30 [00:33<00:19,  1.29s/trial, best loss: 718.547114889508]                                                                               [18:46:48] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:48.854+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:48.856+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:50.148+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:33<00:19,  1.29s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184648 at: http://mlflow:5000/#/experiments/1/runs/8edea4efd21c49d182a161f269962a6f
+[2025-07-16T18:46:50.149+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:50.150+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:34<00:19,  1.29s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:50.151+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:50.395+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:34<00:19,  1.29s/trial, best loss: 718.547114889508] 53%|█████▎    | 16/30 [00:34<00:19,  1.36s/trial, best loss: 718.547114889508]                                                                               [18:46:50] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:50.397+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:50.400+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:51.907+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:34<00:19,  1.36s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184650 at: http://mlflow:5000/#/experiments/1/runs/62d225472fec466f80302439ec45b44e
+[2025-07-16T18:46:51.908+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:51.909+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:36<00:19,  1.36s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:51.910+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:52.156+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:36<00:19,  1.36s/trial, best loss: 718.547114889508] 57%|█████▋    | 17/30 [00:36<00:19,  1.48s/trial, best loss: 718.547114889508]                                                                               [18:46:52] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:52.159+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:52.163+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:52.723+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:36<00:19,  1.48s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184651 at: http://mlflow:5000/#/experiments/1/runs/0fcaa86d024245aca88dc35249664e0f
+[2025-07-16T18:46:52.724+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:52.725+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:37<00:19,  1.48s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:52.725+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:52.924+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:37<00:19,  1.48s/trial, best loss: 718.547114889508] 60%|██████    | 18/30 [00:37<00:15,  1.28s/trial, best loss: 718.547114889508]                                                                               [18:46:52] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:52.929+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:52.930+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:53.345+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:37<00:15,  1.28s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-184652 at: http://mlflow:5000/#/experiments/1/runs/36a144e295494ac7af2a74d05115f99f
+[2025-07-16T18:46:53.347+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:53.348+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:37<00:15,  1.28s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:53.349+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:53.636+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:37<00:15,  1.28s/trial, best loss: 718.547114889508] 63%|██████▎   | 19/30 [00:37<00:11,  1.09s/trial, best loss: 715.4694444850281]                                                                                [18:46:53] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:53.637+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:53.638+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:55.247+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:38<00:11,  1.09s/trial, best loss: 715.4694444850281]                                                                                🏃 View run tune-20250716-184653 at: http://mlflow:5000/#/experiments/1/runs/214e85b4a3814b47b0461797a49fc41c
+[2025-07-16T18:46:55.248+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:55.249+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:39<00:11,  1.09s/trial, best loss: 715.4694444850281]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:55.250+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:55.660+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:39<00:11,  1.09s/trial, best loss: 715.4694444850281] 67%|██████▋   | 20/30 [00:39<00:13,  1.33s/trial, best loss: 703.1963580316317]                                                                                [18:46:55] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:55.662+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:55.663+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:57.522+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:40<00:13,  1.33s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-184655 at: http://mlflow:5000/#/experiments/1/runs/dfde5134b8254e1f86d52faab7b60e1b
+[2025-07-16T18:46:57.522+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:57.523+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:41<00:13,  1.33s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:57.524+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:57.864+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:41<00:13,  1.33s/trial, best loss: 703.1963580316317] 70%|███████   | 21/30 [00:41<00:14,  1.61s/trial, best loss: 703.1963580316317]                                                                                [18:46:57] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:57.866+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:57.867+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:59.295+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:42<00:14,  1.61s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-184657 at: http://mlflow:5000/#/experiments/1/runs/60e2fcf813b44c2ba29c99a07ad98d96
+[2025-07-16T18:46:59.296+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:59.297+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:43<00:14,  1.61s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:46:59.298+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:46:59.522+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:43<00:14,  1.61s/trial, best loss: 703.1963580316317] 73%|███████▎  | 22/30 [00:43<00:13,  1.66s/trial, best loss: 694.8931121848902]                                                                                [18:46:59] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:46:59.523+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:46:59.524+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:00.603+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:43<00:13,  1.66s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184659 at: http://mlflow:5000/#/experiments/1/runs/eeac187fbfc944ef8e4d740daf307b13
+[2025-07-16T18:47:00.604+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:00.604+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:45<00:13,  1.66s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:00.605+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:00.826+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:45<00:13,  1.66s/trial, best loss: 694.8931121848902] 77%|███████▋  | 23/30 [00:45<00:10,  1.55s/trial, best loss: 694.8931121848902]                                                                                [18:47:00] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:00.831+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:00.832+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:01.151+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:45<00:10,  1.55s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184700 at: http://mlflow:5000/#/experiments/1/runs/b579df896ad84ed5b28914354c9e112a
+[2025-07-16T18:47:01.152+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:01.153+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:45<00:10,  1.55s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:01.154+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:01.493+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:45<00:10,  1.55s/trial, best loss: 694.8931121848902] 80%|████████  | 24/30 [00:45<00:07,  1.25s/trial, best loss: 694.8931121848902]                                                                                [18:47:01] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:01.495+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:01.496+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:03.665+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:45<00:07,  1.25s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184701 at: http://mlflow:5000/#/experiments/1/runs/32d201c0d73b47e592f2110dbaa7a294
+[2025-07-16T18:47:03.667+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:03.668+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:48<00:07,  1.25s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:03.669+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:03.927+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:48<00:07,  1.25s/trial, best loss: 694.8931121848902] 83%|████████▎ | 25/30 [00:48<00:08,  1.64s/trial, best loss: 694.8931121848902]                                                                                [18:47:03] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:03.928+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:03.928+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:05.075+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:48<00:08,  1.64s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184703 at: http://mlflow:5000/#/experiments/1/runs/53e5758f904e4d2b956d634e4d4d3d2a
+[2025-07-16T18:47:05.075+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:05.076+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:49<00:08,  1.64s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:05.077+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:05.393+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:49<00:08,  1.64s/trial, best loss: 694.8931121848902] 87%|████████▋ | 26/30 [00:49<00:06,  1.56s/trial, best loss: 694.8931121848902]                                                                                [18:47:05] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:05.394+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:05.397+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:05.787+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:49<00:06,  1.56s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184705 at: http://mlflow:5000/#/experiments/1/runs/70522b9abb7b400a86fd269ea2a707e2
+[2025-07-16T18:47:05.789+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:05.789+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:50<00:06,  1.56s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:05.790+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:06.003+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:50<00:06,  1.56s/trial, best loss: 694.8931121848902] 90%|█████████ | 27/30 [00:50<00:03,  1.31s/trial, best loss: 694.8931121848902]                                                                                [18:47:05] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:06.006+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:06.011+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:06.532+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [00:50<00:03,  1.31s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184705 at: http://mlflow:5000/#/experiments/1/runs/cc5d3d297fdc4b86870a30d5f58ab3a5
+[2025-07-16T18:47:06.533+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:06.534+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [00:50<00:03,  1.31s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:06.534+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:06.778+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [00:50<00:03,  1.31s/trial, best loss: 694.8931121848902] 93%|█████████▎| 28/30 [00:51<00:02,  1.14s/trial, best loss: 694.8931121848902]                                                                                [18:47:06] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:06.779+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:06.780+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:08.346+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [00:51<00:02,  1.14s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-184706 at: http://mlflow:5000/#/experiments/1/runs/e0152e037cfd4b7da9cc3dd2d6590021
+[2025-07-16T18:47:08.348+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:08.349+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [00:52<00:02,  1.14s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:08.350+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:08.585+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [00:52<00:02,  1.14s/trial, best loss: 694.8931121848902] 97%|█████████▋| 29/30 [00:52<00:01,  1.34s/trial, best loss: 687.7432222799732]                                                                                [18:47:08] WARNING: ../src/learner.cc:767:
+[2025-07-16T18:47:08.586+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T18:47:08.586+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:09.310+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [00:53<00:01,  1.34s/trial, best loss: 687.7432222799732]                                                                                🏃 View run tune-20250716-184708 at: http://mlflow:5000/#/experiments/1/runs/03d4bb2321dd4fcd925303683b3e8156
+[2025-07-16T18:47:09.311+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:09.312+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [00:53<00:01,  1.34s/trial, best loss: 687.7432222799732]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:09.313+0000] {subprocess.py:106} INFO - 
+[2025-07-16T18:47:09.571+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [00:53<00:01,  1.34s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [00:53<00:00,  1.24s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [00:53<00:00,  1.79s/trial, best loss: 687.7432222799732]
+[2025-07-16T18:47:09.571+0000] {subprocess.py:106} INFO - Best hyperparameters: {'learning_rate': 0.20465124690783987, 'max_depth': 4.0, 'min_child_weight': 2.0, 'n_estimators': 280.0, 'reg_alpha': 0.19922593076961778, 'reg_lambda': 0.509913933018477}
+[2025-07-16T18:47:09.572+0000] {subprocess.py:106} INFO - 🏃 View run log-best-params-20250716-184709 at: http://mlflow:5000/#/experiments/1/runs/e93e9279a5da40be9d6c7789f892d9b2
+[2025-07-16T18:47:09.573+0000] {subprocess.py:106} INFO - 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T18:47:10.075+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T18:47:10.109+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T18:47:10.110+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=tune_model, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T184605, end_date=20250716T184710
+[2025-07-16T18:47:10.177+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T18:47:10.215+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T18:47:10.217+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T19:12:35.021+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T19:12:35.065+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:12:35.087+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:12:35.088+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T19:12:35.114+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): tune_model> on 2025-07-15 00:00:00+00:00
+[2025-07-16T19:12:35.128+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=119) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T19:12:35.131+0000] {standard_task_runner.py:72} INFO - Started process 125 to run task
+[2025-07-16T19:12:35.129+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'tune_model', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp1s0iqo52']
+[2025-07-16T19:12:35.133+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask tune_model
+[2025-07-16T19:12:35.156+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:12:35.223+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-07-15T00:00:00+00:00 [running]> on host e42e59698f90
+[2025-07-16T19:12:35.228+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:12:35.367+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='tune_model' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T19:12:35.369+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T19:12:35.399+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T19:12:35.401+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/tune_model.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --features_table turnstile_features         ']
+[2025-07-16T19:12:35.422+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T19:12:42.787+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:43: SettingWithCopyWarning:
+[2025-07-16T19:12:42.788+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T19:12:42.789+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T19:12:42.790+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:42.791+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T19:12:42.792+0000] {subprocess.py:106} INFO -   X_train[col] = pd.to_numeric(X_train[col], errors="coerce")
+[2025-07-16T19:12:42.793+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:44: SettingWithCopyWarning:
+[2025-07-16T19:12:42.794+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T19:12:42.796+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T19:12:42.797+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:42.798+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T19:12:42.799+0000] {subprocess.py:106} INFO -   X_val[col] = pd.to_numeric(X_val[col], errors="coerce")
+[2025-07-16T19:12:42.800+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:45: SettingWithCopyWarning:
+[2025-07-16T19:12:42.801+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T19:12:42.802+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T19:12:42.803+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:42.804+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T19:12:42.805+0000] {subprocess.py:106} INFO -   X_train["group_key"] = X_train["group_key"].astype("category")
+[2025-07-16T19:12:42.805+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:46: SettingWithCopyWarning:
+[2025-07-16T19:12:42.806+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-07-16T19:12:42.807+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-07-16T19:12:42.812+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:42.813+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-07-16T19:12:42.814+0000] {subprocess.py:106} INFO -   X_val["group_key"] = X_val["group_key"].astype("category")
+[2025-07-16T19:12:44.215+0000] {subprocess.py:106} INFO - Train shape: (119, 8)
+[2025-07-16T19:12:44.216+0000] {subprocess.py:106} INFO - Validation shape: (146, 8)
+[2025-07-16T19:12:44.216+0000] {subprocess.py:106} INFO - Max datetime in dataset: 2022-07-02 22:00:00
+[2025-07-16T19:12:44.304+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]2025/07/16 19:12:44 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-07-16T19:12:44.306+0000] {subprocess.py:106} INFO - The git executable must be specified in one of the following ways:
+[2025-07-16T19:12:44.307+0000] {subprocess.py:106} INFO -     - be included in your $PATH
+[2025-07-16T19:12:44.308+0000] {subprocess.py:106} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-07-16T19:12:44.308+0000] {subprocess.py:106} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-07-16T19:12:44.309+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:44.310+0000] {subprocess.py:106} INFO - All git commands will error until this is rectified.
+[2025-07-16T19:12:44.310+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:44.311+0000] {subprocess.py:106} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-07-16T19:12:44.312+0000] {subprocess.py:106} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-07-16T19:12:44.312+0000] {subprocess.py:106} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-07-16T19:12:44.313+0000] {subprocess.py:106} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-07-16T19:12:44.314+0000] {subprocess.py:106} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-07-16T19:12:44.314+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:44.315+0000] {subprocess.py:106} INFO - Example:
+[2025-07-16T19:12:44.315+0000] {subprocess.py:106} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-07-16T19:12:44.316+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:44.317+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:45.655+0000] {subprocess.py:106} INFO -                                                       [19:12:45] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:12:45.656+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:12:45.657+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:50.239+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:01<?, ?trial/s, best loss=?]                                                      🏃 View run tune-20250716-191244 at: http://mlflow:5000/#/experiments/1/runs/ea597f93c1d642898fa6a569ea499baf
+[2025-07-16T19:12:50.240+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:50.242+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:06<?, ?trial/s, best loss=?]                                                      🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:12:50.243+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:50.789+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:06<?, ?trial/s, best loss=?]  3%|▎         | 1/30 [00:06<02:57,  6.11s/trial, best loss: 1025.099069549972]                                                                               [19:12:50] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:12:50.792+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:12:50.793+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:53.702+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:06<02:57,  6.11s/trial, best loss: 1025.099069549972]                                                                               🏃 View run tune-20250716-191250 at: http://mlflow:5000/#/experiments/1/runs/24d66bf4014a438e863bd26ebce7b898
+[2025-07-16T19:12:53.704+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:53.705+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:09<02:57,  6.11s/trial, best loss: 1025.099069549972]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:12:53.710+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:54.251+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:09<02:57,  6.11s/trial, best loss: 1025.099069549972]  7%|▋         | 2/30 [00:09<02:08,  4.60s/trial, best loss: 913.3896625231262]                                                                               [19:12:54] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:12:54.252+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:12:54.253+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:58.868+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:10<02:08,  4.60s/trial, best loss: 913.3896625231262]                                                                               🏃 View run tune-20250716-191253 at: http://mlflow:5000/#/experiments/1/runs/5ea035bb66b14abf90682ee9299295aa
+[2025-07-16T19:12:58.870+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:58.871+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:14<02:08,  4.60s/trial, best loss: 913.3896625231262]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:12:58.872+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:12:59.226+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:14<02:08,  4.60s/trial, best loss: 913.3896625231262] 10%|█         | 3/30 [00:14<02:10,  4.82s/trial, best loss: 765.1645598209915]                                                                               [19:12:59] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:12:59.227+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:12:59.232+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:00.306+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:15<02:10,  4.82s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-191258 at: http://mlflow:5000/#/experiments/1/runs/88f46f331d834a819837402fecbe659a
+[2025-07-16T19:13:00.307+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:00.308+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:16<02:10,  4.82s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:00.310+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:00.661+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:16<02:10,  4.82s/trial, best loss: 765.1645598209915] 13%|█▎        | 4/30 [00:16<01:30,  3.48s/trial, best loss: 765.1645598209915]                                                                               [19:13:00] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:00.670+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:00.687+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:05.731+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:16<01:30,  3.48s/trial, best loss: 765.1645598209915]                                                                               🏃 View run tune-20250716-191300 at: http://mlflow:5000/#/experiments/1/runs/cb5d8f5cac6447c88767bdf9cfa70d64
+[2025-07-16T19:13:05.732+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:05.733+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:21<01:30,  3.48s/trial, best loss: 765.1645598209915]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:05.734+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:06.094+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:21<01:30,  3.48s/trial, best loss: 765.1645598209915] 17%|█▋        | 5/30 [00:21<01:44,  4.18s/trial, best loss: 718.547114889508]                                                                               [19:13:06] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:06.095+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:06.107+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:06.555+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:21<01:44,  4.18s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-191305 at: http://mlflow:5000/#/experiments/1/runs/fa7bfa323d644ab48a4c8ffd5b5cb831
+[2025-07-16T19:13:06.557+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:06.558+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:22<01:44,  4.18s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:06.559+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:06.940+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:22<01:44,  4.18s/trial, best loss: 718.547114889508] 20%|██        | 6/30 [00:22<01:13,  3.04s/trial, best loss: 718.547114889508]                                                                              [19:13:06] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:06.945+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:06.955+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:07.592+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:22<01:13,  3.04s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-191306 at: http://mlflow:5000/#/experiments/1/runs/518fbc46239842dcab70ece6f410c5f4
+[2025-07-16T19:13:07.593+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:07.594+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:23<01:13,  3.04s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:07.595+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:07.859+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:23<01:13,  3.04s/trial, best loss: 718.547114889508] 23%|██▎       | 7/30 [00:23<00:54,  2.38s/trial, best loss: 718.547114889508]                                                                              [19:13:07] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:07.869+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:07.870+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:08.323+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:23<00:54,  2.38s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-191307 at: http://mlflow:5000/#/experiments/1/runs/dbbb8d2bef10464f97e248487c94f034
+[2025-07-16T19:13:08.324+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:08.324+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:24<00:54,  2.38s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:08.325+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:08.600+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:24<00:54,  2.38s/trial, best loss: 718.547114889508] 27%|██▋       | 8/30 [00:24<00:40,  1.85s/trial, best loss: 718.547114889508]                                                                              [19:13:08] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:08.607+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:08.608+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:09.335+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:24<00:40,  1.85s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-191308 at: http://mlflow:5000/#/experiments/1/runs/2555891ad19641afbb6618f639fe9f7a
+[2025-07-16T19:13:09.337+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:09.338+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:25<00:40,  1.85s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:09.339+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:09.655+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:25<00:40,  1.85s/trial, best loss: 718.547114889508] 30%|███       | 9/30 [00:25<00:33,  1.59s/trial, best loss: 718.547114889508]                                                                              [19:13:09] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:09.660+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:09.662+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:10.814+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:25<00:33,  1.59s/trial, best loss: 718.547114889508]                                                                              🏃 View run tune-20250716-191309 at: http://mlflow:5000/#/experiments/1/runs/e08ce209881d444d931176b4a3bdeb22
+[2025-07-16T19:13:10.815+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:10.816+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:33,  1.59s/trial, best loss: 718.547114889508]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:10.817+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:11.065+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:26<00:33,  1.59s/trial, best loss: 718.547114889508] 33%|███▎      | 10/30 [00:26<00:31,  1.55s/trial, best loss: 718.547114889508]                                                                               [19:13:11] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:11.066+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:11.066+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:12.750+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:26<00:31,  1.55s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191310 at: http://mlflow:5000/#/experiments/1/runs/fc7930c44c4449978c988f8f1e4adf98
+[2025-07-16T19:13:12.752+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:12.753+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:28<00:31,  1.55s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:12.754+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:13.010+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:28<00:31,  1.55s/trial, best loss: 718.547114889508] 37%|███▋      | 11/30 [00:28<00:31,  1.67s/trial, best loss: 718.547114889508]                                                                               [19:13:13] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:13.011+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:13.012+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:13.442+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:28<00:31,  1.67s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191312 at: http://mlflow:5000/#/experiments/1/runs/030af815431a4a8ab7d30928f9fea15f
+[2025-07-16T19:13:13.443+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:13.444+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:29<00:31,  1.67s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:13.445+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:14.021+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:29<00:31,  1.67s/trial, best loss: 718.547114889508] 40%|████      | 12/30 [00:29<00:24,  1.38s/trial, best loss: 718.547114889508]                                                                               [19:13:14] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:14.023+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:14.024+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:17.620+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:29<00:24,  1.38s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191313 at: http://mlflow:5000/#/experiments/1/runs/26e28dcf6e7240f7a234b0371815b7b8
+[2025-07-16T19:13:17.621+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:17.623+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:33<00:24,  1.38s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:17.624+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:17.899+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:33<00:24,  1.38s/trial, best loss: 718.547114889508] 43%|████▎     | 13/30 [00:33<00:37,  2.22s/trial, best loss: 718.547114889508]                                                                               [19:13:17] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:17.900+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:17.901+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:18.913+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:33<00:37,  2.22s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191317 at: http://mlflow:5000/#/experiments/1/runs/b8541bfcee5a4aac8b3ded9b94dbfbb8
+[2025-07-16T19:13:18.914+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:18.915+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:34<00:37,  2.22s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:18.916+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:19.174+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:34<00:37,  2.22s/trial, best loss: 718.547114889508] 47%|████▋     | 14/30 [00:34<00:31,  1.94s/trial, best loss: 718.547114889508]                                                                               [19:13:19] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:19.177+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:19.179+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:21.095+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:34<00:31,  1.94s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191318 at: http://mlflow:5000/#/experiments/1/runs/8b46d407a6a647c8a95a6629d2ee9732
+[2025-07-16T19:13:21.097+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:21.099+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:36<00:31,  1.94s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:21.100+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:21.397+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:36<00:31,  1.94s/trial, best loss: 718.547114889508] 50%|█████     | 15/30 [00:36<00:30,  2.02s/trial, best loss: 718.547114889508]                                                                               [19:13:21] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:21.399+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:21.401+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:24.624+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:37<00:30,  2.02s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191321 at: http://mlflow:5000/#/experiments/1/runs/47d37811d36c46e891bb6f33d7ccbf97
+[2025-07-16T19:13:24.627+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:24.629+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:40<00:30,  2.02s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:24.630+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:25.075+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:40<00:30,  2.02s/trial, best loss: 718.547114889508] 53%|█████▎    | 16/30 [00:40<00:34,  2.48s/trial, best loss: 718.547114889508]                                                                               [19:13:25] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:25.081+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:25.082+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:27.454+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:40<00:34,  2.48s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191324 at: http://mlflow:5000/#/experiments/1/runs/7c3f5652a9984323af9f608c045e4aa5
+[2025-07-16T19:13:27.455+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:27.456+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:43<00:34,  2.48s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:27.457+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:27.759+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:43<00:34,  2.48s/trial, best loss: 718.547114889508] 57%|█████▋    | 17/30 [00:43<00:33,  2.58s/trial, best loss: 718.547114889508]                                                                               [19:13:27] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:27.768+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:27.771+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:30.157+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:43<00:33,  2.58s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191327 at: http://mlflow:5000/#/experiments/1/runs/352c781db54e40d89bb6061cc56e44d4
+[2025-07-16T19:13:30.158+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:30.159+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:45<00:33,  2.58s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:30.160+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:30.439+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:45<00:33,  2.58s/trial, best loss: 718.547114889508] 60%|██████    | 18/30 [00:45<00:31,  2.62s/trial, best loss: 718.547114889508]                                                                               [19:13:30] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:30.443+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:30.451+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:33.658+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:46<00:31,  2.62s/trial, best loss: 718.547114889508]                                                                               🏃 View run tune-20250716-191330 at: http://mlflow:5000/#/experiments/1/runs/349d50af576742b4adde4e8b217ae696
+[2025-07-16T19:13:33.659+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:33.660+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:49<00:31,  2.62s/trial, best loss: 718.547114889508]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:33.664+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:34.302+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:49<00:31,  2.62s/trial, best loss: 718.547114889508] 63%|██████▎   | 19/30 [00:49<00:31,  2.89s/trial, best loss: 715.4694444850281]                                                                                [19:13:34] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:34.306+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:34.310+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:37.971+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:50<00:31,  2.89s/trial, best loss: 715.4694444850281]                                                                                🏃 View run tune-20250716-191333 at: http://mlflow:5000/#/experiments/1/runs/f5e4745543a94a13a9cfef65fea5911f
+[2025-07-16T19:13:37.972+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:37.973+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:53<00:31,  2.89s/trial, best loss: 715.4694444850281]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:37.974+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:38.353+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:53<00:31,  2.89s/trial, best loss: 715.4694444850281] 67%|██████▋   | 20/30 [00:53<00:33,  3.31s/trial, best loss: 703.1963580316317]                                                                                [19:13:38] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:38.354+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:38.355+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:41.165+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:54<00:33,  3.31s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-191338 at: http://mlflow:5000/#/experiments/1/runs/307f5fafa5ef49c48db997c8336dd4af
+[2025-07-16T19:13:41.167+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:41.168+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:56<00:33,  3.31s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:41.168+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:41.425+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:56<00:33,  3.31s/trial, best loss: 703.1963580316317] 70%|███████   | 21/30 [00:56<00:29,  3.27s/trial, best loss: 703.1963580316317]                                                                                [19:13:41] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:41.433+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:41.434+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:42.600+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:57<00:29,  3.27s/trial, best loss: 703.1963580316317]                                                                                🏃 View run tune-20250716-191341 at: http://mlflow:5000/#/experiments/1/runs/fbae655feaad45ea8bb9abafb4826543
+[2025-07-16T19:13:42.601+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:42.601+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:58<00:29,  3.27s/trial, best loss: 703.1963580316317]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:42.602+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:42.884+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:58<00:29,  3.27s/trial, best loss: 703.1963580316317] 73%|███████▎  | 22/30 [00:58<00:21,  2.72s/trial, best loss: 694.8931121848902]                                                                                [19:13:42] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:42.890+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:42.892+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:44.482+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:58<00:21,  2.72s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191342 at: http://mlflow:5000/#/experiments/1/runs/19e8a4a11df648bda58185e8ec2bc1b1
+[2025-07-16T19:13:44.483+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:44.483+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [01:00<00:21,  2.72s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:44.484+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:44.766+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [01:00<00:21,  2.72s/trial, best loss: 694.8931121848902] 77%|███████▋  | 23/30 [01:00<00:17,  2.47s/trial, best loss: 694.8931121848902]                                                                                [19:13:44] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:44.772+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:44.776+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:46.887+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [01:00<00:17,  2.47s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191344 at: http://mlflow:5000/#/experiments/1/runs/5dfc8ca8a0494069a7f41edad63ebc0f
+[2025-07-16T19:13:46.888+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:46.889+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [01:02<00:17,  2.47s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:46.890+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:47.192+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [01:02<00:17,  2.47s/trial, best loss: 694.8931121848902] 80%|████████  | 24/30 [01:02<00:14,  2.45s/trial, best loss: 694.8931121848902]                                                                                [19:13:47] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:47.193+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:47.194+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:50.905+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [01:02<00:14,  2.45s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191346 at: http://mlflow:5000/#/experiments/1/runs/b2af60a12a214a2e8eee1b93088e9926
+[2025-07-16T19:13:50.907+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:50.908+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [01:06<00:14,  2.45s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:50.909+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:51.358+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [01:06<00:14,  2.45s/trial, best loss: 694.8931121848902] 83%|████████▎ | 25/30 [01:06<00:14,  2.92s/trial, best loss: 694.8931121848902]                                                                                [19:13:51] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:51.362+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:51.367+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:52.871+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [01:07<00:14,  2.92s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191351 at: http://mlflow:5000/#/experiments/1/runs/4f3f80cd4d19441bbbebbceb1484ccaf
+[2025-07-16T19:13:52.872+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:52.873+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [01:08<00:14,  2.92s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:52.873+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:53.186+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [01:08<00:14,  2.92s/trial, best loss: 694.8931121848902] 87%|████████▋ | 26/30 [01:08<00:10,  2.63s/trial, best loss: 694.8931121848902]                                                                                [19:13:53] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:53.187+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:53.188+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:56.402+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [01:08<00:10,  2.63s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191352 at: http://mlflow:5000/#/experiments/1/runs/af75c4510e4043eb9c9fb4140f4b8dd9
+[2025-07-16T19:13:56.403+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:56.404+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [01:12<00:10,  2.63s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:13:56.404+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:13:56.921+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [01:12<00:10,  2.63s/trial, best loss: 694.8931121848902] 90%|█████████ | 27/30 [01:12<00:08,  2.90s/trial, best loss: 694.8931121848902]                                                                                [19:13:56] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:13:56.922+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:13:56.923+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:00.026+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:12<00:08,  2.90s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191356 at: http://mlflow:5000/#/experiments/1/runs/f82de80082d54b30bb3e58ab27753ce4
+[2025-07-16T19:14:00.027+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:00.028+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:15<00:08,  2.90s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:14:00.029+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:00.358+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [01:15<00:08,  2.90s/trial, best loss: 694.8931121848902] 93%|█████████▎| 28/30 [01:15<00:06,  3.12s/trial, best loss: 694.8931121848902]                                                                                [19:14:00] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:14:00.362+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:14:00.364+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:04.613+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:16<00:06,  3.12s/trial, best loss: 694.8931121848902]                                                                                🏃 View run tune-20250716-191400 at: http://mlflow:5000/#/experiments/1/runs/59a566fe32ff4b83beac96957e8afda3
+[2025-07-16T19:14:04.614+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:04.615+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:20<00:06,  3.12s/trial, best loss: 694.8931121848902]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:14:04.616+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:04.954+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [01:20<00:06,  3.12s/trial, best loss: 694.8931121848902] 97%|█████████▋| 29/30 [01:20<00:03,  3.56s/trial, best loss: 687.7432222799732]                                                                                [19:14:04] WARNING: ../src/learner.cc:767:
+[2025-07-16T19:14:04.955+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-16T19:14:04.957+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:07.585+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:20<00:03,  3.56s/trial, best loss: 687.7432222799732]                                                                                🏃 View run tune-20250716-191404 at: http://mlflow:5000/#/experiments/1/runs/3c7955a202734e9a97a859521f3b9e93
+[2025-07-16T19:14:07.586+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:07.587+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:23<00:03,  3.56s/trial, best loss: 687.7432222799732]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:14:07.590+0000] {subprocess.py:106} INFO - 
+[2025-07-16T19:14:07.857+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [01:23<00:03,  3.56s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [01:23<00:00,  3.39s/trial, best loss: 687.7432222799732]100%|██████████| 30/30 [01:23<00:00,  2.78s/trial, best loss: 687.7432222799732]
+[2025-07-16T19:14:07.859+0000] {subprocess.py:106} INFO - Best hyperparameters: {'learning_rate': 0.20465124690783987, 'max_depth': 4.0, 'min_child_weight': 2.0, 'n_estimators': 280.0, 'reg_alpha': 0.19922593076961778, 'reg_lambda': 0.509913933018477}
+[2025-07-16T19:14:07.860+0000] {subprocess.py:106} INFO - 🏃 View run log-best-params-20250716-191407 at: http://mlflow:5000/#/experiments/1/runs/a7b9b975c6e6458c8047b304acf6dbe0
+[2025-07-16T19:14:07.861+0000] {subprocess.py:106} INFO - 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-16T19:14:08.669+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T19:14:08.763+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T19:14:08.765+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=tune_model, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T191235, end_date=20250716T191408
+[2025-07-16T19:14:08.856+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T19:14:08.928+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T19:14:08.937+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

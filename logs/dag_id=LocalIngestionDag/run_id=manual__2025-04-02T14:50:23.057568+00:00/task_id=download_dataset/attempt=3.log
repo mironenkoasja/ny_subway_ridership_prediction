@@ -1,0 +1,26 @@
+[2025-04-03T11:38:12.977+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-03T11:38:13.015+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T14:50:23.057568+00:00 [queued]>
+[2025-04-03T11:38:13.032+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T14:50:23.057568+00:00 [queued]>
+[2025-04-03T11:38:13.033+0000] {taskinstance.py:2867} INFO - Starting attempt 3 of 3
+[2025-04-03T11:38:13.075+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_dataset> on 2025-04-02 14:50:23.057568+00:00
+[2025-04-03T11:38:13.104+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=574) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-03T11:38:13.108+0000] {standard_task_runner.py:72} INFO - Started process 576 to run task
+[2025-04-03T11:38:13.109+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'download_dataset', 'manual__2025-04-02T14:50:23.057568+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpy066f38x']
+[2025-04-03T11:38:13.115+0000] {standard_task_runner.py:105} INFO - Job 41: Subtask download_dataset
+[2025-04-03T11:38:13.295+0000] {task_command.py:467} INFO - Running <TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T14:50:23.057568+00:00 [running]> on host ddeb5aa80aea
+[2025-04-03T11:38:13.781+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LocalIngestionDag' AIRFLOW_CTX_TASK_ID='download_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T14:50:23.057568+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-02T14:50:23.057568+00:00'
+[2025-04-03T11:38:13.783+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-03T11:38:13.819+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-03T11:38:13.822+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/yellow_tripdata_2025-04.parquet "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-04.parquet"']
+[2025-04-03T11:38:13.849+0000] {subprocess.py:99} INFO - Output:
+[2025-04-03T11:38:13.869+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-04-03T11:38:13.870+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-04-03T11:38:14.377+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   111    0   111    0     0    217      0 --:--:-- --:--:-- --:--:--   217
+[2025-04-03T11:38:14.380+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-03T11:38:14.431+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-03T11:38:14.432+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=download_dataset, run_id=manual__2025-04-02T14:50:23.057568+00:00, execution_date=20250402T145023, start_date=20250403T113813, end_date=20250403T113814
+[2025-04-03T11:38:14.506+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-03T11:38:14.565+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T11:38:14.572+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

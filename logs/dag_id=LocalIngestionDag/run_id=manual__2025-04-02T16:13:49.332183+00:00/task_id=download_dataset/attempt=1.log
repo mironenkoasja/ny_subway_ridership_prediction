@@ -1,0 +1,26 @@
+[2025-04-02T16:13:51.918+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-02T16:13:51.946+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T16:13:49.332183+00:00 [queued]>
+[2025-04-02T16:13:51.961+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T16:13:49.332183+00:00 [queued]>
+[2025-04-02T16:13:51.962+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-02T16:13:51.983+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_dataset> on 2025-04-02 16:13:49.332183+00:00
+[2025-04-02T16:13:51.993+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1613) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-02T16:13:51.996+0000] {standard_task_runner.py:72} INFO - Started process 1614 to run task
+[2025-04-02T16:13:51.996+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'download_dataset', 'manual__2025-04-02T16:13:49.332183+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpxy25jafi']
+[2025-04-02T16:13:51.997+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask download_dataset
+[2025-04-02T16:13:52.062+0000] {task_command.py:467} INFO - Running <TaskInstance: LocalIngestionDag.download_dataset manual__2025-04-02T16:13:49.332183+00:00 [running]> on host 6baa03efc864
+[2025-04-02T16:13:52.186+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LocalIngestionDag' AIRFLOW_CTX_TASK_ID='download_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T16:13:49.332183+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-02T16:13:49.332183+00:00'
+[2025-04-02T16:13:52.188+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-02T16:13:52.216+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-02T16:13:52.219+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'curl -o /opt/***/yellow_tripdata_2024-01.parquet "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"']
+[2025-04-02T16:13:52.233+0000] {subprocess.py:99} INFO - Output:
+[2025-04-02T16:13:52.252+0000] {subprocess.py:106} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2025-04-02T16:13:52.254+0000] {subprocess.py:106} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2025-04-02T16:13:57.015+0000] {subprocess.py:106} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 18 47.6M   18 8857k    0     0  6776k      0  0:00:07  0:00:01  0:00:06 6776k 41 47.6M   41 19.9M    0     0  8865k      0  0:00:05  0:00:02  0:00:03 8865k 65 47.6M   65 31.0M    0     0  9613k      0  0:00:05  0:00:03  0:00:02 9613k 89 47.6M   89 42.4M    0     0   9.8M      0  0:00:04  0:00:04 --:--:--  9.8M100 47.6M  100 47.6M    0     0  10.0M      0  0:00:04  0:00:04 --:--:-- 10.7M
+[2025-04-02T16:13:57.021+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-02T16:13:57.057+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-02T16:13:57.058+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=download_dataset, run_id=manual__2025-04-02T16:13:49.332183+00:00, execution_date=20250402T161349, start_date=20250402T161351, end_date=20250402T161357
+[2025-04-02T16:13:57.137+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-02T16:13:57.177+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:13:57.182+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

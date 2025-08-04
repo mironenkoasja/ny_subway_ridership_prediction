@@ -1,0 +1,21 @@
+[2025-04-03T11:31:16.265+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-03T11:31:16.294+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LocalIngestionDag.ingest_data_to_db scheduled__2025-01-02T06:00:00+00:00 [queued]>
+[2025-04-03T11:31:16.307+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LocalIngestionDag.ingest_data_to_db scheduled__2025-01-02T06:00:00+00:00 [queued]>
+[2025-04-03T11:31:16.308+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-03T11:31:16.324+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): ingest_data_to_db> on 2025-01-02 06:00:00+00:00
+[2025-04-03T11:31:16.333+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=458) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-03T11:31:16.336+0000] {standard_task_runner.py:72} INFO - Started process 460 to run task
+[2025-04-03T11:31:16.337+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest_data_to_db', 'scheduled__2025-01-02T06:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmp84_pdiem']
+[2025-04-03T11:31:16.341+0000] {standard_task_runner.py:105} INFO - Job 36: Subtask ingest_data_to_db
+[2025-04-03T11:31:16.406+0000] {task_command.py:467} INFO - Running <TaskInstance: LocalIngestionDag.ingest_data_to_db scheduled__2025-01-02T06:00:00+00:00 [running]> on host ddeb5aa80aea
+[2025-04-03T11:31:17.272+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LocalIngestionDag' AIRFLOW_CTX_TASK_ID='ingest_data_to_db' AIRFLOW_CTX_EXECUTION_DATE='2025-01-02T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-02T06:00:00+00:00'
+[2025-04-03T11:31:17.278+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-03T11:31:17.315+0000] {logging_mixin.py:190} INFO - Ingesting yellow_tripdata_2025-01.parquet into yellow_tripdata_2025-01.parquet
+[2025-04-03T11:31:17.634+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-03T11:31:17.656+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-03T11:31:17.657+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=ingest_data_to_db, run_id=scheduled__2025-01-02T06:00:00+00:00, execution_date=20250102T060000, start_date=20250403T113116, end_date=20250403T113117
+[2025-04-03T11:31:17.724+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-03T11:31:17.755+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-03T11:31:17.759+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

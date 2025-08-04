@@ -1,0 +1,98 @@
+[2025-07-14T18:16:35.144+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-14T18:16:35.227+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-13T00:00:00+00:00 [queued]>
+[2025-07-14T18:16:35.267+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-13T00:00:00+00:00 [queued]>
+[2025-07-14T18:16:35.276+0000] {taskinstance.py:2867} INFO - Starting attempt 4 of 4
+[2025-07-14T18:16:35.316+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_inference> on 2025-07-13 00:00:00+00:00
+[2025-07-14T18:16:35.350+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1858) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-14T18:16:35.356+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'run_inference', 'scheduled__2025-07-13T00:00:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpjrvciwnu']
+[2025-07-14T18:16:35.366+0000] {standard_task_runner.py:72} INFO - Started process 1864 to run task
+[2025-07-14T18:16:35.366+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask run_inference
+[2025-07-14T18:16:35.416+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-14T18:16:35.569+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-13T00:00:00+00:00 [running]> on host d84888688479
+[2025-07-14T18:16:35.575+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-14T18:16:35.873+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='run_inference' AIRFLOW_CTX_EXECUTION_DATE='2025-07-13T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-13T00:00:00+00:00'
+[2025-07-14T18:16:35.877+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-14T18:16:35.940+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-14T18:16:35.957+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/inference.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --inference_table inference_features                 --predictions_table predictions\n        ']
+[2025-07-14T18:16:35.983+0000] {subprocess.py:99} INFO - Output:
+[2025-07-14T18:16:43.770+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-07-14T18:16:43.772+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/inference.py", line 54, in <module>
+[2025-07-14T18:16:43.776+0000] {subprocess.py:106} INFO -     predict_and_save(
+[2025-07-14T18:16:43.777+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/inference.py", line 28, in predict_and_save
+[2025-07-14T18:16:43.780+0000] {subprocess.py:106} INFO -     df_pred["predicted_ridership"] = model.predict(df_pred[FEATURES])
+[2025-07-14T18:16:43.781+0000] {subprocess.py:106} INFO -                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-14T18:16:43.782+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/xgboost/core.py", line 2135, in predict
+[2025-07-14T18:16:43.783+0000] {subprocess.py:106} INFO -     raise TypeError('Expecting data to be a DMatrix object, got: ', type(data))
+[2025-07-14T18:16:43.784+0000] {subprocess.py:106} INFO - TypeError: ('Expecting data to be a DMatrix object, got: ', <class 'pandas.core.frame.DataFrame'>)
+[2025-07-14T18:16:44.277+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-07-14T18:16:44.293+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-14T18:16:44.300+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=turnstile_ml_pipeline, task_id=run_inference, run_id=scheduled__2025-07-13T00:00:00+00:00, execution_date=20250713T000000, start_date=20250714T181635, end_date=20250714T181644
+[2025-07-14T18:16:44.351+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-14T18:16:44.353+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 33 for task run_inference (Bash command failed. The command returned a non-zero exit code 1.; 1864)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-14T18:16:44.400+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-07-14T18:16:44.439+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-14T18:16:44.450+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

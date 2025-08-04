@@ -1,0 +1,29 @@
+[2025-07-20T11:59:51.765+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-20T11:59:51.816+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-19T00:00:00+00:00 [queued]>
+[2025-07-20T11:59:51.848+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-19T00:00:00+00:00 [queued]>
+[2025-07-20T11:59:51.850+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-20T11:59:51.892+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_inference> on 2025-07-19 00:00:00+00:00
+[2025-07-20T11:59:51.915+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=2579) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-20T11:59:51.919+0000] {standard_task_runner.py:72} INFO - Started process 2585 to run task
+[2025-07-20T11:59:51.926+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'run_inference', 'scheduled__2025-07-19T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpahi_ndap']
+[2025-07-20T11:59:51.932+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask run_inference
+[2025-07-20T11:59:51.973+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-20T11:59:52.098+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.run_inference scheduled__2025-07-19T00:00:00+00:00 [running]> on host e42e59698f90
+[2025-07-20T11:59:52.103+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-20T11:59:52.532+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='run_inference' AIRFLOW_CTX_EXECUTION_DATE='2025-07-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-19T00:00:00+00:00'
+[2025-07-20T11:59:52.536+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-20T11:59:52.579+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-20T11:59:52.581+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/inference.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --inference_table inference_features                 --predictions_table predictions\n        ']
+[2025-07-20T11:59:52.609+0000] {subprocess.py:99} INFO - Output:
+[2025-07-20T11:59:59.754+0000] {subprocess.py:106} INFO -    group_key            datetime  ...  hour day_of_week
+[2025-07-20T11:59:59.755+0000] {subprocess.py:106} INFO - 0  A002_R051 2022-07-07 00:00:00  ...     0           3
+[2025-07-20T11:59:59.757+0000] {subprocess.py:106} INFO - 1  A002_R051 2022-07-07 01:00:00  ...     1           3
+[2025-07-20T11:59:59.758+0000] {subprocess.py:106} INFO - 
+[2025-07-20T11:59:59.759+0000] {subprocess.py:106} INFO - [2 rows x 8 columns]
+[2025-07-20T11:59:59.760+0000] {subprocess.py:106} INFO - [OK] Saved 432 predictions to 'predictions'
+[2025-07-20T12:00:00.223+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-20T12:00:00.277+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-20T12:00:00.278+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=run_inference, run_id=scheduled__2025-07-19T00:00:00+00:00, execution_date=20250719T000000, start_date=20250720T115951, end_date=20250720T120000
+[2025-07-20T12:00:00.368+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-20T12:00:00.421+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-20T12:00:00.426+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

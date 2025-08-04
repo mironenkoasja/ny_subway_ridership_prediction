@@ -1,0 +1,75 @@
+[2025-07-16T14:45:34.617+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T14:45:34.763+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:45:34.842+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:45:34.844+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T14:45:34.979+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_and_ingest> on 2025-07-15 00:00:00+00:00
+[2025-07-16T14:45:35.068+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3078) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T14:45:35.149+0000] {standard_task_runner.py:72} INFO - Started process 3090 to run task
+[2025-07-16T14:45:35.142+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'download_and_ingest', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpbd890a0r']
+[2025-07-16T14:45:35.175+0000] {standard_task_runner.py:105} INFO - Job 41: Subtask download_and_ingest
+[2025-07-16T14:45:35.317+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:45:35.849+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [running]> on host d84888688479
+[2025-07-16T14:45:35.863+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:45:36.772+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='download_and_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T14:45:36.778+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T14:45:36.879+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T14:45:36.886+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/download_ingest.py                 --year 2022                 --month 7                 --start_day 1                 --end_day 2                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --table_name raw_turnstile_data\n        ']
+[2025-07-16T14:45:37.005+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T14:45:56.163+0000] {subprocess.py:106} INFO - [INFO] Fetching data for dates: ['2022-07-01', '2022-07-02']
+[2025-07-16T14:45:56.167+0000] {subprocess.py:106} INFO - [OK] Ingested 2000 rows into table 'raw_turnstile_data'
+[2025-07-16T14:45:56.576+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T14:45:56.754+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T14:45:56.758+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=download_and_ingest, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T144534, end_date=20250716T144556
+[2025-07-16T14:45:56.880+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T14:45:57.018+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T14:45:57.029+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T18:45:14.472+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T18:45:14.515+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:45:14.530+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:45:14.531+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T18:45:14.569+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_and_ingest> on 2025-07-15 00:00:00+00:00
+[2025-07-16T18:45:14.599+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=266) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T18:45:14.602+0000] {standard_task_runner.py:72} INFO - Started process 272 to run task
+[2025-07-16T18:45:14.608+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'download_and_ingest', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpjhnhbs98']
+[2025-07-16T18:45:14.614+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask download_and_ingest
+[2025-07-16T18:45:14.642+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:45:14.717+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [running]> on host 36b6cbfeb7c6
+[2025-07-16T18:45:14.722+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:45:14.937+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='download_and_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T18:45:14.940+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T18:45:15.061+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T18:45:15.063+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/download_ingest.py                 --year 2022                 --month 7                 --start_day 1                 --end_day 2                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --table_name raw_turnstile_data\n        ']
+[2025-07-16T18:45:15.103+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T18:45:21.952+0000] {subprocess.py:106} INFO - [INFO] Fetching data for dates: ['2022-07-01', '2022-07-02']
+[2025-07-16T18:45:21.953+0000] {subprocess.py:106} INFO - [OK] Ingested 2000 rows into table 'raw_turnstile_data'
+[2025-07-16T18:45:22.236+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T18:45:22.423+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T18:45:22.451+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=download_and_ingest, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T184514, end_date=20250716T184522
+[2025-07-16T18:45:22.851+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T18:45:22.925+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T18:45:22.928+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T19:11:31.238+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T19:11:31.275+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:11:31.296+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:11:31.297+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T19:11:31.329+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): download_and_ingest> on 2025-07-15 00:00:00+00:00
+[2025-07-16T19:11:31.345+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=59) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T19:11:31.348+0000] {standard_task_runner.py:72} INFO - Started process 65 to run task
+[2025-07-16T19:11:31.355+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'download_and_ingest', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpk49rasss']
+[2025-07-16T19:11:31.361+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask download_and_ingest
+[2025-07-16T19:11:31.401+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:11:31.486+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-15T00:00:00+00:00 [running]> on host e42e59698f90
+[2025-07-16T19:11:31.489+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:11:31.682+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='download_and_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T19:11:31.684+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T19:11:31.780+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T19:11:31.781+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/download_ingest.py                 --year 2022                 --month 7                 --start_day 1                 --end_day 2                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --table_name raw_turnstile_data\n        ']
+[2025-07-16T19:11:31.802+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T19:11:38.331+0000] {subprocess.py:106} INFO - [INFO] Fetching data for dates: ['2022-07-01', '2022-07-02']
+[2025-07-16T19:11:38.333+0000] {subprocess.py:106} INFO - [OK] Ingested 2000 rows into table 'raw_turnstile_data'
+[2025-07-16T19:11:38.583+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T19:11:38.631+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T19:11:38.633+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=download_and_ingest, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T191131, end_date=20250716T191138
+[2025-07-16T19:11:38.705+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T19:11:38.754+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T19:11:38.761+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

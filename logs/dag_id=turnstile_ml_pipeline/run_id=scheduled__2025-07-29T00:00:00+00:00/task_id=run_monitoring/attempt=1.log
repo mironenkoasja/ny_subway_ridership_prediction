@@ -1,0 +1,36 @@
+[2025-07-30T11:48:04.135+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-30T11:48:04.165+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_monitoring scheduled__2025-07-29T00:00:00+00:00 [queued]>
+[2025-07-30T11:48:04.181+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_monitoring scheduled__2025-07-29T00:00:00+00:00 [queued]>
+[2025-07-30T11:48:04.182+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-30T11:48:04.203+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_monitoring> on 2025-07-29 00:00:00+00:00
+[2025-07-30T11:48:04.217+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1536) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-30T11:48:04.219+0000] {standard_task_runner.py:72} INFO - Started process 1542 to run task
+[2025-07-30T11:48:04.218+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'run_monitoring', 'scheduled__2025-07-29T00:00:00+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpmbk0d3dd']
+[2025-07-30T11:48:04.221+0000] {standard_task_runner.py:105} INFO - Job 143: Subtask run_monitoring
+[2025-07-30T11:48:04.246+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-30T11:48:04.306+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.run_monitoring scheduled__2025-07-29T00:00:00+00:00 [running]> on host c9afdf80b5d8
+[2025-07-30T11:48:04.312+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-30T11:48:04.446+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='run_monitoring' AIRFLOW_CTX_EXECUTION_DATE='2025-07-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-29T00:00:00+00:00'
+[2025-07-30T11:48:04.448+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-30T11:48:04.470+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-30T11:48:04.472+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/monitor.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --predictions_table predictions                 --monitoring_table monitoring                 --reference_date 2022-07-30\n        ']
+[2025-07-30T11:48:04.494+0000] {subprocess.py:99} INFO - Output:
+[2025-07-30T11:48:07.932+0000] {subprocess.py:106} INFO - [Monitoring] For date: 2022-07-30
+[2025-07-30T11:48:07.933+0000] {subprocess.py:106} INFO - 2022-07-30
+[2025-07-30T11:48:07.934+0000] {subprocess.py:106} INFO -   monitoring_date  n_obs          mae         rmse  mean_ridership
+[2025-07-30T11:48:07.934+0000] {subprocess.py:106} INFO - 0      2022-07-30    120  1391.745232  1794.061077     1307.183333
+[2025-07-30T11:48:07.935+0000] {subprocess.py:106} INFO -    group_key monitoring_date  n_obs  ...         rmse  ridership_mean  load_class
+[2025-07-30T11:48:07.935+0000] {subprocess.py:106} INFO - 0  A002_R051      2022-07-30      5  ...  1128.456927           947.4     mid-low
+[2025-07-30T11:48:07.936+0000] {subprocess.py:106} INFO - 1  A006_R079      2022-07-30      5  ...  1269.075985          1193.6    mid-high
+[2025-07-30T11:48:07.937+0000] {subprocess.py:106} INFO - 2  A007_R079      2022-07-30      5  ...  1056.817180           733.4         low
+[2025-07-30T11:48:07.937+0000] {subprocess.py:106} INFO - 3  A010_R080      2022-07-30      5  ...  1532.579435          1359.8    mid-high
+[2025-07-30T11:48:07.938+0000] {subprocess.py:106} INFO - 4  A011_R080      2022-07-30      5  ...  2288.841484          2007.6        high
+[2025-07-30T11:48:07.938+0000] {subprocess.py:106} INFO - 
+[2025-07-30T11:48:07.939+0000] {subprocess.py:106} INFO - [5 rows x 7 columns]
+[2025-07-30T11:48:07.939+0000] {subprocess.py:106} INFO - [OK] Saved 24 rows to 'monitoring'
+[2025-07-30T11:48:08.151+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-30T11:48:08.193+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-30T11:48:08.194+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=run_monitoring, run_id=scheduled__2025-07-29T00:00:00+00:00, execution_date=20250729T000000, start_date=20250730T114804, end_date=20250730T114808
+[2025-07-30T11:48:08.275+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-30T11:48:08.301+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-30T11:48:08.304+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

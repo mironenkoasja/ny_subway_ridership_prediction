@@ -1,0 +1,115 @@
+[2025-07-16T19:47:38.962+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T19:47:39.004+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_monitoring manual__2025-07-16T19:07:19+00:00 [queued]>
+[2025-07-16T19:47:39.030+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.run_monitoring manual__2025-07-16T19:07:19+00:00 [queued]>
+[2025-07-16T19:47:39.032+0000] {taskinstance.py:2867} INFO - Starting attempt 5 of 5
+[2025-07-16T19:47:39.065+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): run_monitoring> on 2025-07-16 19:07:19+00:00
+[2025-07-16T19:47:39.082+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=491) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T19:47:39.085+0000] {standard_task_runner.py:72} INFO - Started process 497 to run task
+[2025-07-16T19:47:39.083+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'run_monitoring', 'manual__2025-07-16T19:07:19+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmprpoq0fm3']
+[2025-07-16T19:47:39.088+0000] {standard_task_runner.py:105} INFO - Job 20: Subtask run_monitoring
+[2025-07-16T19:47:39.112+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:47:39.191+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.run_monitoring manual__2025-07-16T19:07:19+00:00 [running]> on host e42e59698f90
+[2025-07-16T19:47:39.349+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='run_monitoring' AIRFLOW_CTX_EXECUTION_DATE='2025-07-16T19:07:19+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-16T19:07:19+00:00'
+[2025-07-16T19:47:39.351+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T19:47:39.392+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T19:47:39.394+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/monitor.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --predictions_table predictions                 --monitoring_table monitoring                 --reference_date 2022-07-16\n        ']
+[2025-07-16T19:47:39.422+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T19:47:44.125+0000] {subprocess.py:106} INFO - [Monitoring] For date: 2022-07-16
+[2025-07-16T19:47:44.127+0000] {subprocess.py:106} INFO - 2022-07-16
+[2025-07-16T19:47:44.129+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-07-16T19:47:44.130+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/monitor.py", line 110, in <module>
+[2025-07-16T19:47:44.133+0000] {subprocess.py:106} INFO -     run_monitoring(
+[2025-07-16T19:47:44.134+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/monitor.py", line 84, in run_monitoring
+[2025-07-16T19:47:44.143+0000] {subprocess.py:106} INFO -     df_metrics["load_class"] = pd.qcut(df_metrics["ridership_mean"], q=4, labels=["low", "mid-low", "mid-high", "high"])
+[2025-07-16T19:47:44.144+0000] {subprocess.py:106} INFO -                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16T19:47:44.146+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/pandas/core/reshape/tile.py", line 377, in qcut
+[2025-07-16T19:47:44.147+0000] {subprocess.py:106} INFO -     bins = np.quantile(x_np, quantiles)
+[2025-07-16T19:47:44.147+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-16T19:47:44.148+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/numpy/lib/function_base.py", line 4543, in quantile
+[2025-07-16T19:47:44.149+0000] {subprocess.py:106} INFO -     return _quantile_unchecked(
+[2025-07-16T19:47:44.150+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^
+[2025-07-16T19:47:44.151+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/numpy/lib/function_base.py", line 4555, in _quantile_unchecked
+[2025-07-16T19:47:44.151+0000] {subprocess.py:106} INFO -     return _ureduce(a,
+[2025-07-16T19:47:44.152+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^
+[2025-07-16T19:47:44.153+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/numpy/lib/function_base.py", line 3823, in _ureduce
+[2025-07-16T19:47:44.153+0000] {subprocess.py:106} INFO -     r = func(a, **kwargs)
+[2025-07-16T19:47:44.154+0000] {subprocess.py:106} INFO -         ^^^^^^^^^^^^^^^^^
+[2025-07-16T19:47:44.155+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/numpy/lib/function_base.py", line 4722, in _quantile_ureduce_func
+[2025-07-16T19:47:44.156+0000] {subprocess.py:106} INFO -     result = _quantile(arr,
+[2025-07-16T19:47:44.156+0000] {subprocess.py:106} INFO -              ^^^^^^^^^^^^^^
+[2025-07-16T19:47:44.158+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/numpy/lib/function_base.py", line 4831, in _quantile
+[2025-07-16T19:47:44.159+0000] {subprocess.py:106} INFO -     slices_having_nans = np.isnan(arr[-1, ...])
+[2025-07-16T19:47:44.160+0000] {subprocess.py:106} INFO -                                   ~~~^^^^^^^^^
+[2025-07-16T19:47:44.162+0000] {subprocess.py:106} INFO - IndexError: index -1 is out of bounds for axis 0 with size 0
+[2025-07-16T19:47:44.448+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-07-16T19:47:44.482+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-16T19:47:44.497+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=turnstile_ml_pipeline, task_id=run_monitoring, run_id=manual__2025-07-16T19:07:19+00:00, execution_date=20250716T190719, start_date=20250716T194739, end_date=20250716T194744
+[2025-07-16T19:47:44.555+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T19:47:44.557+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 20 for task run_monitoring (Bash command failed. The command returned a non-zero exit code 1.; 497)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-16T19:47:44.586+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-07-16T19:47:44.614+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T19:47:44.618+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

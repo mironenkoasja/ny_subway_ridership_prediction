@@ -1,0 +1,938 @@
+[2025-07-09T16:41:20.874+0000] {processor.py:157} INFO - Started process (PID=356) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:41:20.943+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:41:21.023+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:41:21.021+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:41:27.573+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:41:30.972+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:41:30.772+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:41:31.792+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:41:31.792+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:41:35.590+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 14.822 seconds
+[2025-07-09T16:42:06.235+0000] {processor.py:157} INFO - Started process (PID=371) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:06.299+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:42:06.319+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:06.318+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:13.991+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:14.512+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:14.511+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:42:14.692+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:14.691+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:42:14.889+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 8.697 seconds
+[2025-07-09T16:42:46.090+0000] {processor.py:157} INFO - Started process (PID=388) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:46.121+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:42:46.126+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:46.125+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:50.064+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:42:50.691+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:50.691+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:42:50.845+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:42:50.844+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:42:51.126+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 5.051 seconds
+[2025-07-09T16:43:21.745+0000] {processor.py:157} INFO - Started process (PID=404) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:21.748+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:43:21.766+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:21.765+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:24.145+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:24.525+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:24.525+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:43:24.663+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:24.663+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:43:24.797+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 3.087 seconds
+[2025-07-09T16:43:55.116+0000] {processor.py:157} INFO - Started process (PID=406) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:55.120+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:43:55.124+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:55.123+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:56.326+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:43:56.484+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:56.484+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:43:56.544+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:43:56.544+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:43:56.587+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.483 seconds
+[2025-07-09T16:44:27.084+0000] {processor.py:157} INFO - Started process (PID=408) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:27.086+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:44:27.087+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:27.087+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:27.863+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:27.956+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:27.956+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:44:27.993+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:27.992+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:44:28.025+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.947 seconds
+[2025-07-09T16:44:58.711+0000] {processor.py:157} INFO - Started process (PID=410) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:58.712+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:44:58.714+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:58.714+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:59.442+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:44:59.542+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:59.542+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:44:59.583+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:44:59.582+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:44:59.613+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.907 seconds
+[2025-07-09T16:45:29.729+0000] {processor.py:157} INFO - Started process (PID=412) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:45:29.730+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:45:29.732+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:45:29.732+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:45:30.669+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:45:30.853+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:45:30.852+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:45:30.921+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:45:30.921+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:45:30.973+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.251 seconds
+[2025-07-09T16:46:01.550+0000] {processor.py:157} INFO - Started process (PID=414) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:01.553+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:46:01.556+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:01.555+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:02.340+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:02.468+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:02.468+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:46:02.517+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:02.516+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:46:02.558+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.019 seconds
+[2025-07-09T16:46:32.848+0000] {processor.py:157} INFO - Started process (PID=416) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:32.856+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:46:32.860+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:32.859+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:34.402+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:46:34.702+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:34.701+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:46:34.844+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:46:34.843+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:46:34.911+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 2.083 seconds
+[2025-07-09T16:47:05.038+0000] {processor.py:157} INFO - Started process (PID=418) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:05.040+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:47:05.043+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:05.042+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:05.927+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:06.069+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:06.068+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:47:06.119+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:06.119+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:47:06.178+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.150 seconds
+[2025-07-09T16:47:37.092+0000] {processor.py:157} INFO - Started process (PID=420) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:37.094+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:47:37.097+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:37.096+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:37.896+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:47:38.007+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:38.007+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:47:38.043+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:47:38.043+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:47:38.078+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.992 seconds
+[2025-07-09T16:48:08.258+0000] {processor.py:157} INFO - Started process (PID=422) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:08.260+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:48:08.262+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:08.262+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:09.253+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:09.383+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:09.383+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:48:09.433+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:09.433+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:48:09.478+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.228 seconds
+[2025-07-09T16:48:39.564+0000] {processor.py:157} INFO - Started process (PID=424) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:39.566+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:48:39.568+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:39.567+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:40.198+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:48:40.290+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:40.290+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:48:40.332+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:48:40.332+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:48:40.363+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.803 seconds
+[2025-07-09T16:49:10.430+0000] {processor.py:157} INFO - Started process (PID=426) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:10.432+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:49:10.433+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:10.433+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:11.008+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:11.078+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:11.078+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:49:11.109+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:11.109+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:49:11.131+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.705 seconds
+[2025-07-09T16:49:41.296+0000] {processor.py:157} INFO - Started process (PID=428) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:41.299+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:49:41.301+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:41.300+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:41.996+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:49:42.096+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:42.095+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:49:42.137+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:49:42.137+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:49:42.168+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.882 seconds
+[2025-07-09T16:50:12.419+0000] {processor.py:157} INFO - Started process (PID=430) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:12.420+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:50:12.422+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:12.422+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:13.021+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:13.104+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:13.103+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:50:13.136+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:13.136+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:50:13.166+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.752 seconds
+[2025-07-09T16:50:43.428+0000] {processor.py:157} INFO - Started process (PID=432) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:43.430+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:50:43.431+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:43.431+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:43.945+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:50:44.007+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:44.007+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:50:44.033+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:50:44.033+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:50:44.057+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.634 seconds
+[2025-07-09T16:51:14.126+0000] {processor.py:157} INFO - Started process (PID=434) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:14.127+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:51:14.129+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:14.129+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:14.729+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:14.806+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:14.806+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:51:14.839+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:14.839+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:51:14.867+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.745 seconds
+[2025-07-09T16:51:45.138+0000] {processor.py:157} INFO - Started process (PID=436) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:45.139+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:51:45.141+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:45.140+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:45.646+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:51:45.708+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:45.708+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:51:45.736+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:51:45.735+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:51:45.760+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.626 seconds
+[2025-07-09T16:52:16.012+0000] {processor.py:157} INFO - Started process (PID=438) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:16.015+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:52:16.017+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:16.017+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:16.768+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:16.891+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:16.890+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:52:16.925+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:16.924+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:52:16.952+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.948 seconds
+[2025-07-09T16:52:47.211+0000] {processor.py:157} INFO - Started process (PID=440) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:47.212+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:52:47.214+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:47.213+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:47.726+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:52:47.787+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:47.787+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:52:47.814+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:52:47.813+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:52:47.839+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.631 seconds
+[2025-07-09T16:53:18.138+0000] {processor.py:157} INFO - Started process (PID=442) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:18.140+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:53:18.143+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:18.142+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:19.046+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:19.170+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:19.170+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:53:19.218+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:19.217+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:53:19.254+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.123 seconds
+[2025-07-09T16:53:49.388+0000] {processor.py:157} INFO - Started process (PID=444) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:49.390+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:53:49.393+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:49.392+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:50.556+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:53:50.711+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:50.711+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:53:50.764+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:53:50.763+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:53:50.817+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.435 seconds
+[2025-07-09T16:54:21.138+0000] {processor.py:157} INFO - Started process (PID=446) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:21.141+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:54:21.144+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:21.143+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:22.072+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:22.191+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:22.190+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:54:22.230+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:22.230+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:54:22.265+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.138 seconds
+[2025-07-09T16:54:52.379+0000] {processor.py:157} INFO - Started process (PID=448) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:52.382+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:54:52.384+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:52.383+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:53.083+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:54:53.170+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:53.170+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:54:53.202+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:54:53.202+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:54:53.229+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.855 seconds
+[2025-07-09T16:55:23.508+0000] {processor.py:157} INFO - Started process (PID=450) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:23.510+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:55:23.512+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:23.511+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:24.073+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:24.146+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:24.146+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:55:24.178+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:24.178+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:55:24.205+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.700 seconds
+[2025-07-09T16:55:54.472+0000] {processor.py:157} INFO - Started process (PID=452) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:54.473+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:55:54.475+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:54.474+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:54.994+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:55:55.064+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:55.064+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:55:55.089+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:55:55.089+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:55:55.113+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.645 seconds
+[2025-07-09T16:56:25.253+0000] {processor.py:157} INFO - Started process (PID=454) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:25.254+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:56:25.256+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:25.255+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:25.893+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:26.002+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:26.001+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:56:26.038+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:26.038+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:56:26.068+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.819 seconds
+[2025-07-09T16:56:56.408+0000] {processor.py:157} INFO - Started process (PID=456) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:56.411+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:56:56.413+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:56.413+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:57.753+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:56:57.910+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:57.910+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:56:57.976+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:56:57.976+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:56:58.025+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.632 seconds
+[2025-07-09T16:57:28.382+0000] {processor.py:157} INFO - Started process (PID=458) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:57:28.396+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:57:28.403+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:57:28.402+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:57:29.609+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:57:29.773+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:57:29.773+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:57:29.834+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:57:29.834+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:57:29.904+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.549 seconds
+[2025-07-09T16:58:00.102+0000] {processor.py:157} INFO - Started process (PID=460) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:00.104+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:58:00.107+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:00.106+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:00.764+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:00.849+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:00.849+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:58:00.880+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:00.880+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:58:00.912+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.815 seconds
+[2025-07-09T16:58:31.194+0000] {processor.py:157} INFO - Started process (PID=462) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:31.196+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:58:31.197+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:31.197+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:31.924+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:58:31.994+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:31.994+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:58:32.025+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:58:32.025+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:58:32.051+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.861 seconds
+[2025-07-09T16:59:02.328+0000] {processor.py:157} INFO - Started process (PID=464) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:02.330+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:59:02.331+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:02.331+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:02.831+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:02.892+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:02.891+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:59:02.918+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:02.918+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:59:02.944+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.620 seconds
+[2025-07-09T16:59:33.208+0000] {processor.py:157} INFO - Started process (PID=466) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:33.210+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T16:59:33.211+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:33.211+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:33.911+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T16:59:33.994+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:33.994+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T16:59:34.028+0000] {logging_mixin.py:154} INFO - [2025-07-09T16:59:34.028+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T16:59:34.058+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.854 seconds
+[2025-07-09T17:00:04.312+0000] {processor.py:157} INFO - Started process (PID=468) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:04.314+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:00:04.317+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:04.316+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:05.069+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:05.196+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:05.196+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:00:05.242+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:05.242+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:00:05.272+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.968 seconds
+[2025-07-09T17:00:35.552+0000] {processor.py:157} INFO - Started process (PID=470) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:35.554+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:00:35.556+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:35.555+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:36.051+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:00:36.119+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:36.119+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:00:36.145+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:00:36.145+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:00:36.168+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.619 seconds
+[2025-07-09T17:01:06.504+0000] {processor.py:157} INFO - Started process (PID=472) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:06.506+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:01:06.508+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:06.508+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:07.203+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:07.287+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:07.287+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:01:07.321+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:07.320+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:01:07.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.849 seconds
+[2025-07-09T17:01:37.622+0000] {processor.py:157} INFO - Started process (PID=474) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:37.623+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:01:37.625+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:37.624+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:38.112+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:01:38.179+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:38.178+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:01:38.207+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:01:38.207+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:01:38.231+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.613 seconds
+[2025-07-09T17:02:08.475+0000] {processor.py:157} INFO - Started process (PID=476) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:08.476+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:02:08.478+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:08.478+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:09.133+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:09.232+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:09.232+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:02:09.270+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:09.269+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:02:09.300+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.831 seconds
+[2025-07-09T17:02:39.454+0000] {processor.py:157} INFO - Started process (PID=478) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:39.456+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:02:39.458+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:39.458+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:40.043+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:02:40.146+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:40.146+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:02:40.181+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:02:40.181+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:02:40.213+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.764 seconds
+[2025-07-09T17:03:10.493+0000] {processor.py:157} INFO - Started process (PID=480) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:10.495+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:03:10.496+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:10.496+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:11.118+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:11.199+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:11.199+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:03:11.229+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:11.229+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:03:11.258+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.769 seconds
+[2025-07-09T17:03:41.523+0000] {processor.py:157} INFO - Started process (PID=482) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:41.524+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:03:41.526+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:41.525+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:42.135+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:03:42.209+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:42.209+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:03:42.240+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:03:42.240+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:03:42.268+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.749 seconds
+[2025-07-09T17:04:12.511+0000] {processor.py:157} INFO - Started process (PID=484) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:12.513+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:04:12.515+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:12.515+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:13.177+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:13.250+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:13.249+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:04:13.279+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:13.279+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:04:13.306+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.802 seconds
+[2025-07-09T17:04:43.390+0000] {processor.py:157} INFO - Started process (PID=486) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:43.392+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:04:43.393+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:43.393+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:43.936+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:04:44.015+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:44.015+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:04:44.050+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:04:44.050+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:04:44.080+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.693 seconds
+[2025-07-09T17:05:14.375+0000] {processor.py:157} INFO - Started process (PID=488) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:14.377+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:05:14.379+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:14.378+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:15.065+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:15.135+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:15.135+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:05:15.166+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:15.165+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:05:15.194+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.824 seconds
+[2025-07-09T17:05:45.469+0000] {processor.py:157} INFO - Started process (PID=490) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:45.470+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:05:45.472+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:45.472+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:45.945+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:05:46.013+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:46.013+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:05:46.040+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:05:46.039+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:05:46.064+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.598 seconds
+[2025-07-09T17:06:16.259+0000] {processor.py:157} INFO - Started process (PID=492) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:16.261+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:06:16.263+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:16.262+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:16.908+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:16.984+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:16.984+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:06:17.015+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:17.015+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:06:17.045+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.790 seconds
+[2025-07-09T17:06:47.319+0000] {processor.py:157} INFO - Started process (PID=494) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:47.321+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:06:47.323+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:47.323+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:47.892+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:06:47.988+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:47.988+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:06:48.034+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:06:48.034+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:06:48.071+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.755 seconds
+[2025-07-09T17:07:18.357+0000] {processor.py:157} INFO - Started process (PID=496) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:18.359+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:07:18.361+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:18.361+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:19.025+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:19.103+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:19.102+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:07:19.136+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:19.136+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:07:19.165+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.812 seconds
+[2025-07-09T17:07:49.449+0000] {processor.py:157} INFO - Started process (PID=498) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:49.451+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:07:49.453+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:49.453+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:50.099+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:07:50.180+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:50.180+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:07:50.213+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:07:50.212+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:07:50.241+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.797 seconds
+[2025-07-09T17:08:20.525+0000] {processor.py:157} INFO - Started process (PID=500) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:20.526+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:08:20.528+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:20.528+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:21.074+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:21.151+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:21.151+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:08:21.189+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:21.188+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:08:21.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.697 seconds
+[2025-07-09T17:08:51.393+0000] {processor.py:157} INFO - Started process (PID=502) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:51.395+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:08:51.396+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:51.396+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:52.111+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:08:52.218+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:52.218+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:08:52.260+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:08:52.259+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:08:52.293+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.907 seconds
+[2025-07-09T17:09:22.571+0000] {processor.py:157} INFO - Started process (PID=504) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:22.573+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:09:22.574+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:22.574+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:23.162+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:23.257+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:23.257+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:09:23.297+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:23.296+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:09:23.372+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.805 seconds
+[2025-07-09T17:09:53.675+0000] {processor.py:157} INFO - Started process (PID=506) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:53.677+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:09:53.680+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:53.679+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:54.575+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:09:54.654+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:54.654+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:09:54.690+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:09:54.689+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:09:54.723+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.057 seconds
+[2025-07-09T17:10:24.945+0000] {processor.py:157} INFO - Started process (PID=508) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:24.946+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:10:24.948+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:24.948+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:25.678+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:25.807+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:25.806+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:10:25.871+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:25.871+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:10:25.937+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.000 seconds
+[2025-07-09T17:10:56.272+0000] {processor.py:157} INFO - Started process (PID=510) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:56.274+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:10:56.277+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:56.276+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:57.215+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:10:57.451+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:57.450+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:10:57.521+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:10:57.520+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:10:57.579+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.315 seconds
+[2025-07-09T17:11:27.849+0000] {processor.py:157} INFO - Started process (PID=512) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:11:27.856+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:11:27.873+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:11:27.872+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:11:29.484+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:11:29.659+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:11:29.659+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:11:29.745+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:11:29.744+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:11:29.816+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.988 seconds
+[2025-07-09T17:12:00.061+0000] {processor.py:157} INFO - Started process (PID=514) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:00.064+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:12:00.066+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:00.066+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:00.929+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:01.041+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:01.041+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:12:01.092+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:01.091+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:12:01.128+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.074 seconds
+[2025-07-09T17:12:31.461+0000] {processor.py:157} INFO - Started process (PID=516) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:31.464+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:12:31.468+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:31.467+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:32.466+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:12:32.581+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:32.581+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:12:32.635+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:12:32.635+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:12:32.688+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.238 seconds
+[2025-07-09T17:13:02.981+0000] {processor.py:157} INFO - Started process (PID=518) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:02.984+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:13:02.986+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:02.985+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:03.912+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:04.045+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:04.045+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:13:04.093+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:04.093+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:13:04.131+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.160 seconds
+[2025-07-09T17:13:34.221+0000] {processor.py:157} INFO - Started process (PID=520) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:34.223+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:13:34.225+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:34.225+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:35.079+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:13:35.234+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:35.233+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:13:35.313+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:13:35.313+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:13:35.358+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.145 seconds
+[2025-07-09T17:14:05.631+0000] {processor.py:157} INFO - Started process (PID=522) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:05.632+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:14:05.634+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:05.633+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:06.269+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:06.366+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:06.366+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:14:06.406+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:06.405+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:14:06.436+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.809 seconds
+[2025-07-09T17:14:36.717+0000] {processor.py:157} INFO - Started process (PID=524) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:36.720+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:14:36.722+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:36.722+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:37.572+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:14:37.682+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:37.682+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:14:37.724+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:14:37.724+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:14:37.764+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.054 seconds
+[2025-07-09T17:15:07.966+0000] {processor.py:157} INFO - Started process (PID=526) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:07.968+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:15:07.970+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:07.969+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:08.717+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:08.878+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:08.877+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:15:08.928+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:08.927+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:15:08.978+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.017 seconds
+[2025-07-09T17:15:39.259+0000] {processor.py:157} INFO - Started process (PID=528) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:39.261+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:15:39.262+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:39.262+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:40.084+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:15:40.185+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:40.184+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:15:40.233+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:15:40.233+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:15:40.271+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.016 seconds
+[2025-07-09T17:16:10.674+0000] {processor.py:157} INFO - Started process (PID=530) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:10.676+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:16:10.678+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:10.677+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:11.351+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:11.439+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:11.439+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:16:11.474+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:11.473+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:16:11.504+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.834 seconds
+[2025-07-09T17:16:41.786+0000] {processor.py:157} INFO - Started process (PID=532) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:41.788+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:16:41.790+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:41.789+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:42.366+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:16:42.445+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:42.444+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:16:42.475+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:16:42.475+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:16:42.502+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.721 seconds
+[2025-07-09T17:17:12.782+0000] {processor.py:157} INFO - Started process (PID=534) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:12.785+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:17:12.787+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:12.786+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:13.530+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:13.635+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:13.635+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:17:13.676+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:13.675+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:17:13.728+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.955 seconds
+[2025-07-09T17:17:44.290+0000] {processor.py:157} INFO - Started process (PID=536) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:44.302+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:17:44.321+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:44.319+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:48.246+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:17:48.928+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:48.928+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:17:49.153+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:17:49.152+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:17:49.336+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 5.069 seconds
+[2025-07-09T17:18:20.242+0000] {processor.py:157} INFO - Started process (PID=538) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:20.266+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:18:20.270+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:20.269+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:23.776+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:24.098+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:24.098+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:18:24.266+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:24.265+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:18:24.379+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 4.168 seconds
+[2025-07-09T17:18:54.562+0000] {processor.py:157} INFO - Started process (PID=540) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:54.564+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:18:54.566+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:54.566+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:55.070+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:18:55.138+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:55.138+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:18:55.165+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:18:55.165+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:18:55.204+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.646 seconds
+[2025-07-09T17:19:25.499+0000] {processor.py:157} INFO - Started process (PID=542) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:25.501+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:19:25.503+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:25.503+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:26.082+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:26.157+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:26.157+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:19:26.191+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:26.191+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:19:26.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.726 seconds
+[2025-07-09T17:19:56.488+0000] {processor.py:157} INFO - Started process (PID=544) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:56.491+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:19:56.497+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:56.496+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:57.554+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:19:57.751+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:57.751+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:19:57.805+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:19:57.804+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:19:57.855+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.373 seconds
+[2025-07-09T17:20:28.178+0000] {processor.py:157} INFO - Started process (PID=546) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:20:28.180+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:20:28.182+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:20:28.182+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:20:28.930+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:20:29.039+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:20:29.038+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:20:29.073+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:20:29.073+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:20:29.112+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.939 seconds
+[2025-07-09T17:20:59.425+0000] {processor.py:157} INFO - Started process (PID=548) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:20:59.428+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:20:59.430+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:20:59.429+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:21:00.508+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:21:00.645+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:21:00.645+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:21:00.690+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:21:00.690+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:21:00.727+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.309 seconds
+[2025-07-09T17:21:31.151+0000] {processor.py:157} INFO - Started process (PID=550) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:21:31.153+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:21:31.156+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:21:31.156+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:21:32.475+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:21:32.727+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:21:32.726+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:21:32.827+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:21:32.827+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:21:32.927+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.785 seconds
+[2025-07-09T17:22:03.129+0000] {processor.py:157} INFO - Started process (PID=552) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:03.130+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:22:03.131+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:03.131+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:03.650+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:03.734+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:03.734+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:22:03.763+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:03.763+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:22:03.788+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.663 seconds
+[2025-07-09T17:22:34.071+0000] {processor.py:157} INFO - Started process (PID=554) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:34.073+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:22:34.075+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:34.075+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:34.870+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:22:34.967+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:34.967+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:22:35.008+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:22:35.007+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:22:35.041+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.976 seconds
+[2025-07-09T17:23:05.336+0000] {processor.py:157} INFO - Started process (PID=556) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:05.338+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:23:05.340+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:05.339+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:06.211+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:06.305+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:06.305+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:23:06.342+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:06.342+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:23:06.380+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.049 seconds
+[2025-07-09T17:23:36.620+0000] {processor.py:157} INFO - Started process (PID=558) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:36.621+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:23:36.622+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:36.622+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:37.137+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:23:37.202+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:37.202+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:23:37.231+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:23:37.231+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:23:37.257+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.641 seconds
+[2025-07-09T17:24:07.600+0000] {processor.py:157} INFO - Started process (PID=560) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:07.602+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:24:07.603+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:07.603+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:08.273+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:08.359+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:08.359+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:24:08.400+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:08.400+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:24:08.431+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.836 seconds
+[2025-07-09T17:24:38.716+0000] {processor.py:157} INFO - Started process (PID=562) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:38.718+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:24:38.720+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:38.719+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:39.376+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:24:39.452+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:39.452+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:24:39.490+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:24:39.489+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:24:39.523+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.813 seconds
+[2025-07-09T17:25:09.814+0000] {processor.py:157} INFO - Started process (PID=564) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:09.816+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:25:09.817+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:09.817+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:10.454+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:10.546+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:10.546+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:25:10.582+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:10.582+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:25:10.617+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.806 seconds
+[2025-07-09T17:25:40.718+0000] {processor.py:157} INFO - Started process (PID=566) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:40.720+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:25:40.722+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:40.721+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:41.319+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:25:41.399+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:41.398+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:25:41.434+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:25:41.433+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:25:41.466+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.752 seconds
+[2025-07-09T17:26:11.750+0000] {processor.py:157} INFO - Started process (PID=568) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:11.751+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:26:11.753+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:11.753+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:12.421+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:12.496+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:12.496+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:26:12.535+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:12.534+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:26:12.574+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.828 seconds
+[2025-07-09T17:26:42.861+0000] {processor.py:157} INFO - Started process (PID=570) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:42.863+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:26:42.864+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:42.864+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:43.476+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:26:43.557+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:43.556+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:26:43.596+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:26:43.596+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:26:43.628+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.771 seconds
+[2025-07-09T17:27:13.924+0000] {processor.py:157} INFO - Started process (PID=572) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:13.926+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:27:13.927+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:13.927+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:14.562+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:14.638+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:14.638+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:27:14.666+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:14.666+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:27:14.693+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.777 seconds
+[2025-07-09T17:27:44.884+0000] {processor.py:157} INFO - Started process (PID=574) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:44.886+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:27:44.887+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:44.887+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:45.426+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:27:45.500+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:45.500+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:27:45.529+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:27:45.529+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:27:45.558+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.679 seconds
+[2025-07-09T17:28:15.848+0000] {processor.py:157} INFO - Started process (PID=576) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:15.850+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:28:15.852+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:15.851+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:16.569+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:16.668+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:16.668+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:28:16.714+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:16.713+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:28:16.749+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.906 seconds
+[2025-07-09T17:28:47.041+0000] {processor.py:157} INFO - Started process (PID=578) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:47.043+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:28:47.045+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:47.044+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:47.747+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:28:47.863+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:47.863+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:28:47.902+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:28:47.901+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:28:47.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.901 seconds
+[2025-07-09T17:29:18.219+0000] {processor.py:157} INFO - Started process (PID=580) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:18.221+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:29:18.223+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:18.223+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:19.025+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:19.139+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:19.138+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:29:19.189+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:19.189+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:29:19.230+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.017 seconds
+[2025-07-09T17:29:49.492+0000] {processor.py:157} INFO - Started process (PID=582) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:49.494+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:29:49.496+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:49.496+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:50.327+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:29:50.444+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:50.443+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:29:50.499+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:29:50.498+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:29:50.539+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.055 seconds
+[2025-07-09T17:30:20.770+0000] {processor.py:157} INFO - Started process (PID=584) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:20.772+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:30:20.774+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:20.773+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:21.478+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:21.601+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:21.601+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:30:21.645+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:21.645+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:30:21.681+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.915 seconds
+[2025-07-09T17:30:51.996+0000] {processor.py:157} INFO - Started process (PID=586) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:51.998+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:30:52.001+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:51.999+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:52.596+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:30:52.671+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:52.671+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:30:52.706+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:30:52.706+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:30:52.738+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.746 seconds
+[2025-07-09T17:31:23.031+0000] {processor.py:157} INFO - Started process (PID=588) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:23.033+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:31:23.035+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:23.035+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:23.692+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:23.763+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:23.763+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:31:23.796+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:23.795+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:31:23.821+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.799 seconds
+[2025-07-09T17:31:54.114+0000] {processor.py:157} INFO - Started process (PID=590) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:54.116+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:31:54.117+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:54.117+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:54.707+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:31:54.779+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:54.779+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:31:54.806+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:31:54.806+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:31:54.832+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.724 seconds
+[2025-07-09T17:32:25.105+0000] {processor.py:157} INFO - Started process (PID=592) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:25.107+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:32:25.108+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:25.108+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:25.645+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:25.716+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:25.716+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:32:25.745+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:25.745+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:32:25.774+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.673 seconds
+[2025-07-09T17:32:56.028+0000] {processor.py:157} INFO - Started process (PID=594) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:56.029+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:32:56.030+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:56.030+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:56.599+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:32:56.673+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:56.672+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:32:56.701+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:32:56.701+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:32:56.728+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.705 seconds
+[2025-07-09T17:33:27.034+0000] {processor.py:157} INFO - Started process (PID=596) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:27.037+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:33:27.040+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:27.039+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:27.865+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:27.957+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:27.957+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:33:28.002+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:28.002+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:33:28.039+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.014 seconds
+[2025-07-09T17:33:58.305+0000] {processor.py:157} INFO - Started process (PID=598) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:58.307+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:33:58.309+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:58.309+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:58.982+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:33:59.079+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:59.078+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:33:59.114+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:33:59.114+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:33:59.147+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.846 seconds
+[2025-07-09T17:34:29.475+0000] {processor.py:157} INFO - Started process (PID=600) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:34:29.477+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:34:29.480+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:34:29.479+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:34:30.892+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:34:31.095+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:34:31.095+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:34:31.170+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:34:31.169+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:34:31.219+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.745 seconds
+[2025-07-09T17:35:01.574+0000] {processor.py:157} INFO - Started process (PID=602) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:01.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:35:01.579+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:01.578+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:02.497+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:02.600+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:02.600+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:35:02.651+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:02.650+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:35:02.692+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.128 seconds
+[2025-07-09T17:35:32.926+0000] {processor.py:157} INFO - Started process (PID=604) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:32.929+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:35:32.932+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:32.931+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:33.909+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:35:34.023+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:34.023+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:35:34.068+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:35:34.068+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:35:34.103+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.189 seconds
+[2025-07-09T17:36:04.391+0000] {processor.py:157} INFO - Started process (PID=606) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:04.393+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:36:04.395+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:04.395+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:05.524+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:05.672+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:05.671+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:36:05.729+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:05.728+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:36:05.773+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.388 seconds
+[2025-07-09T17:36:36.139+0000] {processor.py:157} INFO - Started process (PID=608) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:36.144+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:36:36.147+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:36.146+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:37.091+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:36:37.220+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:37.219+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:36:37.270+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:36:37.270+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:36:37.312+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.187 seconds
+[2025-07-09T17:37:07.492+0000] {processor.py:157} INFO - Started process (PID=610) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:07.495+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:37:07.498+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:07.497+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:09.346+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:09.679+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:09.679+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:37:09.795+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:09.794+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:37:09.911+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 2.438 seconds
+[2025-07-09T17:37:40.294+0000] {processor.py:157} INFO - Started process (PID=612) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:40.297+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:37:40.300+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:40.299+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:41.535+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:37:41.713+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:41.713+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:37:41.780+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:37:41.780+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:37:41.837+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.552 seconds
+[2025-07-09T17:38:12.140+0000] {processor.py:157} INFO - Started process (PID=614) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:12.142+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:38:12.145+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:12.144+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:12.985+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:13.133+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:13.132+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:38:13.196+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:13.195+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:38:13.244+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.109 seconds
+[2025-07-09T17:38:43.408+0000] {processor.py:157} INFO - Started process (PID=616) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:43.410+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:38:43.412+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:43.411+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:44.197+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:38:44.304+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:44.303+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:38:44.347+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:38:44.347+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:38:44.385+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.983 seconds
+[2025-07-09T17:39:14.658+0000] {processor.py:157} INFO - Started process (PID=618) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:14.660+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:39:14.662+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:14.661+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:15.407+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:15.519+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:15.519+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:39:15.558+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:15.557+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:39:15.589+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.936 seconds
+[2025-07-09T17:39:45.902+0000] {processor.py:157} INFO - Started process (PID=620) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:45.904+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:39:45.907+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:45.906+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:46.513+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:39:46.589+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:46.588+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:39:46.619+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:39:46.619+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:39:46.647+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.755 seconds
+[2025-07-09T17:40:16.947+0000] {processor.py:157} INFO - Started process (PID=622) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:16.949+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:40:16.951+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:16.950+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:17.534+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:17.611+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:17.611+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:40:17.642+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:17.642+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:40:17.670+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.727 seconds
+[2025-07-09T17:40:47.979+0000] {processor.py:157} INFO - Started process (PID=624) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:47.980+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:40:47.982+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:47.982+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:48.513+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:40:48.594+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:48.593+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:40:48.630+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:40:48.630+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:40:48.664+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.689 seconds
+[2025-07-09T17:41:18.945+0000] {processor.py:157} INFO - Started process (PID=626) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:18.947+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:41:18.949+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:18.948+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:19.587+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:19.677+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:19.676+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:41:19.708+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:19.708+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:41:19.741+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.801 seconds
+[2025-07-09T17:41:49.942+0000] {processor.py:157} INFO - Started process (PID=628) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:49.944+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:41:49.947+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:49.946+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:50.882+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:41:51.008+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:51.007+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:41:51.062+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:41:51.062+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:41:51.103+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.168 seconds
+[2025-07-09T17:42:21.269+0000] {processor.py:157} INFO - Started process (PID=630) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:21.271+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:42:21.273+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:21.272+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:21.821+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:21.894+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:21.894+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:42:21.927+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:21.927+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:42:21.957+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.696 seconds
+[2025-07-09T17:42:52.240+0000] {processor.py:157} INFO - Started process (PID=632) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:52.242+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:42:52.243+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:52.243+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:52.869+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:42:52.953+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:52.952+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:42:52.992+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:42:52.992+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:42:53.018+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.782 seconds
+[2025-07-09T17:43:23.309+0000] {processor.py:157} INFO - Started process (PID=634) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:23.311+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:43:23.313+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:23.313+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:23.972+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:24.063+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:24.063+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:43:24.097+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:24.097+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:43:24.127+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.823 seconds
+[2025-07-09T17:43:54.392+0000] {processor.py:157} INFO - Started process (PID=636) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:54.395+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:43:54.397+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:54.396+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:55.188+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:43:55.296+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:55.296+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:43:55.348+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:43:55.348+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:43:55.383+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.997 seconds
+[2025-07-09T17:44:25.667+0000] {processor.py:157} INFO - Started process (PID=638) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:25.669+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:44:25.671+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:25.671+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:26.275+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:26.356+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:26.356+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:44:26.395+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:26.395+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:44:26.426+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.763 seconds
+[2025-07-09T17:44:56.732+0000] {processor.py:157} INFO - Started process (PID=640) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:56.733+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:44:56.735+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:56.735+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:57.437+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:44:57.544+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:57.544+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:44:57.585+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:44:57.585+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:44:57.618+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.891 seconds
+[2025-07-09T17:45:27.922+0000] {processor.py:157} INFO - Started process (PID=642) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:27.924+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:45:27.926+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:27.926+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:28.676+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:28.759+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:28.759+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:45:28.793+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:28.793+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:45:28.822+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.906 seconds
+[2025-07-09T17:45:59.125+0000] {processor.py:157} INFO - Started process (PID=644) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:59.127+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:45:59.128+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:59.128+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:59.734+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:45:59.817+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:59.816+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:45:59.853+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:45:59.853+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:45:59.886+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.766 seconds
+[2025-07-09T17:46:30.247+0000] {processor.py:157} INFO - Started process (PID=646) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:46:30.249+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:46:30.250+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:46:30.250+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:46:30.903+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:46:30.986+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:46:30.986+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:46:31.015+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:46:31.015+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:46:31.046+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.798 seconds
+[2025-07-09T17:47:01.336+0000] {processor.py:157} INFO - Started process (PID=648) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:01.338+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:47:01.340+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:01.339+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:01.863+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:01.938+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:01.938+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:47:01.970+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:01.970+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:47:02.000+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.668 seconds
+[2025-07-09T17:47:32.292+0000] {processor.py:157} INFO - Started process (PID=650) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:32.293+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:47:32.295+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:32.294+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:32.835+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:47:32.903+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:32.902+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:47:32.930+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:47:32.930+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:47:32.952+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.664 seconds
+[2025-07-09T17:48:03.244+0000] {processor.py:157} INFO - Started process (PID=652) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:03.246+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:48:03.247+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:03.247+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:04.078+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:04.174+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:04.173+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:48:04.220+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:04.220+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:48:04.262+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 1.025 seconds
+[2025-07-09T17:48:34.508+0000] {processor.py:157} INFO - Started process (PID=654) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:34.510+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:48:34.511+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:34.511+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:35.142+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:48:35.222+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:35.222+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:48:35.259+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:48:35.258+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:48:35.292+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.788 seconds
+[2025-07-09T17:49:05.595+0000] {processor.py:157} INFO - Started process (PID=656) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:05.597+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:49:05.599+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:05.598+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:06.374+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:06.496+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:06.495+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:49:06.533+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:06.533+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:49:06.567+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.977 seconds
+[2025-07-09T17:49:36.859+0000] {processor.py:157} INFO - Started process (PID=658) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:36.860+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:49:36.863+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:36.862+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:37.564+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:49:37.688+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:37.688+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:49:37.725+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:49:37.724+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:49:37.758+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.903 seconds
+[2025-07-09T17:50:08.058+0000] {processor.py:157} INFO - Started process (PID=660) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:08.060+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:50:08.062+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:08.062+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:08.596+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:08.667+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:08.667+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:50:08.696+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:08.695+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:50:08.724+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.671 seconds
+[2025-07-09T17:50:39.028+0000] {processor.py:157} INFO - Started process (PID=662) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:39.030+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:50:39.032+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:39.031+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:39.570+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:50:39.656+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:39.656+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:50:39.690+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:50:39.690+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:50:39.717+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.693 seconds
+[2025-07-09T17:51:10.001+0000] {processor.py:157} INFO - Started process (PID=664) to work on /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:51:10.003+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/pipeline_dag.py for tasks to queue
+[2025-07-09T17:51:10.005+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:51:10.005+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:51:10.688+0000] {processor.py:839} INFO - DAG(s) dict_keys(['turnstile_ml_pipeline']) retrieved from /opt/airflow/dags/pipeline_dag.py
+[2025-07-09T17:51:10.767+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:51:10.767+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-07-09T17:51:10.803+0000] {logging_mixin.py:154} INFO - [2025-07-09T17:51:10.803+0000] {dag.py:3722} INFO - Setting next_dagrun for turnstile_ml_pipeline to 2025-07-09T00:00:00+00:00, run_after=2025-07-10T00:00:00+00:00
+[2025-07-09T17:51:10.838+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/pipeline_dag.py took 0.842 seconds

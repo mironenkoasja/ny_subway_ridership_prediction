@@ -1,0 +1,78 @@
+[2025-07-16T14:46:12.921+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T14:46:12.955+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:46:12.971+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T14:46:12.972+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T14:46:12.997+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): preprocess_train> on 2025-07-15 00:00:00+00:00
+[2025-07-16T14:46:13.013+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3100) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T14:46:13.015+0000] {standard_task_runner.py:72} INFO - Started process 3106 to run task
+[2025-07-16T14:46:13.022+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'preprocess_train', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpj7l03l6y']
+[2025-07-16T14:46:13.026+0000] {standard_task_runner.py:105} INFO - Job 42: Subtask preprocess_train
+[2025-07-16T14:46:13.051+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:46:13.146+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [running]> on host d84888688479
+[2025-07-16T14:46:13.149+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T14:46:13.296+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_train' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T14:46:13.298+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T14:46:13.336+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T14:46:13.338+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/preprocess.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --raw_table raw_turnstile_data                 --features_table turnstile_features                 --mode train\n        ']
+[2025-07-16T14:46:13.358+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T14:46:17.076+0000] {subprocess.py:106} INFO - Loaded (2000, 10)
+[2025-07-16T14:46:17.077+0000] {subprocess.py:106} INFO - Aggregated df (265, 3)
+[2025-07-16T14:46:17.078+0000] {subprocess.py:106} INFO - [OK] Saved 265 rows to 'turnstile_features'
+[2025-07-16T14:46:17.336+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T14:46:17.395+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T14:46:17.397+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=preprocess_train, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T144612, end_date=20250716T144617
+[2025-07-16T14:46:17.523+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T14:46:17.578+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T14:46:17.580+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T18:45:43.845+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T18:45:43.880+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:45:43.896+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T18:45:43.897+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T18:45:43.921+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): preprocess_train> on 2025-07-15 00:00:00+00:00
+[2025-07-16T18:45:43.934+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=296) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T18:45:43.939+0000] {standard_task_runner.py:72} INFO - Started process 302 to run task
+[2025-07-16T18:45:43.935+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'preprocess_train', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp4e_xshz_']
+[2025-07-16T18:45:43.941+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask preprocess_train
+[2025-07-16T18:45:43.974+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:45:44.044+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [running]> on host 36b6cbfeb7c6
+[2025-07-16T18:45:44.047+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T18:45:44.173+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_train' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T18:45:44.174+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T18:45:44.206+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T18:45:44.208+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/preprocess.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --raw_table raw_turnstile_data                 --features_table turnstile_features                 --mode train\n        ']
+[2025-07-16T18:45:44.232+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T18:45:46.923+0000] {subprocess.py:106} INFO - Loaded (2000, 10)
+[2025-07-16T18:45:46.925+0000] {subprocess.py:106} INFO - Aggregated df (265, 3)
+[2025-07-16T18:45:46.925+0000] {subprocess.py:106} INFO - [OK] Saved 265 rows to 'turnstile_features'
+[2025-07-16T18:45:47.079+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T18:45:47.119+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T18:45:47.121+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=preprocess_train, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T184543, end_date=20250716T184547
+[2025-07-16T18:45:47.187+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T18:45:47.245+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T18:45:47.251+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-07-16T19:12:04.118+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-16T19:12:04.169+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:12:04.194+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [queued]>
+[2025-07-16T19:12:04.195+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-07-16T19:12:04.226+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): preprocess_train> on 2025-07-15 00:00:00+00:00
+[2025-07-16T19:12:04.243+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=89) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-16T19:12:04.245+0000] {standard_task_runner.py:72} INFO - Started process 95 to run task
+[2025-07-16T19:12:04.244+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'preprocess_train', 'scheduled__2025-07-15T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpwz7y_tbk']
+[2025-07-16T19:12:04.251+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask preprocess_train
+[2025-07-16T19:12:04.278+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:12:04.360+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.preprocess_train scheduled__2025-07-15T00:00:00+00:00 [running]> on host e42e59698f90
+[2025-07-16T19:12:04.363+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-16T19:12:04.528+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='preprocess_train' AIRFLOW_CTX_EXECUTION_DATE='2025-07-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-15T00:00:00+00:00'
+[2025-07-16T19:12:04.530+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-16T19:12:04.573+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-16T19:12:04.575+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/preprocess.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --raw_table raw_turnstile_data                 --features_table turnstile_features                 --mode train\n        ']
+[2025-07-16T19:12:04.596+0000] {subprocess.py:99} INFO - Output:
+[2025-07-16T19:12:07.458+0000] {subprocess.py:106} INFO - Loaded (2000, 10)
+[2025-07-16T19:12:07.459+0000] {subprocess.py:106} INFO - Aggregated df (265, 3)
+[2025-07-16T19:12:07.460+0000] {subprocess.py:106} INFO - [OK] Saved 265 rows to 'turnstile_features'
+[2025-07-16T19:12:07.654+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-07-16T19:12:07.695+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-16T19:12:07.696+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=preprocess_train, run_id=scheduled__2025-07-15T00:00:00+00:00, execution_date=20250715T000000, start_date=20250716T191204, end_date=20250716T191207
+[2025-07-16T19:12:07.769+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-07-16T19:12:07.832+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-16T19:12:07.837+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

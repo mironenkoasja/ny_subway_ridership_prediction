@@ -1,0 +1,186 @@
+[2025-07-13T17:02:49.166+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-07-13T17:02:49.200+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model manual__2025-07-13T16:36:30+00:00 [queued]>
+[2025-07-13T17:02:49.219+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model manual__2025-07-13T16:36:30+00:00 [queued]>
+[2025-07-13T17:02:49.221+0000] {taskinstance.py:2867} INFO - Starting attempt 8 of 8
+[2025-07-13T17:02:49.246+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): tune_model> on 2025-07-13 16:36:30+00:00
+[2025-07-13T17:02:49.261+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=579) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-07-13T17:02:49.261+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'tune_model', 'manual__2025-07-13T16:36:30+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpepgvpmxy']
+[2025-07-13T17:02:49.264+0000] {standard_task_runner.py:72} INFO - Started process 585 to run task
+[2025-07-13T17:02:49.265+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask tune_model
+[2025-07-13T17:02:49.290+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-13T17:02:49.369+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.tune_model manual__2025-07-13T16:36:30+00:00 [running]> on host 6011aa489c7f
+[2025-07-13T17:02:49.511+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='tune_model' AIRFLOW_CTX_EXECUTION_DATE='2025-07-13T16:36:30+00:00' AIRFLOW_CTX_TRY_NUMBER='8' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-13T16:36:30+00:00'
+[2025-07-13T17:02:49.513+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-07-13T17:02:49.543+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-07-13T17:02:49.545+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/tune_model.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --features_table turnstile_features         ']
+[2025-07-13T17:02:49.563+0000] {subprocess.py:99} INFO - Output:
+[2025-07-13T17:02:56.520+0000] {subprocess.py:106} INFO - Train shape: (0, 8)
+[2025-07-13T17:02:56.522+0000] {subprocess.py:106} INFO - Validation shape: (0, 8)
+[2025-07-13T17:02:56.523+0000] {subprocess.py:106} INFO - Max datetime in dataset: NaT
+[2025-07-13T17:02:56.614+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]2025/07/13 17:02:56 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-07-13T17:02:56.615+0000] {subprocess.py:106} INFO - The git executable must be specified in one of the following ways:
+[2025-07-13T17:02:56.616+0000] {subprocess.py:106} INFO -     - be included in your $PATH
+[2025-07-13T17:02:56.617+0000] {subprocess.py:106} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-07-13T17:02:56.618+0000] {subprocess.py:106} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-07-13T17:02:56.618+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.619+0000] {subprocess.py:106} INFO - All git commands will error until this is rectified.
+[2025-07-13T17:02:56.620+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.621+0000] {subprocess.py:106} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-07-13T17:02:56.623+0000] {subprocess.py:106} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-07-13T17:02:56.624+0000] {subprocess.py:106} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-07-13T17:02:56.625+0000] {subprocess.py:106} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-07-13T17:02:56.626+0000] {subprocess.py:106} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-07-13T17:02:56.627+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.629+0000] {subprocess.py:106} INFO - Example:
+[2025-07-13T17:02:56.630+0000] {subprocess.py:106} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-07-13T17:02:56.630+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.631+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.922+0000] {subprocess.py:106} INFO -                                                       [17:02:56] WARNING: ../src/learner.cc:767:
+[2025-07-13T17:02:56.923+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-07-13T17:02:56.924+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:56.938+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:56] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:56.940+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:56] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:56.978+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:56] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:56.979+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:56] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.048+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.050+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.104+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.105+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.156+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.158+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.202+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.205+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.257+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.259+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.319+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.324+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.381+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.382+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.433+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.435+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.493+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      [17:02:57] WARNING: ../src/learner.cc:1517: Empty dataset at worker: 0
+[2025-07-13T17:02:57.608+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]                                                      🏃 View run tune-20250713-170256 at: http://mlflow:5000/#/experiments/1/runs/bd73c17e55d44260acd0cd43ddb3b51d
+[2025-07-13T17:02:57.609+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:57.612+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:01<?, ?trial/s, best loss=?]                                                      🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-07-13T17:02:57.613+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:57.696+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:01<?, ?trial/s, best loss=?]job exception: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+[2025-07-13T17:02:57.697+0000] {subprocess.py:106} INFO - 
+[2025-07-13T17:02:57.698+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:01<?, ?trial/s, best loss=?]
+[2025-07-13T17:02:57.699+0000] {subprocess.py:106} INFO - Traceback (most recent call last):
+[2025-07-13T17:02:57.700+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/tune_model.py", line 122, in <module>
+[2025-07-13T17:02:57.702+0000] {subprocess.py:106} INFO -     tune(df, args.experiment_name, args.run_prefix, args.n_trials)
+[2025-07-13T17:02:57.703+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/tune_model.py", line 81, in tune
+[2025-07-13T17:02:57.708+0000] {subprocess.py:106} INFO -     best_result = fmin(
+[2025-07-13T17:02:57.710+0000] {subprocess.py:106} INFO -                   ^^^^^
+[2025-07-13T17:02:57.711+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/fmin.py", line 540, in fmin
+[2025-07-13T17:02:57.712+0000] {subprocess.py:106} INFO -     return trials.fmin(
+[2025-07-13T17:02:57.713+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^
+[2025-07-13T17:02:57.714+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/base.py", line 671, in fmin
+[2025-07-13T17:02:57.715+0000] {subprocess.py:106} INFO -     return fmin(
+[2025-07-13T17:02:57.716+0000] {subprocess.py:106} INFO -            ^^^^^
+[2025-07-13T17:02:57.718+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/fmin.py", line 586, in fmin
+[2025-07-13T17:02:57.719+0000] {subprocess.py:106} INFO -     rval.exhaust()
+[2025-07-13T17:02:57.720+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/fmin.py", line 364, in exhaust
+[2025-07-13T17:02:57.721+0000] {subprocess.py:106} INFO -     self.run(self.max_evals - n_done, block_until_done=self.asynchronous)
+[2025-07-13T17:02:57.722+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/fmin.py", line 300, in run
+[2025-07-13T17:02:57.724+0000] {subprocess.py:106} INFO -     self.serial_evaluate()
+[2025-07-13T17:02:57.725+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/fmin.py", line 178, in serial_evaluate
+[2025-07-13T17:02:57.726+0000] {subprocess.py:106} INFO -     result = self.domain.evaluate(spec, ctrl)
+[2025-07-13T17:02:57.727+0000] {subprocess.py:106} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.729+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/hyperopt/base.py", line 892, in evaluate
+[2025-07-13T17:02:57.730+0000] {subprocess.py:106} INFO -     rval = self.fn(pyll_rval)
+[2025-07-13T17:02:57.731+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.733+0000] {subprocess.py:106} INFO -   File "/opt/***/pipeline/tune_model.py", line 73, in objective
+[2025-07-13T17:02:57.738+0000] {subprocess.py:106} INFO -     rmse = root_mean_squared_error(y_val, y_pred)
+[2025-07-13T17:02:57.739+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.740+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+[2025-07-13T17:02:57.742+0000] {subprocess.py:106} INFO -     return func(*args, **kwargs)
+[2025-07-13T17:02:57.744+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.745+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/metrics/_regression.py", line 665, in root_mean_squared_error
+[2025-07-13T17:02:57.749+0000] {subprocess.py:106} INFO -     mean_squared_error(
+[2025-07-13T17:02:57.751+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+[2025-07-13T17:02:57.753+0000] {subprocess.py:106} INFO -     return func(*args, **kwargs)
+[2025-07-13T17:02:57.755+0000] {subprocess.py:106} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.756+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/metrics/_regression.py", line 580, in mean_squared_error
+[2025-07-13T17:02:57.759+0000] {subprocess.py:106} INFO -     _check_reg_targets_with_floating_dtype(
+[2025-07-13T17:02:57.760+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/metrics/_regression.py", line 209, in _check_reg_targets_with_floating_dtype
+[2025-07-13T17:02:57.762+0000] {subprocess.py:106} INFO -     y_type, y_true, y_pred, sample_weight, multioutput = _check_reg_targets(
+[2025-07-13T17:02:57.764+0000] {subprocess.py:106} INFO -                                                          ^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.765+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/metrics/_regression.py", line 115, in _check_reg_targets
+[2025-07-13T17:02:57.766+0000] {subprocess.py:106} INFO -     y_true = check_array(y_true, ensure_2d=False, dtype=dtype)
+[2025-07-13T17:02:57.767+0000] {subprocess.py:106} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-07-13T17:02:57.771+0000] {subprocess.py:106} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1128, in check_array
+[2025-07-13T17:02:57.772+0000] {subprocess.py:106} INFO -     raise ValueError(
+[2025-07-13T17:02:57.775+0000] {subprocess.py:106} INFO - ValueError: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
+[2025-07-13T17:02:58.456+0000] {subprocess.py:110} INFO - Command exited with return code 1
+[2025-07-13T17:02:58.478+0000] {taskinstance.py:3313} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-13T17:02:58.488+0000] {taskinstance.py:1226} INFO - Marking task as FAILED. dag_id=turnstile_ml_pipeline, task_id=tune_model, run_id=manual__2025-07-13T16:36:30+00:00, execution_date=20250713T163630, start_date=20250713T170249, end_date=20250713T170258
+[2025-07-13T17:02:58.541+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-07-13T17:02:58.542+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 21 for task tune_model (Bash command failed. The command returned a non-zero exit code 1.; 585)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3006, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 274, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3161, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3185, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 768, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 734, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 424, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 276, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-07-13T17:02:58.603+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-07-13T17:02:58.653+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-13T17:02:58.660+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

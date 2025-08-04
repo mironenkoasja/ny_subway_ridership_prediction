@@ -1,0 +1,34 @@
+[2025-04-02T16:33:36.249+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-02T16:33:36.281+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: LocalIngestionDag.ingest_dataset manual__2025-04-02T14:50:23.057568+00:00 [queued]>
+[2025-04-02T16:33:36.299+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: LocalIngestionDag.ingest_dataset manual__2025-04-02T14:50:23.057568+00:00 [queued]>
+[2025-04-02T16:33:36.300+0000] {taskinstance.py:2867} INFO - Starting attempt 2 of 2
+[2025-04-02T16:33:36.320+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): ingest_dataset> on 2025-04-02 14:50:23.057568+00:00
+[2025-04-02T16:33:36.328+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1930) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-02T16:33:36.330+0000] {standard_task_runner.py:72} INFO - Started process 1931 to run task
+[2025-04-02T16:33:36.331+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'LocalIngestionDag', 'ingest_dataset', 'manual__2025-04-02T14:50:23.057568+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmplv2awq3r']
+[2025-04-02T16:33:36.332+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask ingest_dataset
+[2025-04-02T16:33:36.403+0000] {task_command.py:467} INFO - Running <TaskInstance: LocalIngestionDag.ingest_dataset manual__2025-04-02T14:50:23.057568+00:00 [running]> on host 6baa03efc864
+[2025-04-02T16:33:36.533+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='LocalIngestionDag' AIRFLOW_CTX_TASK_ID='ingest_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-02T14:50:23.057568+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-02T14:50:23.057568+00:00'
+[2025-04-02T16:33:36.534+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-02T16:33:36.553+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-04-02T16:33:36.555+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'ls /opt/***']
+[2025-04-02T16:33:36.568+0000] {subprocess.py:99} INFO - Output:
+[2025-04-02T16:33:36.574+0000] {subprocess.py:106} INFO - ***.cfg
+[2025-04-02T16:33:36.576+0000] {subprocess.py:106} INFO - config
+[2025-04-02T16:33:36.578+0000] {subprocess.py:106} INFO - dags
+[2025-04-02T16:33:36.580+0000] {subprocess.py:106} INFO - logs
+[2025-04-02T16:33:36.581+0000] {subprocess.py:106} INFO - plugins
+[2025-04-02T16:33:36.582+0000] {subprocess.py:106} INFO - webserver_config.py
+[2025-04-02T16:33:36.583+0000] {subprocess.py:106} INFO - yellow_tripdata_2024-01.parquet
+[2025-04-02T16:33:36.584+0000] {subprocess.py:106} INFO - yellow_tripdata_2025-01.parquet
+[2025-04-02T16:33:36.584+0000] {subprocess.py:106} INFO - yellow_tripdata_2025-02.parquet
+[2025-04-02T16:33:36.585+0000] {subprocess.py:106} INFO - yellow_tripdata_2025-03.parquet
+[2025-04-02T16:33:36.586+0000] {subprocess.py:106} INFO - yellow_tripdata_2025-04.parquet
+[2025-04-02T16:33:36.587+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-04-02T16:33:36.622+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-02T16:33:36.623+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=LocalIngestionDag, task_id=ingest_dataset, run_id=manual__2025-04-02T14:50:23.057568+00:00, execution_date=20250402T145023, start_date=20250402T163336, end_date=20250402T163336
+[2025-04-02T16:33:36.668+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-02T16:33:36.691+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-02T16:33:36.695+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

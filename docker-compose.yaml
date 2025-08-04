@@ -1,0 +1,123 @@
+version: "1.2"
+
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: ny_sub_turnstiles
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    image: custom-airflow
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/ny_sub_turnstiles
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+      PG_USER: airflow
+      PG_PASSWORD: airflow
+      PG_PORT: 5432
+      PG_HOST: postgres 
+      PG_DB_NAME: ny_sub_turnstiles
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipeline:/opt/airflow/pipeline
+      - ./logs:/opt/airflow/logs
+      - ./shared:/opt/airflow/shared
+      - ./mlruns:/mlflow 
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    image: custom-airflow
+    restart: always
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/ny_sub_turnstiles
+      PG_USER: airflow
+      PG_PASSWORD: airflow
+      PG_PORT: 5432
+      PG_HOST: postgres 
+      PG_DB_NAME: ny_sub_turnstiles
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipeline:/opt/airflow/pipeline
+      - ./logs:/opt/airflow/logs
+      - ./shared:/opt/airflow/shared
+      - ./mlruns:/mlflow 
+    command: scheduler
+
+  airflow-init:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    image: custom-airflow
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/ny_sub_turnstiles
+      PG_USER: airflow
+      PG_PASSWORD: airflow
+      PG_PORT: 5432
+      PG_HOST: postgres 
+      PG_DB_NAME: ny_sub_turnstiles
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipeline:/opt/airflow/pipeline
+    command: >
+      bash -c "airflow db init &&
+               airflow users create --username airflow --password airflow --firstname Air --lastname Flow --role Admin --email admin@example.com"
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    restart: always
+    ports:
+      - "5000:5000"
+    working_dir: /mlflow
+    volumes:
+      - ./mlruns:/mlflow
+    command: >
+      mlflow server 
+        --backend-store-uri sqlite:///mlflow.db
+        --default-artifact-root /mlflow
+        --host 0.0.0.0 --port 5000
+
+
+  grafana:
+    image: grafana/grafana:10.2.2
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - grafana_storage:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-db:
+  grafana-storage:

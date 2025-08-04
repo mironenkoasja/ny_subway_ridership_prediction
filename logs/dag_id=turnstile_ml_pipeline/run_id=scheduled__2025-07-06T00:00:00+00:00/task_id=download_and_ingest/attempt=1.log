@@ -1,0 +1,59 @@
+[2025-07-07T07:59:19.073+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T07:59:19.076+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T07:59:19.179+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T07:59:19.181+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T07:59:19.351+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [queued]>
+[2025-07-07T07:59:19.383+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [queued]>
+[2025-07-07T07:59:19.384+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-07T07:59:19.432+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): download_and_ingest> on 2025-07-06 00:00:00+00:00
+[2025-07-07T07:59:19.447+0000] {standard_task_runner.py:57} INFO - Started process 102 to run task
+[2025-07-07T07:59:19.455+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'download_and_ingest', 'scheduled__2025-07-06T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmp0r3_kej7']
+[2025-07-07T07:59:19.457+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask download_and_ingest
+[2025-07-07T07:59:19.521+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-07T07:59:19.659+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T07:59:19.660+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T07:59:19.671+0000] {task_command.py:416} INFO - Running <TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [running]> on host 0e981b5735bc
+[2025-07-07T07:59:20.003+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='download_and_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-07-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-06T00:00:00+00:00'
+[2025-07-07T07:59:20.007+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-07-07T07:59:20.012+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n            python /opt/***/pipeline/download_ingest.py                 --year { params.year }                 --month { params.month }                 --start_day { params.start_day }                 --end_day { params.end_day }                 --user ***                 --password ***                 --host None                 --port 5432                 --db_name ny_sub_turnstiles                 --table_name raw_turnstile_data\n        ']
+[2025-07-07T07:59:20.048+0000] {subprocess.py:86} INFO - Output:
+[2025-07-07T07:59:24.690+0000] {subprocess.py:93} INFO - usage: download_ingest.py [-h] --year YEAR --month MONTH --start_day START_DAY
+[2025-07-07T07:59:24.693+0000] {subprocess.py:93} INFO -                           --end_day END_DAY --user USER --password PASSWORD
+[2025-07-07T07:59:24.695+0000] {subprocess.py:93} INFO -                           --host HOST --port PORT --db_name DB_NAME
+[2025-07-07T07:59:24.698+0000] {subprocess.py:93} INFO -                           --table_name TABLE_NAME
+[2025-07-07T07:59:24.701+0000] {subprocess.py:93} INFO - download_ingest.py: error: argument --year: invalid int value: '{'
+[2025-07-07T07:59:25.106+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-07-07T07:59:25.146+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-07-07T07:59:25.164+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=turnstile_ml_pipeline, task_id=download_and_ingest, execution_date=20250706T000000, start_date=20250707T075919, end_date=20250707T075925
+[2025-07-07T07:59:25.235+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 13 for task download_and_ingest (Bash command failed. The command returned a non-zero exit code 2.; 102)
+[2025-07-07T07:59:25.261+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-07T07:59:25.399+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-07T17:54:14.282+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T17:54:14.284+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T17:54:14.349+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T17:54:14.350+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T17:54:14.418+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [queued]>
+[2025-07-07T17:54:14.434+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [queued]>
+[2025-07-07T17:54:14.435+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-07T17:54:14.456+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): download_and_ingest> on 2025-07-06 00:00:00+00:00
+[2025-07-07T17:54:14.463+0000] {standard_task_runner.py:57} INFO - Started process 49 to run task
+[2025-07-07T17:54:14.469+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'download_and_ingest', 'scheduled__2025-07-06T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_dag.py', '--cfg-path', '/tmp/tmpoz5ypa9k']
+[2025-07-07T17:54:14.472+0000] {standard_task_runner.py:85} INFO - Job 2: Subtask download_and_ingest
+[2025-07-07T17:54:14.508+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-07T17:54:14.597+0000] {logging_mixin.py:154} INFO - Changing /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509
+[2025-07-07T17:54:14.598+0000] {logging_mixin.py:154} INFO - Failed to change /opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=turnstile_ml_pipeline/run_id=scheduled__2025-07-06T00:00:00+00:00/task_id=download_and_ingest'
+[2025-07-07T17:54:14.601+0000] {task_command.py:416} INFO - Running <TaskInstance: turnstile_ml_pipeline.download_and_ingest scheduled__2025-07-06T00:00:00+00:00 [running]> on host 961842f4d5ed
+[2025-07-07T17:54:14.768+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='download_and_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-07-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-06T00:00:00+00:00'
+[2025-07-07T17:54:14.771+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-07-07T17:54:14.773+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n            python /opt/***/pipeline/download_ingest.py                 --year 2022                 --month 6                 --start_day 22                 --end_day 23                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --table_name raw_turnstile_data\n        ']
+[2025-07-07T17:54:14.785+0000] {subprocess.py:86} INFO - Output:
+[2025-07-07T17:54:19.421+0000] {subprocess.py:93} INFO - [INFO] Fetching data for dates: ['2022-06-22', '2022-06-23']
+[2025-07-07T17:54:19.422+0000] {subprocess.py:93} INFO - [OK] Ingested 2000 rows into table 'raw_turnstile_data'
+[2025-07-07T17:54:19.561+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-07-07T17:54:19.599+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=download_and_ingest, execution_date=20250706T000000, start_date=20250707T175414, end_date=20250707T175419
+[2025-07-07T17:54:19.645+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-07-07T17:54:19.721+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
