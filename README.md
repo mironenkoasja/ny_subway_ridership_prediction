@@ -68,7 +68,7 @@ After each prediction run, the DAG also generates **monitoring data** to help ev
 
 3. **Trigger the pipeline manually or via scheduler** in Airflow
 
-4. **Inspect predictions and metrics** in MLflow and the monitoring artifacts
+4. **Inspect predictions and metrics** in Grafana and the monitoring artifacts
 
 ## 🔍 Use Cases
 
