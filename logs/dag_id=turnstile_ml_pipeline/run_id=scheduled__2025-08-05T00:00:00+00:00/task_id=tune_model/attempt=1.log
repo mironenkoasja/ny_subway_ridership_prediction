@@ -1,0 +1,341 @@
+[2025-08-06T08:00:47.190+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-08-06T08:00:47.222+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-08-05T00:00:00+00:00 [queued]>
+[2025-08-06T08:00:47.243+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-08-05T00:00:00+00:00 [queued]>
+[2025-08-06T08:00:47.244+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-08-06T08:00:47.268+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): tune_model> on 2025-08-05 00:00:00+00:00
+[2025-08-06T08:00:47.276+0000] {standard_task_runner.py:72} INFO - Started process 395 to run task
+[2025-08-06T08:00:47.281+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'turnstile_ml_pipeline', 'tune_model', 'scheduled__2025-08-05T00:00:00+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/turnstile_ml_pipeline.py', '--cfg-path', '/tmp/tmprb6byeow']
+[2025-08-06T08:00:47.284+0000] {standard_task_runner.py:105} INFO - Job 103: Subtask tune_model
+[2025-08-06T08:00:47.306+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-08-06T08:00:47.354+0000] {task_command.py:467} INFO - Running <TaskInstance: turnstile_ml_pipeline.tune_model scheduled__2025-08-05T00:00:00+00:00 [running]> on host c3acc3669c6c
+[2025-08-06T08:00:47.356+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-08-06T08:00:47.473+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='turnstile_ml_pipeline' AIRFLOW_CTX_TASK_ID='tune_model' AIRFLOW_CTX_EXECUTION_DATE='2025-08-05T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-05T00:00:00+00:00'
+[2025-08-06T08:00:47.474+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-08-06T08:00:47.497+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-08-06T08:00:47.502+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', '\n            python /opt/***/pipeline/tune_model.py                 --user ***                 --password ***                 --host postgres                 --port 5432                 --db_name ny_sub_turnstiles                 --features_table turnstile_features         ']
+[2025-08-06T08:00:47.519+0000] {subprocess.py:99} INFO - Output:
+[2025-08-06T08:00:53.704+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:55: SettingWithCopyWarning:
+[2025-08-06T08:00:53.704+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-08-06T08:00:53.705+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-08-06T08:00:53.706+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:53.706+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-08-06T08:00:53.707+0000] {subprocess.py:106} INFO -   X_train[col] = pd.to_numeric(X_train[col], errors="coerce")
+[2025-08-06T08:00:53.708+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:56: SettingWithCopyWarning:
+[2025-08-06T08:00:53.708+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-08-06T08:00:53.709+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-08-06T08:00:53.710+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:53.710+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-08-06T08:00:53.711+0000] {subprocess.py:106} INFO -   X_val[col] = pd.to_numeric(X_val[col], errors="coerce")
+[2025-08-06T08:00:53.712+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:57: SettingWithCopyWarning:
+[2025-08-06T08:00:53.713+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-08-06T08:00:53.713+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-08-06T08:00:53.715+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:53.715+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-08-06T08:00:53.716+0000] {subprocess.py:106} INFO -   X_train["group_key"] = X_train["group_key"].astype("category")
+[2025-08-06T08:00:53.717+0000] {subprocess.py:106} INFO - /opt/***/pipeline/tune_model.py:58: SettingWithCopyWarning:
+[2025-08-06T08:00:53.718+0000] {subprocess.py:106} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2025-08-06T08:00:53.719+0000] {subprocess.py:106} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2025-08-06T08:00:53.719+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:53.720+0000] {subprocess.py:106} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2025-08-06T08:00:53.721+0000] {subprocess.py:106} INFO -   X_val["group_key"] = X_val["group_key"].astype("category")
+[2025-08-06T08:00:54.734+0000] {subprocess.py:106} INFO - Train shape: (1852, 8)
+[2025-08-06T08:00:54.735+0000] {subprocess.py:106} INFO - Validation shape: (150, 8)
+[2025-08-06T08:00:54.736+0000] {subprocess.py:106} INFO - Max datetime in dataset: 2022-08-05 22:00:00
+[2025-08-06T08:00:54.866+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:00<?, ?trial/s, best loss=?]2025/08/06 08:00:54 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-08-06T08:00:54.867+0000] {subprocess.py:106} INFO - The git executable must be specified in one of the following ways:
+[2025-08-06T08:00:54.868+0000] {subprocess.py:106} INFO -     - be included in your $PATH
+[2025-08-06T08:00:54.868+0000] {subprocess.py:106} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-08-06T08:00:54.869+0000] {subprocess.py:106} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-08-06T08:00:54.870+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:54.871+0000] {subprocess.py:106} INFO - All git commands will error until this is rectified.
+[2025-08-06T08:00:54.872+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:54.873+0000] {subprocess.py:106} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-08-06T08:00:54.874+0000] {subprocess.py:106} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-08-06T08:00:54.874+0000] {subprocess.py:106} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-08-06T08:00:54.875+0000] {subprocess.py:106} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-08-06T08:00:54.876+0000] {subprocess.py:106} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-08-06T08:00:54.876+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:54.877+0000] {subprocess.py:106} INFO - Example:
+[2025-08-06T08:00:54.878+0000] {subprocess.py:106} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-08-06T08:00:54.879+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:54.879+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:55.686+0000] {subprocess.py:106} INFO - /home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:55] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:55.689+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:55.690+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:55.691+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:55.692+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:56.858+0000] {subprocess.py:106} INFO -                                                       🏃 View run tune-20250806-080054 at: http://mlflow:5000/#/experiments/1/runs/fbe4ea8f5d864024ac28391a9e64cc54
+[2025-08-06T08:00:56.859+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:56.860+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:02<?, ?trial/s, best loss=?]                                                      🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:56.860+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.089+0000] {subprocess.py:106} INFO -   0%|          | 0/30 [00:02<?, ?trial/s, best loss=?]  3%|▎         | 1/30 [00:02<01:02,  2.17s/trial, best loss: 865.173697173127]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:57] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:57.090+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:57.091+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.091+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:57.092+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.418+0000] {subprocess.py:106} INFO -                                                                               🏃 View run tune-20250806-080056 at: http://mlflow:5000/#/experiments/1/runs/96f04596880b486cb6398e113f04bacd
+[2025-08-06T08:00:57.419+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.419+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:02<01:02,  2.17s/trial, best loss: 865.173697173127]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:57.420+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.692+0000] {subprocess.py:106} INFO -   3%|▎         | 1/30 [00:02<01:02,  2.17s/trial, best loss: 865.173697173127]  7%|▋         | 2/30 [00:02<00:34,  1.22s/trial, best loss: 865.173697173127]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:57] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:57.693+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:57.700+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.701+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:57.701+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.969+0000] {subprocess.py:106} INFO -                                                                               🏃 View run tune-20250806-080057 at: http://mlflow:5000/#/experiments/1/runs/be41bb30e4a54c1a98a5211e3ae6d5ae
+[2025-08-06T08:00:57.970+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:57.970+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:03<00:34,  1.22s/trial, best loss: 865.173697173127]                                                                              🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:57.971+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.186+0000] {subprocess.py:106} INFO -   7%|▋         | 2/30 [00:03<00:34,  1.22s/trial, best loss: 865.173697173127] 10%|█         | 3/30 [00:03<00:24,  1.10trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:58] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:58.187+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:58.188+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.188+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:58.189+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.495+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080058 at: http://mlflow:5000/#/experiments/1/runs/74011af7114b4a5bb24217fff74de603
+[2025-08-06T08:00:58.496+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.497+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:03<00:24,  1.10trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:58.497+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.723+0000] {subprocess.py:106} INFO -  10%|█         | 3/30 [00:03<00:24,  1.10trial/s, best loss: 380.0894156364878] 13%|█▎        | 4/30 [00:03<00:19,  1.31trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:58] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:58.731+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:58.732+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:58.732+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:58.733+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.021+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080058 at: http://mlflow:5000/#/experiments/1/runs/40b5da9494f240cca8b005b3572db380
+[2025-08-06T08:00:59.022+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.023+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:04<00:19,  1.31trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:59.023+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.220+0000] {subprocess.py:106} INFO -  13%|█▎        | 4/30 [00:04<00:19,  1.31trial/s, best loss: 380.0894156364878] 17%|█▋        | 5/30 [00:04<00:16,  1.48trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:59] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:59.231+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:59.232+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.232+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:59.233+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.542+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080059 at: http://mlflow:5000/#/experiments/1/runs/875a6f19fb5444cab45fbfb45f14a9e2
+[2025-08-06T08:00:59.542+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.543+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:04<00:16,  1.48trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:00:59.544+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.760+0000] {subprocess.py:106} INFO -  17%|█▋        | 5/30 [00:04<00:16,  1.48trial/s, best loss: 380.0894156364878] 20%|██        | 6/30 [00:04<00:14,  1.60trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:00:59] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:00:59.761+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:00:59.766+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:00:59.767+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:00:59.767+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.035+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080059 at: http://mlflow:5000/#/experiments/1/runs/af4372bf215246cfae29674a2f8c539e
+[2025-08-06T08:01:00.037+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.038+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:05<00:14,  1.60trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:00.038+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.284+0000] {subprocess.py:106} INFO -  20%|██        | 6/30 [00:05<00:14,  1.60trial/s, best loss: 380.0894156364878] 23%|██▎       | 7/30 [00:05<00:13,  1.72trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:00] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:00.285+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:00.285+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.286+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:00.286+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.547+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080100 at: http://mlflow:5000/#/experiments/1/runs/802a98fc21e4422b922dc0668af56dd4
+[2025-08-06T08:01:00.548+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.549+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:05<00:13,  1.72trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:00.550+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.785+0000] {subprocess.py:106} INFO -  23%|██▎       | 7/30 [00:05<00:13,  1.72trial/s, best loss: 380.0894156364878] 27%|██▋       | 8/30 [00:05<00:12,  1.79trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:00] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:00.791+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:00.792+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:00.792+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:00.793+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.082+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080100 at: http://mlflow:5000/#/experiments/1/runs/e111b32cc300476e9fd2661bce0967e4
+[2025-08-06T08:01:01.083+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.084+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:06<00:12,  1.79trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:01.085+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.271+0000] {subprocess.py:106} INFO -  27%|██▋       | 8/30 [00:06<00:12,  1.79trial/s, best loss: 380.0894156364878] 30%|███       | 9/30 [00:06<00:11,  1.81trial/s, best loss: 380.0894156364878]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:01] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:01.285+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:01.286+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.287+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:01.288+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.545+0000] {subprocess.py:106} INFO -                                                                                🏃 View run tune-20250806-080101 at: http://mlflow:5000/#/experiments/1/runs/5510aaabba32424ba705f24ee841be35
+[2025-08-06T08:01:01.546+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.547+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:06<00:11,  1.81trial/s, best loss: 380.0894156364878]                                                                               🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:01.547+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.739+0000] {subprocess.py:106} INFO -  30%|███       | 9/30 [00:06<00:11,  1.81trial/s, best loss: 380.0894156364878] 33%|███▎      | 10/30 [00:06<00:10,  1.91trial/s, best loss: 359.2990134310459]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:01] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:01.740+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:01.740+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:01.741+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:01.742+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.022+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080101 at: http://mlflow:5000/#/experiments/1/runs/03263689d7844d1ab0d35cad667cd027
+[2025-08-06T08:01:02.023+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.024+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:07<00:10,  1.91trial/s, best loss: 359.2990134310459]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:02.024+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.210+0000] {subprocess.py:106} INFO -  33%|███▎      | 10/30 [00:07<00:10,  1.91trial/s, best loss: 359.2990134310459] 37%|███▋      | 11/30 [00:07<00:09,  1.97trial/s, best loss: 359.2990134310459]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:02] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:02.210+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:02.211+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.212+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:02.212+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.471+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080102 at: http://mlflow:5000/#/experiments/1/runs/1faa176140804d5cb429113cd2a3f0cc
+[2025-08-06T08:01:02.472+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.473+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:07<00:09,  1.97trial/s, best loss: 359.2990134310459]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:02.474+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.665+0000] {subprocess.py:106} INFO -  37%|███▋      | 11/30 [00:07<00:09,  1.97trial/s, best loss: 359.2990134310459] 40%|████      | 12/30 [00:07<00:08,  2.04trial/s, best loss: 359.2990134310459]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:02] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:02.666+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:02.667+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.668+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:02.668+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.950+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080102 at: http://mlflow:5000/#/experiments/1/runs/04cb09899cf64ab49dae410d3576b768
+[2025-08-06T08:01:02.951+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:02.952+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:08<00:08,  2.04trial/s, best loss: 359.2990134310459]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:02.952+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.166+0000] {subprocess.py:106} INFO -  40%|████      | 12/30 [00:08<00:08,  2.04trial/s, best loss: 359.2990134310459] 43%|████▎     | 13/30 [00:08<00:08,  2.05trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:03] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:03.181+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:03.182+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.183+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:03.183+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.454+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080102 at: http://mlflow:5000/#/experiments/1/runs/64321237292d47849fe0b90e14ca36da
+[2025-08-06T08:01:03.455+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.456+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:08<00:08,  2.05trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:03.457+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.768+0000] {subprocess.py:106} INFO -  43%|████▎     | 13/30 [00:08<00:08,  2.05trial/s, best loss: 355.78845326969105] 47%|████▋     | 14/30 [00:08<00:07,  2.01trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:03] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:03.779+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:03.780+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:03.781+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:03.781+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.030+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080103 at: http://mlflow:5000/#/experiments/1/runs/26d010f0fa954e5fb895e2431b53de26
+[2025-08-06T08:01:04.031+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.032+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:09<00:07,  2.01trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:04.033+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.224+0000] {subprocess.py:106} INFO -  47%|████▋     | 14/30 [00:09<00:07,  2.01trial/s, best loss: 355.78845326969105] 50%|█████     | 15/30 [00:09<00:07,  1.94trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:04] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:04.231+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:04.232+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.232+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:04.233+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.511+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080104 at: http://mlflow:5000/#/experiments/1/runs/7366b93a2c034fc18bceb7063a5088a1
+[2025-08-06T08:01:04.512+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.513+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:09<00:07,  1.94trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:04.513+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.712+0000] {subprocess.py:106} INFO -  50%|█████     | 15/30 [00:09<00:07,  1.94trial/s, best loss: 355.78845326969105] 53%|█████▎    | 16/30 [00:09<00:07,  1.98trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:04] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:04.721+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:04.722+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.723+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:04.723+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.980+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080104 at: http://mlflow:5000/#/experiments/1/runs/02830e77ccd54cb396e515481947e69a
+[2025-08-06T08:01:04.981+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:04.982+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:10<00:07,  1.98trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:04.982+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.173+0000] {subprocess.py:106} INFO -  53%|█████▎    | 16/30 [00:10<00:07,  1.98trial/s, best loss: 355.78845326969105] 57%|█████▋    | 17/30 [00:10<00:06,  2.02trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:05] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:05.174+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:05.174+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.175+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:05.175+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.451+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080105 at: http://mlflow:5000/#/experiments/1/runs/602fcedb99434870aa67733c07277ceb
+[2025-08-06T08:01:05.452+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.453+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:10<00:06,  2.02trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:05.453+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.660+0000] {subprocess.py:106} INFO -  57%|█████▋    | 17/30 [00:10<00:06,  2.02trial/s, best loss: 355.78845326969105] 60%|██████    | 18/30 [00:10<00:05,  2.05trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:05] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:05.671+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:05.672+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.672+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:05.672+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.918+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080105 at: http://mlflow:5000/#/experiments/1/runs/4fec95860207403ca36753d2a1142e31
+[2025-08-06T08:01:05.918+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:05.919+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:11<00:05,  2.05trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:05.920+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.117+0000] {subprocess.py:106} INFO -  60%|██████    | 18/30 [00:11<00:05,  2.05trial/s, best loss: 355.78845326969105] 63%|██████▎   | 19/30 [00:11<00:05,  2.08trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:06] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:06.118+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:06.119+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.120+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:06.121+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.480+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080105 at: http://mlflow:5000/#/experiments/1/runs/d5298f5a7145461cbe7b4b5323ebba74
+[2025-08-06T08:01:06.481+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.482+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:11<00:05,  2.08trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:06.482+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.697+0000] {subprocess.py:106} INFO -  63%|██████▎   | 19/30 [00:11<00:05,  2.08trial/s, best loss: 355.78845326969105] 67%|██████▋   | 20/30 [00:11<00:05,  1.97trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:06] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:06.702+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:06.711+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.712+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:06.712+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:06.999+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080106 at: http://mlflow:5000/#/experiments/1/runs/b56c5a3e526f4d16a2c0e4e4e3e8866a
+[2025-08-06T08:01:07.000+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.001+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:12<00:05,  1.97trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:07.001+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.217+0000] {subprocess.py:106} INFO -  67%|██████▋   | 20/30 [00:12<00:05,  1.97trial/s, best loss: 355.78845326969105] 70%|███████   | 21/30 [00:12<00:04,  1.97trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:07] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:07.218+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:07.218+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.219+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:07.219+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.501+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080107 at: http://mlflow:5000/#/experiments/1/runs/1e309e90d85242a696e2084bc3ece744
+[2025-08-06T08:01:07.502+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.504+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:12<00:04,  1.97trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:07.505+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.699+0000] {subprocess.py:106} INFO -  70%|███████   | 21/30 [00:12<00:04,  1.97trial/s, best loss: 355.78845326969105] 73%|███████▎  | 22/30 [00:12<00:04,  1.97trial/s, best loss: 355.78845326969105]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:07] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:07.699+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:07.700+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.701+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:07.701+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.961+0000] {subprocess.py:106} INFO -                                                                                  🏃 View run tune-20250806-080107 at: http://mlflow:5000/#/experiments/1/runs/ef1f914c47374bd383b7922219e5df69
+[2025-08-06T08:01:07.962+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:07.962+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:13<00:04,  1.97trial/s, best loss: 355.78845326969105]                                                                                 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:07.963+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.153+0000] {subprocess.py:106} INFO -  73%|███████▎  | 22/30 [00:13<00:04,  1.97trial/s, best loss: 355.78845326969105] 77%|███████▋  | 23/30 [00:13<00:03,  2.03trial/s, best loss: 345.1149039058974] /home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:08] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:08.161+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:08.162+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.163+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:08.164+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.464+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080108 at: http://mlflow:5000/#/experiments/1/runs/f29102e580d74afa9540c4a47431f615
+[2025-08-06T08:01:08.465+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.465+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:13<00:03,  2.03trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:08.466+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.676+0000] {subprocess.py:106} INFO -  77%|███████▋  | 23/30 [00:13<00:03,  2.03trial/s, best loss: 345.1149039058974] 80%|████████  | 24/30 [00:13<00:02,  2.02trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:08] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:08.676+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:08.677+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.678+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:08.678+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.958+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080108 at: http://mlflow:5000/#/experiments/1/runs/821bb9a509b04e50b3db79290d072167
+[2025-08-06T08:01:08.959+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:08.959+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:14<00:02,  2.02trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:08.960+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.076+0000] {subprocess.py:106} INFO -  80%|████████  | 24/30 [00:14<00:02,  2.02trial/s, best loss: 345.1149039058974] 83%|████████▎ | 25/30 [00:14<00:02,  2.02trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:09] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:09.079+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:09.090+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.091+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:09.092+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.331+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080109 at: http://mlflow:5000/#/experiments/1/runs/7dfeb1af91ea49598c56f88979e20065
+[2025-08-06T08:01:09.332+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.332+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:14<00:02,  2.02trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:09.333+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.528+0000] {subprocess.py:106} INFO -  83%|████████▎ | 25/30 [00:14<00:02,  2.02trial/s, best loss: 345.1149039058974] 87%|████████▋ | 26/30 [00:14<00:01,  2.18trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:09] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:09.529+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:09.530+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.531+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:09.531+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.779+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080109 at: http://mlflow:5000/#/experiments/1/runs/5aeaf881990a4dc88e34c3f122da332b
+[2025-08-06T08:01:09.780+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.780+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:15<00:01,  2.18trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:09.781+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.980+0000] {subprocess.py:106} INFO -  87%|████████▋ | 26/30 [00:15<00:01,  2.18trial/s, best loss: 345.1149039058974] 90%|█████████ | 27/30 [00:15<00:01,  2.20trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:09] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:09.990+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:09.991+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:09.992+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:09.993+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.242+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080109 at: http://mlflow:5000/#/experiments/1/runs/1ed9b2c08ae74a449eb9a8e94a4bdaee
+[2025-08-06T08:01:10.243+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.243+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [00:15<00:01,  2.20trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:10.244+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.450+0000] {subprocess.py:106} INFO -  90%|█████████ | 27/30 [00:15<00:01,  2.20trial/s, best loss: 345.1149039058974] 93%|█████████▎| 28/30 [00:15<00:00,  2.18trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:10] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:10.451+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:10.451+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.452+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:10.452+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.709+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080110 at: http://mlflow:5000/#/experiments/1/runs/4bb4105f26c2460098ea48c03d20b70f
+[2025-08-06T08:01:10.710+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.711+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [00:15<00:00,  2.18trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:10.711+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.909+0000] {subprocess.py:106} INFO -  93%|█████████▎| 28/30 [00:15<00:00,  2.18trial/s, best loss: 345.1149039058974] 97%|█████████▋| 29/30 [00:16<00:00,  2.17trial/s, best loss: 345.1149039058974]/home/***/.local/lib/python3.12/site-packages/xgboost/training.py:183: UserWarning: [08:01:10] WARNING: /workspace/src/learner.cc:738:
+[2025-08-06T08:01:10.920+0000] {subprocess.py:106} INFO - Parameters: { "n_estimators" } are not used.
+[2025-08-06T08:01:10.921+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:10.922+0000] {subprocess.py:106} INFO -   bst.update(dtrain, iteration=i, fobj=obj)
+[2025-08-06T08:01:10.923+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:11.172+0000] {subprocess.py:106} INFO -                                                                                 🏃 View run tune-20250806-080110 at: http://mlflow:5000/#/experiments/1/runs/602e82c7e0b64518bedcc483c1a742dd
+[2025-08-06T08:01:11.173+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:11.173+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [00:16<00:00,  2.17trial/s, best loss: 345.1149039058974]                                                                                🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:11.174+0000] {subprocess.py:106} INFO - 
+[2025-08-06T08:01:11.342+0000] {subprocess.py:106} INFO -  97%|█████████▋| 29/30 [00:16<00:00,  2.17trial/s, best loss: 345.1149039058974]100%|██████████| 30/30 [00:16<00:00,  2.17trial/s, best loss: 345.1149039058974]100%|██████████| 30/30 [00:16<00:00,  1.82trial/s, best loss: 345.1149039058974]
+[2025-08-06T08:01:11.343+0000] {subprocess.py:106} INFO - Best hyperparameters: {'learning_rate': 0.6942456184428979, 'max_depth': 9.0, 'min_child_weight': 7.0, 'n_estimators': 170.0, 'reg_alpha': 0.34851358381866737, 'reg_lambda': 0.09629175163702082}
+[2025-08-06T08:01:11.344+0000] {subprocess.py:106} INFO - 🏃 View run log-best-params-20250806-080111 at: http://mlflow:5000/#/experiments/1/runs/2094e331583845648840e30f18b1afae
+[2025-08-06T08:01:11.345+0000] {subprocess.py:106} INFO - 🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[2025-08-06T08:01:11.774+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-08-06T08:01:11.808+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-08-06T08:01:11.809+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=turnstile_ml_pipeline, task_id=tune_model, run_id=scheduled__2025-08-05T00:00:00+00:00, execution_date=20250805T000000, start_date=20250806T080047, end_date=20250806T080111
+[2025-08-06T08:01:11.867+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-08-06T08:01:11.900+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-06T08:01:11.903+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

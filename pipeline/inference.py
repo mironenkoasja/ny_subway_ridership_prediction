@@ -21,10 +21,10 @@ def load_model(tracking_uri=None, model_output_dir=None):
 
     with open(model_output_dir, "rb") as f:
         model = pickle.load(f)
-    if isinstance(model, xgb.Booster):
-        reg = xgb.XGBRegressor()
-        reg._Booster = model
-        return reg
+    # if isinstance(model, xgb.Booster):
+    #     reg = xgb.XGBRegressor()
+    #     reg._Booster = model
+    #     return reg
 
     return model
 

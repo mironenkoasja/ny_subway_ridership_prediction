@@ -67,7 +67,9 @@ def train(
 
     for col in FEATURES:
         if col != "group_key":
-            train[col] = pd.to_numeric(train[col], errors="coerce").replace(-1.0, np.nan)
+            train[col] = pd.to_numeric(train[col], errors="coerce").replace(
+                -1.0, np.nan
+            )
         else:
             train[col] = train[col].astype("category")
 

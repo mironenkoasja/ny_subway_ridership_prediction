@@ -2,7 +2,6 @@ import os
 import contextlib
 from unittest import mock
 import pandas as pd
-
 from pipeline import train_register
 
 
