@@ -20,9 +20,7 @@ def preprocess(df_raw):
         df_raw["date"].astype(str) + " " + df_raw["time"], errors="coerce"
     )
 
-    df_raw = df_raw.dropna(
-        subset=["entries", "exits", "datetime", "c_a", "unit", "scp"]
-    )
+    df_raw = df_raw.dropna(subset=["entries", "exits", "datetime", "c_a", "unit", "scp"])
     df_raw = df_raw.sort_values(["c_a", "unit", "scp", "datetime"])
 
     df_raw["entries_diff"] = df_raw.groupby(["c_a", "unit", "scp"])["entries"].diff()
@@ -72,9 +70,7 @@ def add_features(df, mode="train"):
         df = pd.concat([df, df_future], ignore_index=True)
         df = df.sort_values(["group_key", "datetime"])
 
-        df["entries_4h_last_week"] = df.groupby("group_key")["ridership_4h"].shift(
-            6 * 7
-        )
+        df["entries_4h_last_week"] = df.groupby("group_key")["ridership_4h"].shift(6 * 7)
         df["entries_4h_last_day"] = df.groupby("group_key")["ridership_4h"].shift(6)
         df["rolling_mean_prev_day"] = df.groupby("group_key")["ridership_4h"].transform(
             lambda x: x.shift(6).rolling(6).mean()
