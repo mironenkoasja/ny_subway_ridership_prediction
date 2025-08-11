@@ -3,7 +3,7 @@
 This project builds an end-to-end **batch machine learning pipeline** for predicting NYC subway ridership based on historical turnstile data. The project runs locally using Docker Compose.
 
 🚇 **What does it do?**  
-The system forecasts **ridership volume per station group in 4-hour windows**, using patterns from the previous days and weeks. 
+The system forecasts **ridership volume per turnstiles group in 4-hour windows**, using patterns from the previous days and weeks. 
 
 **Tools used:**
 
