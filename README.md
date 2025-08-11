@@ -15,7 +15,7 @@ The system forecasts **ridership volume per turnstiles group in 4-hour windows**
 - **Docker** for reproducible deployment
 -**Gafana** for monitoring prediction quality
 
-Although the model is trained on historical data from **2022**, the Airflow DAG is designed to **simulate daily predictions in real time** by executing a rolling prediction window as if today were the current date.
+Although the model is trained on historical data from **2022**, the Airflow DAG is designed to **simulate daily predictions in real time** by executing a rolling prediction window as if today were the date from 2022.
 
 After each prediction run, the DAG also generates **monitoring data** to help evaluate model performance and track changes over time.
 
